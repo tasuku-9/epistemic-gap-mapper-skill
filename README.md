@@ -17,7 +17,7 @@ The goal is to turn a fragile or outsider hypothesis into a structure that speci
 
 > It does not replace expertise. It makes outsider hypotheses legible to expertise.
 
-![Process overview](assets/epistemic_gap_mapper_process_overview.png)
+![Epistemic Gap Mapper overview](assets/gap-mapper.png)
 
 ## Core idea
 
