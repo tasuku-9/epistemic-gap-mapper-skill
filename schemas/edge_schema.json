@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Epistemic Gap Mapper Edge",
+  "type": "object",
+  "required": ["from", "to", "relation"],
+  "properties": {
+    "from": {"type": "string"},
+    "to": {"type": "string"},
+    "relation": {
+      "type": "string",
+      "enum": [
+        "supports",
+        "supports_weakly",
+        "contradicts",
+        "extends",
+        "qualifies",
+        "depends_on",
+        "explains_gap",
+        "challenges_narrative",
+        "overclaims",
+        "requires_test",
+        "falsified_by",
+        "heuristic_analogy_for",
+        "not_direct_evidence"
+      ]
+    },
+    "reason": {"type": "string"},
+    "confidence": {"type": "string", "enum": ["high", "medium", "low", "unknown"]}
+  },
+  "additionalProperties": false
+}

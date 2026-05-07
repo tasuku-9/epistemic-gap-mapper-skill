@@ -1,0 +1,4 @@
+interface:
+  display_name: "Epistemic Gap Mapper"
+  short_description: "Map bold hypotheses for expert review"
+  default_prompt: "Use $epistemic-gap-mapper-skill to map my hypothesis against target papers and target narratives."

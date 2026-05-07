@@ -1,0 +1,122 @@
+{
+  "nodes": [
+    {
+      "node_id": "P1",
+      "node_type": "PaperNode",
+      "text": "Sato et al. 2014, overview of Y-chromosome variation in modern Japanese males.",
+      "domain": "population genetics",
+      "tier": "A",
+      "confidence": "high"
+    },
+    {
+      "node_id": "E1",
+      "node_type": "EvidenceNode",
+      "text": "D1a2a/D-M55 persists at high frequency in modern Japanese male lineages.",
+      "domain": "population genetics",
+      "tier": "A",
+      "supporting_sources": ["P1"],
+      "confidence": "high"
+    },
+    {
+      "node_id": "UC1",
+      "node_type": "UserClaimNode",
+      "text": "Paternal-lineage asymmetry may indicate some form of social or reproductive advantage for Jomon-associated paternal lineages.",
+      "domain": "population genetics / social history",
+      "tier": "B",
+      "supporting_sources": ["E1"],
+      "related_target_narratives": ["N2"],
+      "risks": ["R1"],
+      "falsifiers": ["F1"],
+      "confidence": "medium"
+    },
+    {
+      "node_id": "N2",
+      "node_type": "NarrativeNode",
+      "text": "D1a2a/D-M55 persistence is best understood as passive Jomon-associated survival.",
+      "source_status": "synthetic_consensus / ai_frequency_narrative",
+      "citation_debt": "medium",
+      "tier": "unknown",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "P2",
+      "node_type": "PaperNode",
+      "text": "Hudson 1992 on Yayoi ritual and dotaku context.",
+      "domain": "archaeology",
+      "tier": "A",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "E2",
+      "node_type": "EvidenceNode",
+      "text": "Dotaku ritual flourished and then ended in the Late Yayoi period.",
+      "domain": "archaeology",
+      "tier": "A",
+      "supporting_sources": ["P2"],
+      "confidence": "high"
+    },
+    {
+      "node_id": "UC2",
+      "node_type": "UserClaimNode",
+      "text": "The end of dotaku ritual may reflect social reorganization or network disruption, not solely internal cultural transformation.",
+      "domain": "archaeology / social history",
+      "tier": "B",
+      "supporting_sources": ["E2"],
+      "related_target_narratives": ["N3"],
+      "risks": ["R2"],
+      "confidence": "medium"
+    },
+    {
+      "node_id": "N3",
+      "node_type": "NarrativeNode",
+      "text": "Dotaku discontinuity is usually treated as internal ritual transformation or cultural transition.",
+      "source_status": "textbook_canonical / review_supported",
+      "citation_debt": "medium",
+      "tier": "unknown",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "UC3",
+      "node_type": "UserClaimNode",
+      "text": "Kiki myths may preserve structures of ritual-political memory related to social integration.",
+      "domain": "mythology / intellectual history",
+      "tier": "B",
+      "related_target_narratives": ["N4"],
+      "risks": ["R3"],
+      "confidence": "low"
+    },
+    {
+      "node_id": "R1",
+      "node_type": "RiskNode",
+      "text": "Y-chromosome frequency alone cannot prove conquest or elite dominance.",
+      "tier": "X",
+      "confidence": "high"
+    },
+    {
+      "node_id": "F1",
+      "node_type": "FalsifierNode",
+      "text": "If representative Kofun elite burials do not show elevated D1a2a/D-M55 compared with non-elites, the paternal-elite version is weakened.",
+      "tier": "M",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "M7",
+      "node_type": "MethodNode",
+      "method_name": "Heuristic Comparative History",
+      "text": "Comparative cases are possibility structures, not evidence for the Japanese case.",
+      "tier": "M",
+      "confidence": "high"
+    }
+  ],
+  "edges": [
+    {"from": "P1", "to": "E1", "relation": "supports", "reason": "P1 supports the Y-lineage frequency observation.", "confidence": "high"},
+    {"from": "E1", "to": "UC1", "relation": "supports_weakly", "reason": "Frequency asymmetry is consistent with, but does not prove, social advantage.", "confidence": "medium"},
+    {"from": "UC1", "to": "N2", "relation": "challenges_narrative", "reason": "The claim reframes passive survival as possible social signal.", "confidence": "medium"},
+    {"from": "R1", "to": "UC1", "relation": "qualifies", "reason": "R1 limits the strength of UC1.", "confidence": "high"},
+    {"from": "F1", "to": "UC1", "relation": "falsified_by", "reason": "F1 gives a test that could weaken UC1.", "confidence": "medium"},
+    {"from": "P2", "to": "E2", "relation": "supports", "reason": "P2 provides dotaku ritual context.", "confidence": "medium"},
+    {"from": "E2", "to": "UC2", "relation": "supports_weakly", "reason": "Dotaku discontinuity allows but does not prove social reorganization.", "confidence": "medium"},
+    {"from": "UC2", "to": "N3", "relation": "challenges_narrative", "reason": "UC2 introduces an alternative to purely internal transformation.", "confidence": "medium"},
+    {"from": "M7", "to": "UC2", "relation": "heuristic_analogy_for", "reason": "Comparative cases can frame possibility but not prove UC2.", "confidence": "high"}
+  ]
+}

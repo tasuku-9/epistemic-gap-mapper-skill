@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Epistemic Gap Mapper Node",
+  "type": "object",
+  "required": ["node_id", "node_type", "text"],
+  "properties": {
+    "node_id": {"type": "string"},
+    "node_type": {
+      "type": "string",
+      "enum": [
+        "PaperNode",
+        "SourceClaimNode",
+        "UserClaimNode",
+        "EvidenceNode",
+        "InferenceNode",
+        "AssumptionNode",
+        "NarrativeNode",
+        "GapNode",
+        "ExceptionNode",
+        "RiskNode",
+        "FalsifierNode",
+        "MethodNode"
+      ]
+    },
+    "text": {"type": "string"},
+    "tier": {"type": "string", "enum": ["A", "B", "C", "X", "M", "unknown"]},
+    "domain": {"type": "string"},
+    "source_kind": {"type": "string"},
+    "source_status": {"type": "string"},
+    "citation_debt": {"type": "string", "enum": ["low", "medium", "high", "unknown", "not_applicable"]},
+    "supporting_sources": {"type": "array", "items": {"type": "string"}},
+    "related_target_papers": {"type": "array", "items": {"type": "string"}},
+    "related_target_narratives": {"type": "array", "items": {"type": "string"}},
+    "risks": {"type": "array", "items": {"type": "string"}},
+    "falsifiers": {"type": "array", "items": {"type": "string"}},
+    "confidence": {"type": "string", "enum": ["high", "medium", "low", "unknown"]},
+    "metadata": {"type": "object"}
+  },
+  "additionalProperties": true
+}

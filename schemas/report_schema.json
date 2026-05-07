@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Breakthrough Diagnosis Report",
+  "type": "object",
+  "required": ["breakthrough_status", "a_level_foundations", "b_level_contributions", "c_level_vulnerabilities", "x_level_problems"],
+  "properties": {
+    "breakthrough_status": {"type": "string"},
+    "why": {"type": "string"},
+    "a_level_foundations": {"type": "array", "items": {"type": "string"}},
+    "b_level_contributions": {"type": "array", "items": {"type": "string"}},
+    "c_level_vulnerabilities": {"type": "array", "items": {"type": "string"}},
+    "x_level_problems": {"type": "array", "items": {"type": "string"}},
+    "target_paper_relationship": {"type": "string"},
+    "target_narrative_relationship": {"type": "string"},
+    "required_patches": {"type": "array", "items": {"type": "string"}},
+    "falsification_plan": {"type": "array", "items": {"type": "string"}},
+    "recommended_next_action": {"type": "string"}
+  }
+}
