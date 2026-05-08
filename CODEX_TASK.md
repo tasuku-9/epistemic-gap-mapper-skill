@@ -8,7 +8,8 @@ You are improving **Epistemic Gap Mapper Skill**, a prompt-and-schema based skil
 2. Keep `SKILL.md` concise and procedural. Move detailed examples, schemas, and reusable text into `docs/`, `schemas/`, `prompts/`, `templates/`, `examples/`, or `outreach/`.
 3. Strengthen validation without turning the project into a heavy software package.
 4. Keep worked examples explicit about uncertainty, overclaim risks, and falsification conditions.
-5. Improve public-facing explanation without making the project sound like a manifesto or a fringe-theory amplifier.
+5. Keep the first-use path simple enough for a new user to complete before reading the advanced examples.
+6. Improve public-facing explanation without making the project sound like a manifesto or a fringe-theory amplifier.
 
 ## Guardrails
 
@@ -28,12 +29,14 @@ You are improving **Epistemic Gap Mapper Skill**, a prompt-and-schema based skil
 4. Expand worked examples so every major node type appears at least once.
 5. Add tests or GitHub Actions only if they remain lightweight and dependency-minimal.
 6. Add more examples from domains outside the Jomon / Dotaku / Kiki case.
+7. Preserve the starter example and templates as a low-friction first step.
 
 ## Validation
 
 Before committing changes, run:
 
 ```bash
+python scripts/egm_cli.py validate examples/starter_cafe_rain/nodes_starter.json
 python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_minimal.json
 python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_full.json
 python scripts/egm_cli.py render examples/jomon_dotaku_kiki/nodes_full.json --mermaid

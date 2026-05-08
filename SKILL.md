@@ -30,6 +30,8 @@ Load only the files needed for the current task:
 - `schemas/node_schema.json`, `schemas/edge_schema.json`, `schemas/graph_schema.json`, and `schemas/report_schema.json`: read before producing machine-checkable JSON.
 - `prompts/*.md`: use when the user wants reusable copy-paste prompts.
 - `templates/*.md`: use when starting an intake, target-paper table, target-narrative table, or diagnosis report.
+- `templates/first_map_template.md`, `templates/nodes_template.json`, and `templates/graph_template.md`: use when the user needs the fastest possible first map.
+- `examples/starter_cafe_rain/`: use as the low-friction first example before the larger research case.
 - `examples/jomon_dotaku_kiki/nodes_minimal.json`: use as the compact worked graph for learning the node system.
 - `examples/jomon_dotaku_kiki/nodes_full.json`: use as the fuller worked graph when the user needs broad coverage of the Jomon / Dotaku / Kiki case.
 - `examples/jomon_dotaku_kiki/graph_sample_grouped.md`: use when the full graph needs a readable grouped Mermaid view.
@@ -83,6 +85,7 @@ Be clear, rigorous, and non-grandiose. Prefer node-specific criticism over broad
 Use the lightweight CLI only for local graph checks:
 
 ```bash
+python scripts/egm_cli.py validate examples/starter_cafe_rain/nodes_starter.json
 python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_minimal.json
 python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_full.json
 python scripts/egm_cli.py render examples/jomon_dotaku_kiki/nodes_full.json --mermaid

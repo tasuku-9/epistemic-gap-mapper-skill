@@ -81,6 +81,17 @@ This skill is useful when a researcher, independent scholar, journalist, graduat
 - which standard narrative is being challenged,
 - and what evidence would falsify the hypothesis.
 
+## First 10 Minutes
+
+If the full worked example feels too large, start here:
+
+- `examples/starter_cafe_rain/` — a small everyday example asking whether rainy days increase neighborhood cafe sales.
+- `templates/first_map_template.md` — a paper-before-the-paper worksheet.
+- `templates/nodes_template.json` — a copyable starter node graph.
+- `templates/graph_template.md` — a copyable Mermaid graph skeleton.
+
+The starter example is intentionally ordinary. It teaches the basic move: map a claim, the source data, the default narrative, the overclaim risk, and the falsifier before arguing about conclusions.
+
 ## Jomon / Dotaku / Kiki Worked Examples
 
 The `examples/jomon_dotaku_kiki/` folder contains two levels of node examples:
@@ -105,8 +116,8 @@ The `prose_case/` folder shows how the same broad hypothesis can be written in f
 - `docs/` — conceptual design, workflow, node schema, edge schema, methodological index.
 - `prompts/` — copy-paste prompts for each step of the workflow.
 - `schemas/` — JSON schemas for nodes, edges, graphs, and reports.
-- `templates/` — reusable intake and report templates.
-- `examples/` — worked example based on the Jomon/Dotaku/Kiki hypothesis.
+- `templates/` — reusable intake, graph, node, and report templates.
+- `examples/` — starter and advanced worked examples.
 - `outreach/` — public explainers and recruitment/community posts in English and Japanese.
 - `scripts/` — lightweight local graph validation and Mermaid rendering helper.
 - `.github/` — issue templates and the `.github/workflows/validate-samples.yml` sample validation workflow.
@@ -124,6 +135,7 @@ Executable helper scripts are intended for release under the **MIT License**. Te
 ## Validation
 
 ```bash
+python scripts/egm_cli.py validate examples/starter_cafe_rain/nodes_starter.json
 python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_minimal.json
 python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_full.json
 python scripts/egm_cli.py render examples/jomon_dotaku_kiki/nodes_full.json --mermaid

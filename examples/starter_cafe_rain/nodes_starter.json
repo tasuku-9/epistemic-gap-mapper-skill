@@ -1,0 +1,215 @@
+{
+  "nodes": [
+    {
+      "node_id": "P1",
+      "node_type": "PaperNode",
+      "citation": "Cafe sales log, last 90 business days",
+      "text": "A local cafe sales log containing daily revenue and transaction counts for the last 90 business days.",
+      "domain": "small business / local data",
+      "source_kind": "local dataset",
+      "role": "primary source",
+      "verification_status": "user-provided source",
+      "tier": "A",
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Local Data"
+      }
+    },
+    {
+      "node_id": "P2",
+      "node_type": "PaperNode",
+      "citation": "Local daily weather log for the same 90-day period",
+      "text": "A local weather log identifying which business days were rainy during the sales-log period.",
+      "domain": "local data / weather",
+      "source_kind": "local dataset",
+      "role": "primary source",
+      "verification_status": "user-provided source",
+      "tier": "A",
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Local Data"
+      }
+    },
+    {
+      "node_id": "SC1",
+      "node_type": "SourceClaimNode",
+      "text": "The sales log can show whether average revenue or transaction count differs between rainy and non-rainy days.",
+      "source_paper": "P1",
+      "domain": "small business / local data",
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Local Data"
+      }
+    },
+    {
+      "node_id": "E1",
+      "node_type": "EvidenceNode",
+      "text": "Rainy days in the sample appear to have higher average transaction counts than non-rainy days.",
+      "source": "P1",
+      "domain": "small business / local data",
+      "tier": "B",
+      "supporting_sources": ["P1", "SC1"],
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Local Data"
+      }
+    },
+    {
+      "node_id": "E2",
+      "node_type": "EvidenceNode",
+      "text": "The rainy-day label comes from the local weather log for the same period.",
+      "source": "P2",
+      "domain": "local data / weather",
+      "tier": "A",
+      "supporting_sources": ["P2"],
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Local Data"
+      }
+    },
+    {
+      "node_id": "N1",
+      "node_type": "NarrativeNode",
+      "text": "Rainy days bring more people into cafes because customers want an indoor place to wait or work.",
+      "source_status": "local habit / common business story",
+      "citation_debt": "medium",
+      "component_claims": [
+        "Rain changes customer behavior",
+        "Customers choose cafes as indoor waiting or work spaces",
+        "That behavior raises cafe sales"
+      ],
+      "tier": "unknown",
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Narrative Audit"
+      }
+    },
+    {
+      "node_id": "NT1",
+      "node_type": "NarrativeTraceNode",
+      "text": "The cafe sales log may be compatible with the rainy-day sales narrative, but it does not directly show why customers came in.",
+      "target_narrative": "N1",
+      "source_paper": "P1",
+      "trace_status": "partial_support",
+      "citation_debt_effect": "clarifies",
+      "tier": "M",
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Narrative Audit"
+      }
+    },
+    {
+      "node_id": "UC1",
+      "node_type": "UserClaimNode",
+      "text": "Rainy days may increase this cafe's sales, but the cause needs to be checked against confounders.",
+      "domain": "small business / local data",
+      "tier": "B",
+      "supporting_sources": ["E1", "E2"],
+      "related_target_papers": ["P1", "P2"],
+      "related_target_narratives": ["N1"],
+      "risks": ["R1"],
+      "falsifiers": ["F1"],
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Claim"
+      }
+    },
+    {
+      "node_id": "R1",
+      "node_type": "RiskNode",
+      "text": "Rain may coincide with weekends, events, holidays, promotions, or seasonal changes.",
+      "risky_phrase": "rainy days increase sales",
+      "why_risky": "A simple rainy/non-rainy comparison may confuse weather with other sales drivers.",
+      "suggested_patch": "Say 'may increase' and check day-of-week, events, promotions, and seasonality before making a stronger claim.",
+      "tier": "X",
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Falsification / Risk"
+      }
+    },
+    {
+      "node_id": "F1",
+      "node_type": "FalsifierNode",
+      "text": "If the rainy-day effect disappears after controlling for weekends, events, promotions, and seasonality, UC1 is weakened.",
+      "would_weaken": ["UC1"],
+      "required_evidence": "A comparison that controls for day-of-week, special events, promotions, and seasonal period.",
+      "tier": "M",
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Falsification / Risk"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "P1",
+      "to": "SC1",
+      "relation": "supports",
+      "reason": "P1 is the source for the sales-log claim.",
+      "confidence": "medium"
+    },
+    {
+      "from": "SC1",
+      "to": "E1",
+      "relation": "supports",
+      "reason": "SC1 supports the rainy/non-rainy sales comparison.",
+      "confidence": "medium"
+    },
+    {
+      "from": "P2",
+      "to": "E2",
+      "relation": "supports",
+      "reason": "P2 supplies the rainy-day labels.",
+      "confidence": "medium"
+    },
+    {
+      "from": "E1",
+      "to": "UC1",
+      "relation": "supports_weakly",
+      "reason": "Higher average sales on rainy days is consistent with UC1 but does not prove causation.",
+      "confidence": "medium"
+    },
+    {
+      "from": "E2",
+      "to": "UC1",
+      "relation": "supports_weakly",
+      "reason": "E2 makes the rainy-day comparison possible.",
+      "confidence": "medium"
+    },
+    {
+      "from": "P1",
+      "to": "NT1",
+      "relation": "supports_weakly",
+      "reason": "P1 may be compatible with N1 but does not directly explain customer motivation.",
+      "confidence": "medium"
+    },
+    {
+      "from": "NT1",
+      "to": "N1",
+      "relation": "not_direct_evidence",
+      "reason": "NT1 clarifies citation debt without treating the narrative as proven or false.",
+      "confidence": "medium"
+    },
+    {
+      "from": "UC1",
+      "to": "N1",
+      "relation": "challenges_narrative",
+      "reason": "UC1 accepts a possible sales effect but challenges the easy causal story.",
+      "confidence": "medium"
+    },
+    {
+      "from": "R1",
+      "to": "UC1",
+      "relation": "qualifies",
+      "reason": "R1 limits how strongly UC1 can be stated.",
+      "confidence": "high"
+    },
+    {
+      "from": "F1",
+      "to": "UC1",
+      "relation": "falsified_by",
+      "reason": "F1 states what would weaken UC1.",
+      "confidence": "medium"
+    }
+  ]
+}

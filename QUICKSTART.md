@@ -1,5 +1,15 @@
 # Quickstart
 
+## First 10 minutes
+
+If you are new to Epistemic Gap Mapper, start with the small example:
+
+- `examples/starter_cafe_rain/README.md`
+- `examples/starter_cafe_rain/nodes_starter.json`
+- `templates/first_map_template.md`
+
+The goal is to fill a small map before writing a long argument.
+
 ## Step 1 — Start with guardrails
 
 Open `prompts/00_system_guardrails.md` and paste it into your AI session.
@@ -39,6 +49,7 @@ Use `prompts/08_breakthrough_diagnosis.md`.
 ## Optional — Validate or render a node graph
 
 ```bash
+python scripts/egm_cli.py validate examples/starter_cafe_rain/nodes_starter.json
 python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_minimal.json
 python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_full.json
 python scripts/egm_cli.py render examples/jomon_dotaku_kiki/nodes_full.json --mermaid

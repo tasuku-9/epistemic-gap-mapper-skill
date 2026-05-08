@@ -12,6 +12,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Validate starter sample graph
+        run: python scripts/egm_cli.py validate examples/starter_cafe_rain/nodes_starter.json
       - name: Validate minimal sample graph
         run: python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_minimal.json
       - name: Validate full sample graph

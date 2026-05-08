@@ -1,0 +1,105 @@
+{
+  "nodes": [
+    {
+      "node_id": "P1",
+      "node_type": "PaperNode",
+      "citation": "Replace with paper, dataset, source, or document name",
+      "text": "Replace with what this source is.",
+      "domain": "replace with domain",
+      "source_kind": "article / dataset / book / report / primary source",
+      "role": "target paper / primary source / data source / context source",
+      "verification_status": "verification needed",
+      "tier": "A",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "E1",
+      "node_type": "EvidenceNode",
+      "text": "Replace with a concrete observation or source-backed fact.",
+      "source": "P1",
+      "domain": "replace with domain",
+      "tier": "A",
+      "supporting_sources": ["P1"],
+      "confidence": "medium"
+    },
+    {
+      "node_id": "N1",
+      "node_type": "NarrativeNode",
+      "text": "Replace with the standard narrative or common explanation being examined.",
+      "source_status": "unknown",
+      "citation_debt": "unknown",
+      "component_claims": ["Replace with one component claim"],
+      "tier": "unknown",
+      "confidence": "unknown"
+    },
+    {
+      "node_id": "UC1",
+      "node_type": "UserClaimNode",
+      "text": "Replace with your hypothesis or claim.",
+      "domain": "replace with domain",
+      "tier": "B",
+      "supporting_sources": ["E1"],
+      "related_target_papers": ["P1"],
+      "related_target_narratives": ["N1"],
+      "risks": ["R1"],
+      "falsifiers": ["F1"],
+      "confidence": "medium"
+    },
+    {
+      "node_id": "R1",
+      "node_type": "RiskNode",
+      "text": "Replace with the main overclaim or confounder risk.",
+      "risky_phrase": "replace with risky wording",
+      "why_risky": "Replace with why the claim may exceed the evidence.",
+      "suggested_patch": "Replace with safer wording.",
+      "tier": "X",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "F1",
+      "node_type": "FalsifierNode",
+      "text": "Replace with evidence that would weaken or falsify the claim.",
+      "would_weaken": ["UC1"],
+      "required_evidence": "Replace with what evidence would be needed.",
+      "tier": "M",
+      "confidence": "medium"
+    }
+  ],
+  "edges": [
+    {
+      "from": "P1",
+      "to": "E1",
+      "relation": "supports",
+      "reason": "Replace with why P1 supports E1.",
+      "confidence": "medium"
+    },
+    {
+      "from": "E1",
+      "to": "UC1",
+      "relation": "supports_weakly",
+      "reason": "Replace with why E1 supports but does not prove UC1.",
+      "confidence": "medium"
+    },
+    {
+      "from": "UC1",
+      "to": "N1",
+      "relation": "challenges_narrative",
+      "reason": "Replace with how UC1 accepts, challenges, or reframes N1.",
+      "confidence": "medium"
+    },
+    {
+      "from": "R1",
+      "to": "UC1",
+      "relation": "qualifies",
+      "reason": "Replace with how R1 limits UC1.",
+      "confidence": "medium"
+    },
+    {
+      "from": "F1",
+      "to": "UC1",
+      "relation": "falsified_by",
+      "reason": "Replace with how F1 would weaken UC1.",
+      "confidence": "medium"
+    }
+  ]
+}
