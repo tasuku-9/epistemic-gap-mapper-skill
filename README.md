@@ -130,13 +130,10 @@ The `prose_case/` folder shows how the same broad hypothesis can be written in f
 
 ## License
 
-Text, prompts, templates, and diagrams are intended for release under **CC BY 4.0 International** unless otherwise stated.
+This repository uses two licenses:
 
-Executable helper scripts are intended for release under the **MIT License**. Text assets are intended for **CC BY 4.0**.
-
-- Root `LICENSE`: CC BY 4.0 notice for the primary text/prompt/schema skill materials.
-- Text, prompts, templates, documentation, examples, schemas, outreach materials, and diagrams: see `LICENSE-CC-BY-4.0.md`.
-- Code in `scripts/`: see `LICENSE-MIT.md`.
+- `LICENSE`: CC BY 4.0 for text, prompts, templates, documentation, examples, schemas, outreach materials, and diagrams.
+- `LICENSE-MIT.md`: MIT License for executable helper scripts in `scripts/`.
 
 ## Validation
 
