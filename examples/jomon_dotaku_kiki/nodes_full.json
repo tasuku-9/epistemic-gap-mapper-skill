@@ -1,0 +1,1472 @@
+{
+  "nodes": [
+    {
+      "node_id": "P1",
+      "node_type": "PaperNode",
+      "citation": "Sato et al. 2014; Inoue & Sato 2024",
+      "text": "Modern Japanese male Y-chromosome haplogroup studies used for D1a2a/D-M55 and O-lineage frequency context.",
+      "domain": "population genetics",
+      "source_kind": "articles",
+      "role": "data-anomaly papers",
+      "verification_status": "verification needed",
+      "tier": "A",
+      "confidence": "high"
+    },
+    {
+      "node_id": "P2",
+      "node_type": "PaperNode",
+      "citation": "Cooke et al. 2021; Liu et al. 2024",
+      "text": "Ancient and modern genomic studies supporting tripartite or updated ancestry models for Japanese populations.",
+      "domain": "archaeogenetics / population genomics",
+      "source_kind": "articles",
+      "role": "canonical/update frame papers",
+      "verification_status": "verification needed",
+      "tier": "A",
+      "confidence": "high"
+    },
+    {
+      "node_id": "P3",
+      "node_type": "PaperNode",
+      "citation": "Hudson 1992",
+      "text": "Archaeological discussion of Yayoi ritual context and dotaku.",
+      "domain": "archaeology",
+      "source_kind": "article",
+      "role": "canonical frame paper",
+      "verification_status": "verification needed",
+      "tier": "A",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "P4",
+      "node_type": "PaperNode",
+      "citation": "Mabuchi & Hirao 1982",
+      "text": "Lead isotope work on dotaku raw bronze material provenance.",
+      "domain": "archaeometry / archaeology",
+      "source_kind": "article",
+      "role": "data-support paper",
+      "verification_status": "verification needed",
+      "tier": "A",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "P5",
+      "node_type": "PaperNode",
+      "citation": "Kojiki and Nihon Shoki; Philippi 1968; Aston 1896",
+      "text": "Primary mythological texts and reference translations containing heavenly descent, land creation, land cession, and Ogetsuhime motifs.",
+      "domain": "mythology / textual studies",
+      "source_kind": "primary texts / translations",
+      "role": "primary source",
+      "verification_status": "known primary source",
+      "tier": "A",
+      "confidence": "high"
+    },
+    {
+      "node_id": "P6",
+      "node_type": "PaperNode",
+      "citation": "Fang et al. 2025; Liu et al. 2025; Wang et al. 2024",
+      "text": "Studies on Shandong/Haidai genetic change, northern coastal route gene flow, and Central Plain to northern coast population expansion.",
+      "domain": "ancient DNA / East Asian population history",
+      "source_kind": "articles",
+      "role": "continental background papers",
+      "verification_status": "verification needed",
+      "tier": "A",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "P7",
+      "node_type": "PaperNode",
+      "citation": "Fujio 2015",
+      "text": "AMS-based Yayoi chronology reference used for dating the start of Early Yayoi in one influential framework.",
+      "domain": "archaeology / chronology",
+      "source_kind": "book",
+      "role": "chronology reference",
+      "verification_status": "verification needed",
+      "tier": "A",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "SC1",
+      "node_type": "SourceClaimNode",
+      "text": "Target Y-chromosome studies report substantial D1a2a/D-M55-related lineages in modern Japanese male populations.",
+      "source_paper": "P1",
+      "domain": "population genetics",
+      "confidence": "high"
+    },
+    {
+      "node_id": "SC2",
+      "node_type": "SourceClaimNode",
+      "text": "Updated genomic models complicate a simple dual-structure account of Japanese population history.",
+      "source_paper": "P2",
+      "domain": "archaeogenetics",
+      "confidence": "high"
+    },
+    {
+      "node_id": "SC3",
+      "node_type": "SourceClaimNode",
+      "text": "Dotaku were central to Yayoi ritual systems and later disappear from use and deposition patterns.",
+      "source_paper": "P3",
+      "domain": "archaeology",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "SC4",
+      "node_type": "SourceClaimNode",
+      "text": "Lead isotope analysis can connect dotaku raw materials to external source regions such as the Korean Peninsula and North China.",
+      "source_paper": "P4",
+      "domain": "archaeometry",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "SC5",
+      "node_type": "SourceClaimNode",
+      "text": "The Kiki contain narratives of heavenly descent, land creation, land cession or submission, and agricultural-origin motifs.",
+      "source_paper": "P5",
+      "domain": "mythology / textual studies",
+      "confidence": "high"
+    },
+    {
+      "node_id": "SC6",
+      "node_type": "SourceClaimNode",
+      "text": "Continental ancient DNA studies indicate genetic changes and coastal gene flow relevant to later Korean Peninsula and Japanese archipelago population formation.",
+      "source_paper": "P6",
+      "domain": "ancient DNA",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "SC7",
+      "node_type": "SourceClaimNode",
+      "text": "One influential AMS radiocarbon-based framework places Early Yayoi beginnings around the 10th century BCE.",
+      "source_paper": "P7",
+      "domain": "archaeological chronology",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "E1",
+      "node_type": "EvidenceNode",
+      "text": "D1a2a/D-M55 persists at high frequency in modern Japanese male lineages.",
+      "source": "P1",
+      "domain": "population genetics",
+      "tier": "A",
+      "supporting_sources": [
+        "P1",
+        "SC1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "node_id": "E2",
+      "node_type": "EvidenceNode",
+      "text": "Autosomal ancestry models for most mainland Japanese populations are largely continental-derived but regionally variable and increasingly modeled with more than two components.",
+      "source": "P2",
+      "domain": "archaeogenetics",
+      "tier": "A",
+      "supporting_sources": [
+        "P2",
+        "SC2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "node_id": "E3",
+      "node_type": "EvidenceNode",
+      "text": "The combination of largely continental-derived autosomal ancestry and high D1a2a/D-M55 paternal frequency creates a paternal-lineage asymmetry needing interpretation.",
+      "source": "E1 + E2",
+      "domain": "population genetics / social history",
+      "tier": "B",
+      "supporting_sources": [
+        "E1",
+        "E2"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "node_id": "E4",
+      "node_type": "EvidenceNode",
+      "text": "Dotaku ritual flourished in western Japan and then ended in the Late Yayoi period.",
+      "source": "P3",
+      "domain": "archaeology",
+      "tier": "A",
+      "supporting_sources": [
+        "P3",
+        "SC3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "node_id": "E5",
+      "node_type": "EvidenceNode",
+      "text": "Dotaku raw materials were connected to external bronze source networks through lead isotope evidence.",
+      "source": "P4",
+      "domain": "archaeometry / archaeology",
+      "tier": "A",
+      "supporting_sources": [
+        "P4",
+        "SC4"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "node_id": "E6",
+      "node_type": "EvidenceNode",
+      "text": "The Kiki contain structures of descent, land creation beginning with Awaji, land cession or submission, and Ogetsuhime agricultural-origin motifs.",
+      "source": "P5",
+      "domain": "mythology / textual studies",
+      "tier": "A",
+      "supporting_sources": [
+        "P5",
+        "SC5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "node_id": "E7",
+      "node_type": "EvidenceNode",
+      "text": "Continental background studies show Shandong/Haidai genetic change and northern coastal route gene flow relevant to possible Yayoi-to-Kofun ancestry formation.",
+      "source": "P6",
+      "domain": "ancient DNA / East Asian population history",
+      "tier": "A",
+      "supporting_sources": [
+        "P6",
+        "SC6"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "node_id": "E8",
+      "node_type": "EvidenceNode",
+      "text": "One influential long chronology places Early Yayoi beginnings around the 10th century BCE.",
+      "source": "P7",
+      "domain": "archaeological chronology",
+      "tier": "A",
+      "supporting_sources": [
+        "P7",
+        "SC7"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "node_id": "A1",
+      "node_type": "AssumptionNode",
+      "text": "Y-chromosome asymmetry can preserve signals of sex-biased social structure, reproductive advantage, or elite effects.",
+      "tier": "C",
+      "risk_level": "medium",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "A2",
+      "node_type": "AssumptionNode",
+      "text": "A major ritual discontinuity can be interpreted as a possible sign of social or political reorganization, but not proof of it.",
+      "tier": "B",
+      "risk_level": "medium",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "A3",
+      "node_type": "AssumptionNode",
+      "text": "Mythic structures may preserve transformed social memory without functioning as direct historical chronicles.",
+      "tier": "C",
+      "risk_level": "high",
+      "confidence": "low"
+    },
+    {
+      "node_id": "A4",
+      "node_type": "AssumptionNode",
+      "text": "Continental population movements can provide historical context without establishing a direct causal chain to specific Japanese cultural formations.",
+      "tier": "B",
+      "risk_level": "medium",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "A5",
+      "node_type": "AssumptionNode",
+      "text": "Multiple independent anomalies can be examined abductively without claiming that any single line of evidence proves the model.",
+      "tier": "M",
+      "risk_level": "low",
+      "confidence": "high"
+    },
+    {
+      "node_id": "EX1",
+      "node_type": "ExceptionNode",
+      "text": "High D1a2a/D-M55 paternal frequency coexists with largely continental-derived autosomal ancestry in many mainland Japanese population models.",
+      "target_narrative": "N2",
+      "source": "E1/E2",
+      "tier": "B",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "EX2",
+      "node_type": "ExceptionNode",
+      "text": "Dotaku discontinuity remains a striking ritual-system change that may not be fully explained by simple continuity language.",
+      "target_narrative": "N3",
+      "source": "E4",
+      "tier": "B",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "EX3",
+      "node_type": "ExceptionNode",
+      "text": "Kiki narratives repeatedly organize descent, land transfer, submission, and agricultural origins, inviting structured rather than literal comparison with social integration motifs.",
+      "target_narrative": "N4",
+      "source": "E6",
+      "tier": "B",
+      "confidence": "low"
+    },
+    {
+      "node_id": "EX4",
+      "node_type": "ExceptionNode",
+      "text": "Coastal continental gene-flow evidence complicates simplified, single-event migration narratives.",
+      "target_narrative": "N5",
+      "source": "E7",
+      "tier": "B",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "I1",
+      "node_type": "InferenceNode",
+      "text": "Paternal-lineage asymmetry may reflect some form of social or reproductive advantage rather than passive survival alone.",
+      "tier": "B",
+      "depends_on": [
+        "E1",
+        "E2",
+        "E3",
+        "A1",
+        "EX1"
+      ],
+      "risks": [
+        "R1"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "node_id": "I2",
+      "node_type": "InferenceNode",
+      "text": "Dotaku discontinuity may reflect social reorganization, network disruption, ritual authority transfer, or elite replacement, not only internal ritual transformation.",
+      "tier": "B",
+      "depends_on": [
+        "E4",
+        "E5",
+        "A2",
+        "EX2"
+      ],
+      "risks": [
+        "R2"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "node_id": "I3",
+      "node_type": "InferenceNode",
+      "text": "Kiki mythic structures may be examined as possible transformed ritual-political memory, not literal historical record.",
+      "tier": "B",
+      "depends_on": [
+        "E6",
+        "A3",
+        "EX3"
+      ],
+      "risks": [
+        "R3"
+      ],
+      "confidence": "low"
+    },
+    {
+      "node_id": "I4",
+      "node_type": "InferenceNode",
+      "text": "Shandong/Haidai and northern coastal gene-flow evidence may provide historical context for Yayoi-to-Kofun continental ancestry, but not a direct proven cause.",
+      "tier": "B",
+      "depends_on": [
+        "E7",
+        "E8",
+        "A4",
+        "EX4"
+      ],
+      "risks": [
+        "R4"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "node_id": "I5",
+      "node_type": "InferenceNode",
+      "text": "The three anomaly families may be considered together as a cross-domain abductive model of Late Yayoi-to-early Kofun social reorganization.",
+      "tier": "B",
+      "depends_on": [
+        "I1",
+        "I2",
+        "I3",
+        "I4",
+        "A5"
+      ],
+      "risks": [
+        "R6"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "node_id": "UC1",
+      "node_type": "UserClaimNode",
+      "text": "The paternal-lineage asymmetry may indicate some form of social or reproductive advantage for Jomon-associated paternal lineages.",
+      "domain": "population genetics / social history",
+      "tier": "B",
+      "supporting_sources": [
+        "E1",
+        "E2",
+        "E3",
+        "I1"
+      ],
+      "related_target_papers": [
+        "P1",
+        "P2"
+      ],
+      "related_target_narratives": [
+        "N1",
+        "N2"
+      ],
+      "risks": [
+        "R1"
+      ],
+      "falsifiers": [
+        "F1",
+        "F5"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "node_id": "UC2",
+      "node_type": "UserClaimNode",
+      "text": "The end of dotaku ritual may reflect social reorganization or network disruption, not solely internal cultural transformation.",
+      "domain": "archaeology / social history",
+      "tier": "B",
+      "supporting_sources": [
+        "E4",
+        "E5",
+        "I2"
+      ],
+      "related_target_papers": [
+        "P3",
+        "P4"
+      ],
+      "related_target_narratives": [
+        "N3"
+      ],
+      "risks": [
+        "R2"
+      ],
+      "falsifiers": [
+        "F2"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "node_id": "UC3",
+      "node_type": "UserClaimNode",
+      "text": "Kiki mythic structures may preserve transformed structures of ritual-political memory related to social integration.",
+      "domain": "mythology / intellectual history",
+      "tier": "B",
+      "supporting_sources": [
+        "E6",
+        "I3"
+      ],
+      "related_target_papers": [
+        "P5"
+      ],
+      "related_target_narratives": [
+        "N4"
+      ],
+      "risks": [
+        "R3"
+      ],
+      "falsifiers": [
+        "F3"
+      ],
+      "confidence": "low"
+    },
+    {
+      "node_id": "UC4",
+      "node_type": "UserClaimNode",
+      "text": "Continental East Asian population dynamics around Shandong/Haidai and northern coastal routes may provide historical context for Yayoi-to-Kofun transformations, without proving a direct Shang-Zhou-to-Yayoi causal chain.",
+      "domain": "ancient DNA / historical background",
+      "tier": "B",
+      "supporting_sources": [
+        "E7",
+        "E8",
+        "I4"
+      ],
+      "related_target_papers": [
+        "P6",
+        "P7"
+      ],
+      "related_target_narratives": [
+        "N5"
+      ],
+      "risks": [
+        "R4"
+      ],
+      "falsifiers": [
+        "F4"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "node_id": "UC5",
+      "node_type": "UserClaimNode",
+      "text": "The paternal-lineage asymmetry, dotaku discontinuity, Kiki mythic structures, and continental background can be framed as a single testable abductive hypothesis about Late Yayoi-to-early Kofun social reorganization.",
+      "domain": "cross-domain synthesis",
+      "tier": "B",
+      "supporting_sources": [
+        "I1",
+        "I2",
+        "I3",
+        "I4",
+        "I5"
+      ],
+      "related_target_papers": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6",
+        "P7"
+      ],
+      "related_target_narratives": [
+        "N1",
+        "N2",
+        "N3",
+        "N4",
+        "N5"
+      ],
+      "risks": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "falsifiers": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "node_id": "N1",
+      "node_type": "NarrativeNode",
+      "text": "The standard Japanese population-history narrative treats Yayoi agriculturalists as demographically overlaying Jomon hunter-gatherers.",
+      "source_status": "textbook_canonical / synthetic_consensus",
+      "citation_debt": "medium",
+      "component_claims": [
+        "Yayoi agriculturalists migrated from the continent",
+        "Yayoi populations demographically outweighed Jomon groups",
+        "Modern Japanese formed through admixture and demographic replacement"
+      ],
+      "tier": "unknown",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "N2",
+      "node_type": "NarrativeNode",
+      "text": "D1a2a/D-M55 persistence is best understood as passive Jomon-associated survival rather than a possible social signal.",
+      "source_status": "synthetic_consensus / ai_frequency_narrative",
+      "citation_debt": "medium",
+      "component_claims": [
+        "D1a2a/D-M55 is Jomon-associated",
+        "Persistence is mainly passive survival",
+        "Social-elite interpretations are usually not foregrounded"
+      ],
+      "tier": "unknown",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "N3",
+      "node_type": "NarrativeNode",
+      "text": "Dotaku discontinuity is usually treated as internal ritual transformation or cultural transition.",
+      "source_status": "textbook_canonical / review_supported",
+      "citation_debt": "medium",
+      "component_claims": [
+        "Dotaku ritual ended as part of internal cultural change",
+        "The end need not imply external disruption"
+      ],
+      "tier": "unknown",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "N4",
+      "node_type": "NarrativeNode",
+      "text": "Kiki mythic material is often treated as literary-theological or royal legitimation tradition rather than usable social-historical memory.",
+      "source_status": "textbook_canonical / disciplinary_habit",
+      "citation_debt": "high",
+      "component_claims": [
+        "Myths are not direct chronicles",
+        "Mythic structures are difficult to connect to social process",
+        "Royal legitimation is the main interpretive frame"
+      ],
+      "tier": "unknown",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "N5",
+      "node_type": "NarrativeNode",
+      "text": "Yayoi formation is sometimes narrated as a migration story without precise specification of East Asian source dynamics or staged coastal movements.",
+      "source_status": "textbook_canonical / synthetic_consensus",
+      "citation_debt": "medium",
+      "component_claims": [
+        "Continental migration brought wet-rice agriculture",
+        "The specific source dynamics are often simplified",
+        "Political events such as Shang-Zhou are rarely integrated"
+      ],
+      "tier": "unknown",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "G1",
+      "node_type": "GapNode",
+      "text": "Autosomal ancestry models do not by themselves explain the social-historical meaning of paternal-lineage asymmetry.",
+      "located_in": [
+        "P1",
+        "P2",
+        "N1",
+        "N2"
+      ],
+      "importance": "high",
+      "tier": "B",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "G2",
+      "node_type": "GapNode",
+      "text": "Dotaku ritual discontinuity is archaeologically described but not always integrated with population history or later mythic-political narratives.",
+      "located_in": [
+        "P3",
+        "N3"
+      ],
+      "importance": "medium",
+      "tier": "B",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "G3",
+      "node_type": "GapNode",
+      "text": "Kiki mythic structures are often interpreted within textual or legitimation frames without cross-domain testing against archaeological and genetic anomalies.",
+      "located_in": [
+        "P5",
+        "N4"
+      ],
+      "importance": "medium",
+      "tier": "B",
+      "confidence": "low"
+    },
+    {
+      "node_id": "G4",
+      "node_type": "GapNode",
+      "text": "Continental source dynamics for Yayoi formation are not always connected to specific ancient DNA findings in public or textbook narratives.",
+      "located_in": [
+        "P6",
+        "N5"
+      ],
+      "importance": "medium",
+      "tier": "B",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "G5",
+      "node_type": "GapNode",
+      "text": "No single target paper is responsible for cross-domain consistency among paternal-lineage asymmetry, dotaku discontinuity, and Kiki mythic structures.",
+      "located_in": [
+        "N1",
+        "N2",
+        "N3",
+        "N4"
+      ],
+      "importance": "high",
+      "tier": "B",
+      "confidence": "high"
+    },
+    {
+      "node_id": "R1",
+      "node_type": "RiskNode",
+      "text": "Y-chromosome frequency alone cannot prove conquest, elite dominance, or social advantage.",
+      "risky_phrase": "indicate social or reproductive advantage",
+      "why_risky": "Frequency asymmetry can arise through drift, founder effects, sampling, demography, or social institutions without conquest.",
+      "suggested_patch": "Use 'may indicate' and explicitly list alternative explanations and ancient-DNA falsifiers.",
+      "tier": "X",
+      "confidence": "high"
+    },
+    {
+      "node_id": "R2",
+      "node_type": "RiskNode",
+      "text": "Dotaku discontinuity alone cannot prove external disruption or political takeover.",
+      "risky_phrase": "network disruption",
+      "why_risky": "Internal ritual transformation may explain the discontinuity without external social disruption.",
+      "suggested_patch": "Frame disruption as one possible interpretation requiring independent support.",
+      "tier": "X",
+      "confidence": "high"
+    },
+    {
+      "node_id": "R3",
+      "node_type": "RiskNode",
+      "text": "Kiki mythic structures cannot be read as literal historical record.",
+      "risky_phrase": "preserve structures of ritual-political memory",
+      "why_risky": "Mythic correspondences can be overread without independent controls.",
+      "suggested_patch": "Use method language: possible transformed memory structure, not direct evidence.",
+      "tier": "X",
+      "confidence": "high"
+    },
+    {
+      "node_id": "R4",
+      "node_type": "RiskNode",
+      "text": "A direct Shang-Zhou-to-Yayoi migration chain is not established.",
+      "risky_phrase": "direct trigger",
+      "why_risky": "Ancient DNA can indicate regional dynamics and gene flow without proving a specific political-event cause.",
+      "suggested_patch": "Use 'historical context' rather than 'direct cause' or 'trigger'.",
+      "tier": "X",
+      "confidence": "high"
+    },
+    {
+      "node_id": "R5",
+      "node_type": "RiskNode",
+      "text": "Calling the Dotaku cultural sphere 'immigrant' overstates the identification of cultural sphere and migrant population.",
+      "risky_phrase": "immigrant Dotaku cultural sphere",
+      "why_risky": "Dotaku cultural affiliation is not identical to direct immigrant status.",
+      "suggested_patch": "Use 'continental-associated Dotaku cultural sphere' or 'Yayoi/Dotaku cultural sphere'.",
+      "tier": "X",
+      "confidence": "high"
+    },
+    {
+      "node_id": "R6",
+      "node_type": "RiskNode",
+      "text": "Combining genetics, archaeology, and myth can create a false impression of proof if the abductive status is not maintained.",
+      "risky_phrase": "single integrated model",
+      "why_risky": "Consilience can suggest an explanatory frame but cannot replace domain-specific evidence.",
+      "suggested_patch": "State that the model is a working hypothesis and preserve A/B/C/X distinctions.",
+      "tier": "X",
+      "confidence": "high"
+    },
+    {
+      "node_id": "F1",
+      "node_type": "FalsifierNode",
+      "text": "Representative Kofun elite burials do not show elevated D1a2a/D-M55 compared with non-elite or contemporaneous populations.",
+      "would_weaken": [
+        "UC1",
+        "I1",
+        "UC5"
+      ],
+      "required_evidence": "Representative ancient DNA from elite and non-elite Kofun burials.",
+      "tier": "M",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "F2",
+      "node_type": "FalsifierNode",
+      "text": "Regional dotaku chronologies fully explain the discontinuity as continuous local ritual transformation without social network disruption.",
+      "would_weaken": [
+        "UC2",
+        "I2",
+        "UC5"
+      ],
+      "required_evidence": "Fine-grained regional archaeological sequences showing continuity without network break or authority transfer.",
+      "tier": "M",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "F3",
+      "node_type": "FalsifierNode",
+      "text": "Kiki descent, land-transfer, and agricultural-origin motifs are shown to be late literary constructions with no stable earlier transmission pattern.",
+      "would_weaken": [
+        "UC3",
+        "I3",
+        "UC5"
+      ],
+      "required_evidence": "Textual-historical evidence for late invention or instability of the relevant motifs.",
+      "tier": "M",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "F4",
+      "node_type": "FalsifierNode",
+      "text": "Yayoi-related migration is adequately explained by source dynamics independent of Shandong/Haidai or northern coastal-route ancestry.",
+      "would_weaken": [
+        "UC4",
+        "I4"
+      ],
+      "required_evidence": "Ancient DNA models excluding Shandong/Haidai-related coastal contribution from relevant Yayoi-to-Kofun transformations.",
+      "tier": "M",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "F5",
+      "node_type": "FalsifierNode",
+      "text": "Neutral demographic models adequately explain modern Y-D1a2a/D-M55 frequency without any sex-biased social advantage.",
+      "would_weaken": [
+        "UC1",
+        "I1"
+      ],
+      "required_evidence": "Robust population-genetic modeling explaining the paternal/autosomal asymmetry through drift, founder effects, or sampling alone.",
+      "tier": "M",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "M1",
+      "node_type": "MethodNode",
+      "method_name": "Abductive Reasoning",
+      "text": "The model proposes a candidate explanation across multiple observations; it does not prove the hypothesis.",
+      "not_evidence": true,
+      "tier": "M",
+      "confidence": "high"
+    },
+    {
+      "node_id": "M2",
+      "node_type": "MethodNode",
+      "method_name": "Claim Stratification",
+      "text": "A/B/C/X/M separates evidence, plausible inference, speculation, overclaim, and method.",
+      "not_evidence": true,
+      "tier": "M",
+      "confidence": "high"
+    },
+    {
+      "node_id": "M3",
+      "node_type": "MethodNode",
+      "method_name": "Consilience",
+      "text": "Independent lines of evidence may converge on a shared explanatory frame without any single line proving it.",
+      "not_evidence": true,
+      "tier": "M",
+      "confidence": "high"
+    },
+    {
+      "node_id": "M4",
+      "node_type": "MethodNode",
+      "method_name": "Myth as Social Memory, Not Literal Chronicle",
+      "text": "Myths are not direct historical records; persistent structures may be examined for possible correspondences under strict caution.",
+      "not_evidence": true,
+      "tier": "M",
+      "confidence": "high"
+    },
+    {
+      "node_id": "M6",
+      "node_type": "MethodNode",
+      "method_name": "Oral Genealogy and Political Legitimacy",
+      "text": "Examples such as Kumulipo show how oral cosmological genealogies can bind creation, descent, ecology, and political legitimacy without being literal chronicles.",
+      "not_evidence": true,
+      "tier": "M",
+      "confidence": "medium"
+    },
+    {
+      "node_id": "M7",
+      "node_type": "MethodNode",
+      "method_name": "Heuristic Comparative History",
+      "text": "Comparative history cases such as Dorian, Germanic, Mongol, Andean, or highland/lowland examples are possibility structures, not evidence for the Japanese case.",
+      "not_evidence": true,
+      "tier": "M",
+      "confidence": "high"
+    },
+    {
+      "node_id": "M8",
+      "node_type": "MethodNode",
+      "method_name": "Falsification-Oriented Framing",
+      "text": "Each major claim should state what evidence would weaken or falsify it.",
+      "not_evidence": true,
+      "tier": "M",
+      "confidence": "high"
+    }
+  ],
+  "edges": [
+    {
+      "from": "P1",
+      "to": "SC1",
+      "relation": "supports",
+      "reason": "P1 is the source for SC1.",
+      "confidence": "high"
+    },
+    {
+      "from": "P2",
+      "to": "SC2",
+      "relation": "supports",
+      "reason": "P2 is the source for SC2.",
+      "confidence": "high"
+    },
+    {
+      "from": "P3",
+      "to": "SC3",
+      "relation": "supports",
+      "reason": "P3 is the source for SC3.",
+      "confidence": "high"
+    },
+    {
+      "from": "P4",
+      "to": "SC4",
+      "relation": "supports",
+      "reason": "P4 is the source for SC4.",
+      "confidence": "high"
+    },
+    {
+      "from": "P5",
+      "to": "SC5",
+      "relation": "supports",
+      "reason": "P5 is the source for SC5.",
+      "confidence": "high"
+    },
+    {
+      "from": "P6",
+      "to": "SC6",
+      "relation": "supports",
+      "reason": "P6 is the source for SC6.",
+      "confidence": "high"
+    },
+    {
+      "from": "P7",
+      "to": "SC7",
+      "relation": "supports",
+      "reason": "P7 is the source for SC7.",
+      "confidence": "high"
+    },
+    {
+      "from": "SC1",
+      "to": "E1",
+      "relation": "supports",
+      "reason": "SC1 supports E1.",
+      "confidence": "high"
+    },
+    {
+      "from": "SC2",
+      "to": "E2",
+      "relation": "supports",
+      "reason": "SC2 supports E2.",
+      "confidence": "high"
+    },
+    {
+      "from": "SC3",
+      "to": "E4",
+      "relation": "supports",
+      "reason": "SC3 supports E4.",
+      "confidence": "medium"
+    },
+    {
+      "from": "SC4",
+      "to": "E5",
+      "relation": "supports",
+      "reason": "SC4 supports E5.",
+      "confidence": "medium"
+    },
+    {
+      "from": "SC5",
+      "to": "E6",
+      "relation": "supports",
+      "reason": "SC5 supports E6.",
+      "confidence": "high"
+    },
+    {
+      "from": "SC6",
+      "to": "E7",
+      "relation": "supports",
+      "reason": "SC6 supports E7.",
+      "confidence": "medium"
+    },
+    {
+      "from": "SC7",
+      "to": "E8",
+      "relation": "supports",
+      "reason": "SC7 supports E8.",
+      "confidence": "medium"
+    },
+    {
+      "from": "E1",
+      "to": "E3",
+      "relation": "supports_weakly",
+      "reason": "E1 supplies the paternal-line side of the asymmetry.",
+      "confidence": "medium"
+    },
+    {
+      "from": "E2",
+      "to": "E3",
+      "relation": "supports_weakly",
+      "reason": "E2 supplies the autosomal ancestry side of the asymmetry.",
+      "confidence": "medium"
+    },
+    {
+      "from": "EX1",
+      "to": "N2",
+      "relation": "challenges_narrative",
+      "reason": "EX1 complicates passive survival-only narrative.",
+      "confidence": "medium"
+    },
+    {
+      "from": "EX2",
+      "to": "N3",
+      "relation": "challenges_narrative",
+      "reason": "EX2 complicates internal transformation-only narrative.",
+      "confidence": "medium"
+    },
+    {
+      "from": "EX3",
+      "to": "N4",
+      "relation": "challenges_narrative",
+      "reason": "EX3 complicates purely literary-theological narrative.",
+      "confidence": "medium"
+    },
+    {
+      "from": "EX4",
+      "to": "N5",
+      "relation": "challenges_narrative",
+      "reason": "EX4 complicates simplified migration narrative.",
+      "confidence": "medium"
+    },
+    {
+      "from": "E3",
+      "to": "EX1",
+      "relation": "supports_weakly",
+      "reason": "E3 supplies the observation used in EX1.",
+      "confidence": "medium"
+    },
+    {
+      "from": "E4",
+      "to": "EX2",
+      "relation": "supports_weakly",
+      "reason": "E4 supplies the observation used in EX2.",
+      "confidence": "medium"
+    },
+    {
+      "from": "E6",
+      "to": "EX3",
+      "relation": "supports_weakly",
+      "reason": "E6 supplies the observation used in EX3.",
+      "confidence": "medium"
+    },
+    {
+      "from": "E7",
+      "to": "EX4",
+      "relation": "supports_weakly",
+      "reason": "E7 supplies the observation used in EX4.",
+      "confidence": "medium"
+    },
+    {
+      "from": "A1",
+      "to": "I1",
+      "relation": "depends_on",
+      "reason": "I1 depends on A1.",
+      "confidence": "medium"
+    },
+    {
+      "from": "A2",
+      "to": "I2",
+      "relation": "depends_on",
+      "reason": "I2 depends on A2.",
+      "confidence": "medium"
+    },
+    {
+      "from": "A3",
+      "to": "I3",
+      "relation": "depends_on",
+      "reason": "I3 depends on A3.",
+      "confidence": "medium"
+    },
+    {
+      "from": "A4",
+      "to": "I4",
+      "relation": "depends_on",
+      "reason": "I4 depends on A4.",
+      "confidence": "medium"
+    },
+    {
+      "from": "A5",
+      "to": "I5",
+      "relation": "depends_on",
+      "reason": "I5 depends on A5.",
+      "confidence": "medium"
+    },
+    {
+      "from": "E3",
+      "to": "I1",
+      "relation": "supports_weakly",
+      "reason": "E3 is a non-decisive input to I1.",
+      "confidence": "medium"
+    },
+    {
+      "from": "EX1",
+      "to": "I1",
+      "relation": "supports_weakly",
+      "reason": "EX1 is a non-decisive input to I1.",
+      "confidence": "medium"
+    },
+    {
+      "from": "E4",
+      "to": "I2",
+      "relation": "supports_weakly",
+      "reason": "E4 is a non-decisive input to I2.",
+      "confidence": "medium"
+    },
+    {
+      "from": "E5",
+      "to": "I2",
+      "relation": "supports_weakly",
+      "reason": "E5 is a non-decisive input to I2.",
+      "confidence": "medium"
+    },
+    {
+      "from": "EX2",
+      "to": "I2",
+      "relation": "supports_weakly",
+      "reason": "EX2 is a non-decisive input to I2.",
+      "confidence": "medium"
+    },
+    {
+      "from": "E6",
+      "to": "I3",
+      "relation": "supports_weakly",
+      "reason": "E6 is a non-decisive input to I3.",
+      "confidence": "medium"
+    },
+    {
+      "from": "EX3",
+      "to": "I3",
+      "relation": "supports_weakly",
+      "reason": "EX3 is a non-decisive input to I3.",
+      "confidence": "medium"
+    },
+    {
+      "from": "E7",
+      "to": "I4",
+      "relation": "supports_weakly",
+      "reason": "E7 is a non-decisive input to I4.",
+      "confidence": "medium"
+    },
+    {
+      "from": "E8",
+      "to": "I4",
+      "relation": "supports_weakly",
+      "reason": "E8 is a non-decisive input to I4.",
+      "confidence": "medium"
+    },
+    {
+      "from": "EX4",
+      "to": "I4",
+      "relation": "supports_weakly",
+      "reason": "EX4 is a non-decisive input to I4.",
+      "confidence": "medium"
+    },
+    {
+      "from": "I1",
+      "to": "I5",
+      "relation": "supports_weakly",
+      "reason": "I1 contributes to the cross-domain abductive model.",
+      "confidence": "medium"
+    },
+    {
+      "from": "I2",
+      "to": "I5",
+      "relation": "supports_weakly",
+      "reason": "I2 contributes to the cross-domain abductive model.",
+      "confidence": "medium"
+    },
+    {
+      "from": "I3",
+      "to": "I5",
+      "relation": "supports_weakly",
+      "reason": "I3 contributes to the cross-domain abductive model.",
+      "confidence": "medium"
+    },
+    {
+      "from": "I4",
+      "to": "I5",
+      "relation": "supports_weakly",
+      "reason": "I4 contributes to the cross-domain abductive model.",
+      "confidence": "medium"
+    },
+    {
+      "from": "I1",
+      "to": "UC1",
+      "relation": "supports_weakly",
+      "reason": "I1 is the inferential bridge to UC1.",
+      "confidence": "medium"
+    },
+    {
+      "from": "I2",
+      "to": "UC2",
+      "relation": "supports_weakly",
+      "reason": "I2 is the inferential bridge to UC2.",
+      "confidence": "medium"
+    },
+    {
+      "from": "I3",
+      "to": "UC3",
+      "relation": "supports_weakly",
+      "reason": "I3 is the inferential bridge to UC3.",
+      "confidence": "medium"
+    },
+    {
+      "from": "I4",
+      "to": "UC4",
+      "relation": "supports_weakly",
+      "reason": "I4 is the inferential bridge to UC4.",
+      "confidence": "medium"
+    },
+    {
+      "from": "I5",
+      "to": "UC5",
+      "relation": "supports_weakly",
+      "reason": "I5 is the inferential bridge to UC5.",
+      "confidence": "medium"
+    },
+    {
+      "from": "UC1",
+      "to": "N1",
+      "relation": "challenges_narrative",
+      "reason": "UC1 reframes or challenges N1.",
+      "confidence": "medium"
+    },
+    {
+      "from": "UC1",
+      "to": "N2",
+      "relation": "challenges_narrative",
+      "reason": "UC1 reframes or challenges N2.",
+      "confidence": "medium"
+    },
+    {
+      "from": "UC2",
+      "to": "N3",
+      "relation": "challenges_narrative",
+      "reason": "UC2 reframes or challenges N3.",
+      "confidence": "medium"
+    },
+    {
+      "from": "UC3",
+      "to": "N4",
+      "relation": "challenges_narrative",
+      "reason": "UC3 reframes or challenges N4.",
+      "confidence": "medium"
+    },
+    {
+      "from": "UC4",
+      "to": "N5",
+      "relation": "challenges_narrative",
+      "reason": "UC4 reframes or challenges N5.",
+      "confidence": "medium"
+    },
+    {
+      "from": "UC5",
+      "to": "N1",
+      "relation": "challenges_narrative",
+      "reason": "UC5 reframes or challenges N1.",
+      "confidence": "medium"
+    },
+    {
+      "from": "UC5",
+      "to": "N2",
+      "relation": "challenges_narrative",
+      "reason": "UC5 reframes or challenges N2.",
+      "confidence": "medium"
+    },
+    {
+      "from": "UC5",
+      "to": "N3",
+      "relation": "challenges_narrative",
+      "reason": "UC5 reframes or challenges N3.",
+      "confidence": "medium"
+    },
+    {
+      "from": "UC5",
+      "to": "N4",
+      "relation": "challenges_narrative",
+      "reason": "UC5 reframes or challenges N4.",
+      "confidence": "medium"
+    },
+    {
+      "from": "UC5",
+      "to": "N5",
+      "relation": "challenges_narrative",
+      "reason": "UC5 reframes or challenges N5.",
+      "confidence": "medium"
+    },
+    {
+      "from": "UC1",
+      "to": "G1",
+      "relation": "explains_gap",
+      "reason": "UC1 offers a possible explanation or framing for G1.",
+      "confidence": "medium"
+    },
+    {
+      "from": "UC2",
+      "to": "G2",
+      "relation": "explains_gap",
+      "reason": "UC2 offers a possible explanation or framing for G2.",
+      "confidence": "medium"
+    },
+    {
+      "from": "UC3",
+      "to": "G3",
+      "relation": "explains_gap",
+      "reason": "UC3 offers a possible explanation or framing for G3.",
+      "confidence": "medium"
+    },
+    {
+      "from": "UC4",
+      "to": "G4",
+      "relation": "explains_gap",
+      "reason": "UC4 offers a possible explanation or framing for G4.",
+      "confidence": "medium"
+    },
+    {
+      "from": "UC5",
+      "to": "G5",
+      "relation": "explains_gap",
+      "reason": "UC5 offers a possible explanation or framing for G5.",
+      "confidence": "medium"
+    },
+    {
+      "from": "R1",
+      "to": "UC1",
+      "relation": "qualifies",
+      "reason": "R1 limits the wording and evidentiary strength of UC1.",
+      "confidence": "high"
+    },
+    {
+      "from": "R2",
+      "to": "UC2",
+      "relation": "qualifies",
+      "reason": "R2 limits the wording and evidentiary strength of UC2.",
+      "confidence": "high"
+    },
+    {
+      "from": "R3",
+      "to": "UC3",
+      "relation": "qualifies",
+      "reason": "R3 limits the wording and evidentiary strength of UC3.",
+      "confidence": "high"
+    },
+    {
+      "from": "R4",
+      "to": "UC4",
+      "relation": "qualifies",
+      "reason": "R4 limits the wording and evidentiary strength of UC4.",
+      "confidence": "high"
+    },
+    {
+      "from": "R5",
+      "to": "UC5",
+      "relation": "qualifies",
+      "reason": "R5 limits the wording and evidentiary strength of UC5.",
+      "confidence": "high"
+    },
+    {
+      "from": "R6",
+      "to": "UC5",
+      "relation": "qualifies",
+      "reason": "R6 limits the wording and evidentiary strength of UC5.",
+      "confidence": "high"
+    },
+    {
+      "from": "F1",
+      "to": "UC1",
+      "relation": "falsified_by",
+      "reason": "F1 identifies evidence that would weaken UC1.",
+      "confidence": "medium"
+    },
+    {
+      "from": "F2",
+      "to": "UC2",
+      "relation": "falsified_by",
+      "reason": "F2 identifies evidence that would weaken UC2.",
+      "confidence": "medium"
+    },
+    {
+      "from": "F3",
+      "to": "UC3",
+      "relation": "falsified_by",
+      "reason": "F3 identifies evidence that would weaken UC3.",
+      "confidence": "medium"
+    },
+    {
+      "from": "F4",
+      "to": "UC4",
+      "relation": "falsified_by",
+      "reason": "F4 identifies evidence that would weaken UC4.",
+      "confidence": "medium"
+    },
+    {
+      "from": "F5",
+      "to": "UC1",
+      "relation": "falsified_by",
+      "reason": "F5 identifies evidence that would weaken UC1.",
+      "confidence": "medium"
+    },
+    {
+      "from": "F1",
+      "to": "UC5",
+      "relation": "falsified_by",
+      "reason": "F1 identifies evidence that would weaken UC5.",
+      "confidence": "medium"
+    },
+    {
+      "from": "F2",
+      "to": "UC5",
+      "relation": "falsified_by",
+      "reason": "F2 identifies evidence that would weaken UC5.",
+      "confidence": "medium"
+    },
+    {
+      "from": "F3",
+      "to": "UC5",
+      "relation": "falsified_by",
+      "reason": "F3 identifies evidence that would weaken UC5.",
+      "confidence": "medium"
+    },
+    {
+      "from": "M1",
+      "to": "UC5",
+      "relation": "not_direct_evidence",
+      "reason": "M1 is methodological framing only, not direct evidence for UC5.",
+      "confidence": "high"
+    },
+    {
+      "from": "M2",
+      "to": "UC5",
+      "relation": "not_direct_evidence",
+      "reason": "M2 is methodological framing only, not direct evidence for UC5.",
+      "confidence": "high"
+    },
+    {
+      "from": "M3",
+      "to": "UC5",
+      "relation": "not_direct_evidence",
+      "reason": "M3 is methodological framing only, not direct evidence for UC5.",
+      "confidence": "high"
+    },
+    {
+      "from": "M4",
+      "to": "UC3",
+      "relation": "heuristic_analogy_for",
+      "reason": "M4 is methodological framing only, not direct evidence for UC3.",
+      "confidence": "high"
+    },
+    {
+      "from": "M6",
+      "to": "UC3",
+      "relation": "heuristic_analogy_for",
+      "reason": "M6 is methodological framing only, not direct evidence for UC3.",
+      "confidence": "high"
+    },
+    {
+      "from": "M7",
+      "to": "UC2",
+      "relation": "heuristic_analogy_for",
+      "reason": "M7 is methodological framing only, not direct evidence for UC2.",
+      "confidence": "high"
+    },
+    {
+      "from": "M7",
+      "to": "UC3",
+      "relation": "heuristic_analogy_for",
+      "reason": "M7 is methodological framing only, not direct evidence for UC3.",
+      "confidence": "high"
+    },
+    {
+      "from": "M8",
+      "to": "UC5",
+      "relation": "not_direct_evidence",
+      "reason": "M8 is methodological framing only, not direct evidence for UC5.",
+      "confidence": "high"
+    }
+  ]
+}

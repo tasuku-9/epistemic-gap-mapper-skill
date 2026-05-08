@@ -29,7 +29,8 @@ Create a folder in `examples/` with:
 - `input_summary.md`
 - `target_papers.md`
 - `target_narratives.md`
-- `nodes_sample.json`
+- `nodes_minimal.json`
+- `nodes_full.json` when the case needs fuller coverage
 - `breakthrough_diagnosis_sample.md`
 
 ## Adding a new method tag

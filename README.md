@@ -80,6 +80,19 @@ This skill is useful when a researcher, independent scholar, journalist, graduat
 - which standard narrative is being challenged,
 - and what evidence would falsify the hypothesis.
 
+## Jomon / Dotaku / Kiki Worked Examples
+
+The `examples/jomon_dotaku_kiki/` folder contains two levels of node examples:
+
+- `nodes_minimal.json` — a compact readable graph for learning the node system.
+- `nodes_full.json` — a fuller graph covering major claims from the working paper, including paternal-lineage asymmetry, dotaku discontinuity, Kiki mythic structures, continental background, heuristic comparison, risks, and falsifiers.
+- `graph_sample_grouped.md` — a Mermaid graph with subgraphs for genetics, archaeology, mythology, continental background, narrative audit, comparative methods, and falsification.
+
+The `prose_case/` folder shows how the same broad hypothesis can be written in formal prose and then decomposed back into nodes:
+
+- `prose_case/prose_only_working_paper_sample.md`
+- `prose_case/node_decomposition_walkthrough.md`
+
 ## Repository contents
 
 - `SKILL.md` — Codex skill instructions and trigger metadata.
@@ -110,8 +123,9 @@ Executable helper scripts are intended for release under the **MIT License**. Te
 ## Validation
 
 ```bash
-python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_sample.json
-python scripts/egm_cli.py render examples/jomon_dotaku_kiki/nodes_sample.json --mermaid
+python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_minimal.json
+python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_full.json
+python scripts/egm_cli.py render examples/jomon_dotaku_kiki/nodes_full.json --mermaid
 ```
 
 ## v0.2 Additions

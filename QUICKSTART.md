@@ -39,8 +39,9 @@ Use `prompts/08_breakthrough_diagnosis.md`.
 ## Optional — Validate or render a node graph
 
 ```bash
-python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_sample.json
-python scripts/egm_cli.py render examples/jomon_dotaku_kiki/nodes_sample.json --mermaid
+python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_minimal.json
+python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_full.json
+python scripts/egm_cli.py render examples/jomon_dotaku_kiki/nodes_full.json --mermaid
 ```
 
 ## Principle
