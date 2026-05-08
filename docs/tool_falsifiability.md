@@ -14,6 +14,7 @@ Treat the mapper as failing, or at least needing redesign, when any of these pat
 4. Heuristic analogies, myths, comparisons, or methods are treated as direct evidence.
 5. Target narratives collapse into target papers, making diffuse citation debt look like direct paper conflict.
 6. Overclaims exceeding local source support are not detected.
+7. X-tier nodes are labeled only as "bad" without `failure_modes`, making the breakage impossible to inspect.
 
 ## Calibration checks
 

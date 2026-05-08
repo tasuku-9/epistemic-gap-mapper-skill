@@ -62,7 +62,8 @@ Audit fields:
 - falsifier presence,
 - definition consistency,
 - paper/narrative separation,
-- overclaim phrases.
+- overclaim phrases,
+- X-tier failure modes.
 
 Output:
 
@@ -71,7 +72,8 @@ Output:
 - C-tier candidates lacking falsifiers,
 - terms that need definition or scope control,
 - places where target papers and target narratives blur,
-- phrases that exceed local source support.
+- phrases that exceed local source support,
+- X-tier nodes missing `failure_modes`.
 
 ### Stage 5B - Human Tier Declaration
 

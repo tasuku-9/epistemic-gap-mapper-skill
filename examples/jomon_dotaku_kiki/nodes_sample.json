@@ -27,7 +27,10 @@
       "source": "P1",
       "domain": "population genetics",
       "tier": "A",
-      "supporting_sources": ["P1", "SC1"],
+      "supporting_sources": [
+        "P1",
+        "SC1"
+      ],
       "confidence": "high"
     },
     {
@@ -52,15 +55,24 @@
       "node_type": "InferenceNode",
       "text": "Paternal-lineage asymmetry may reflect some form of social or reproductive advantage rather than passive survival alone.",
       "tier": "B",
-      "depends_on": ["E1", "EX1", "A1"],
-      "risks": ["R1"],
+      "depends_on": [
+        "E1",
+        "EX1",
+        "A1"
+      ],
+      "risks": [
+        "R1"
+      ],
       "confidence": "medium"
     },
     {
       "node_id": "G1",
       "node_type": "GapNode",
       "text": "Autosomal ancestry models do not by themselves explain the social-historical meaning of paternal-lineage asymmetry.",
-      "located_in": ["P1", "N2"],
+      "located_in": [
+        "P1",
+        "N2"
+      ],
       "importance": "high",
       "tier": "B",
       "confidence": "medium"
@@ -71,11 +83,22 @@
       "text": "Paternal-lineage asymmetry may indicate some form of social or reproductive advantage for Jomon-associated paternal lineages.",
       "domain": "population genetics / social history",
       "tier": "B",
-      "supporting_sources": ["E1", "I1"],
-      "related_target_papers": ["P1"],
-      "related_target_narratives": ["N2"],
-      "risks": ["R1"],
-      "falsifiers": ["F1"],
+      "supporting_sources": [
+        "E1",
+        "I1"
+      ],
+      "related_target_papers": [
+        "P1"
+      ],
+      "related_target_narratives": [
+        "N2"
+      ],
+      "risks": [
+        "R1"
+      ],
+      "falsifiers": [
+        "F1"
+      ],
       "confidence": "medium"
     },
     {
@@ -84,7 +107,10 @@
       "text": "D1a2a/D-M55 persistence is best understood as passive Jomon-associated survival.",
       "source_status": "synthetic_consensus / ai_frequency_narrative",
       "citation_debt": "medium",
-      "component_claims": ["D1a2a/D-M55 is Jomon-associated", "Persistence is mainly passive survival"],
+      "component_claims": [
+        "D1a2a/D-M55 is Jomon-associated",
+        "Persistence is mainly passive survival"
+      ],
       "tier": "unknown",
       "confidence": "medium"
     },
@@ -107,7 +133,9 @@
       "source": "P2",
       "domain": "archaeology",
       "tier": "A",
-      "supporting_sources": ["P2"],
+      "supporting_sources": [
+        "P2"
+      ],
       "confidence": "high"
     },
     {
@@ -116,11 +144,21 @@
       "text": "The end of dotaku ritual may reflect social reorganization or network disruption, not solely internal cultural transformation.",
       "domain": "archaeology / social history",
       "tier": "B",
-      "supporting_sources": ["E2"],
-      "related_target_papers": ["P2"],
-      "related_target_narratives": ["N3"],
-      "risks": ["R2"],
-      "falsifiers": ["F2"],
+      "supporting_sources": [
+        "E2"
+      ],
+      "related_target_papers": [
+        "P2"
+      ],
+      "related_target_narratives": [
+        "N3"
+      ],
+      "risks": [
+        "R2"
+      ],
+      "falsifiers": [
+        "F2"
+      ],
       "confidence": "medium"
     },
     {
@@ -129,7 +167,9 @@
       "text": "Dotaku discontinuity is usually treated as internal ritual transformation or cultural transition.",
       "source_status": "textbook_canonical / review_supported",
       "citation_debt": "medium",
-      "component_claims": ["Dotaku ritual discontinuity is an internal cultural transition"],
+      "component_claims": [
+        "Dotaku ritual discontinuity is an internal cultural transition"
+      ],
       "tier": "unknown",
       "confidence": "medium"
     },
@@ -139,11 +179,21 @@
       "text": "Kiki myths may preserve structures of ritual-political memory related to social integration.",
       "domain": "mythology / intellectual history",
       "tier": "B",
-      "supporting_sources": ["P3"],
-      "related_target_papers": ["P3"],
-      "related_target_narratives": ["N4"],
-      "risks": ["R3"],
-      "falsifiers": ["F3"],
+      "supporting_sources": [
+        "P3"
+      ],
+      "related_target_papers": [
+        "P3"
+      ],
+      "related_target_narratives": [
+        "N4"
+      ],
+      "risks": [
+        "R3"
+      ],
+      "falsifiers": [
+        "F3"
+      ],
       "confidence": "low"
     },
     {
@@ -152,7 +202,10 @@
       "text": "Kiki mythic material is often treated as literary-theological tradition rather than usable social-historical memory.",
       "source_status": "textbook_canonical / disciplinary_habit",
       "citation_debt": "high",
-      "component_claims": ["Myths are not direct chronicles", "Mythic structures are difficult to connect to social process"],
+      "component_claims": [
+        "Myths are not direct chronicles",
+        "Mythic structures are difficult to connect to social process"
+      ],
       "tier": "unknown",
       "confidence": "medium"
     },
@@ -176,7 +229,12 @@
       "why_risky": "Frequency asymmetry can arise through multiple demographic and sampling processes.",
       "suggested_patch": "State this as a testable possibility and list alternative explanations.",
       "tier": "X",
-      "confidence": "high"
+      "confidence": "high",
+      "failure_modes": [
+        "scope_jump",
+        "evidence_laundering"
+      ],
+      "failure_mode_notes": "A lineage-frequency observation cannot by itself carry a conquest or elite-dominance conclusion."
     },
     {
       "node_id": "R2",
@@ -186,7 +244,12 @@
       "why_risky": "Internal ritual transformation may explain discontinuity without external social disruption.",
       "suggested_patch": "Frame disruption as one possible interpretation requiring independent support.",
       "tier": "X",
-      "confidence": "high"
+      "confidence": "high",
+      "failure_modes": [
+        "scope_jump",
+        "narrative_capture"
+      ],
+      "failure_mode_notes": "A ritual discontinuity can be captured by a disruption narrative before local continuity and chronology are checked."
     },
     {
       "node_id": "R3",
@@ -196,13 +259,21 @@
       "why_risky": "Mythic correspondences can be overread without independent controls.",
       "suggested_patch": "Use method language: possible transformed memory structure, not direct evidence.",
       "tier": "X",
-      "confidence": "high"
+      "confidence": "high",
+      "failure_modes": [
+        "analogy_inflation",
+        "evidence_laundering"
+      ],
+      "failure_mode_notes": "Mythic motifs are interpretive analogies and cannot be laundered into literal historical evidence."
     },
     {
       "node_id": "F1",
       "node_type": "FalsifierNode",
       "text": "If representative Kofun elite burials do not show elevated D1a2a/D-M55 compared with non-elites, the paternal-elite version is weakened.",
-      "would_weaken": ["UC1", "I1"],
+      "would_weaken": [
+        "UC1",
+        "I1"
+      ],
       "required_evidence": "Representative ancient DNA from elite and non-elite Kofun burials.",
       "tier": "M",
       "confidence": "medium"
@@ -211,7 +282,9 @@
       "node_id": "F2",
       "node_type": "FalsifierNode",
       "text": "If dotaku discontinuity is fully explained by local ritual transformation with no social network disruption, UC2 is weakened.",
-      "would_weaken": ["UC2"],
+      "would_weaken": [
+        "UC2"
+      ],
       "required_evidence": "Regional archaeological sequences showing continuous local transformation without disruption.",
       "tier": "M",
       "confidence": "medium"
@@ -220,7 +293,9 @@
       "node_id": "F3",
       "node_type": "FalsifierNode",
       "text": "If Kiki descent and land-transfer motifs are late literary constructions with no stable earlier pattern, UC3 is weakened.",
-      "would_weaken": ["UC3"],
+      "would_weaken": [
+        "UC3"
+      ],
       "required_evidence": "Textual-historical evidence for late invention or unstable transmission of the relevant motifs.",
       "tier": "M",
       "confidence": "medium"
@@ -236,27 +311,159 @@
     }
   ],
   "edges": [
-    {"from": "P1", "to": "SC1", "relation": "supports", "reason": "P1 is the source for SC1.", "confidence": "high"},
-    {"from": "SC1", "to": "E1", "relation": "supports", "reason": "SC1 supports the Y-lineage frequency observation.", "confidence": "high"},
-    {"from": "E1", "to": "EX1", "relation": "supports", "reason": "E1 supplies the lineage persistence observation used in EX1.", "confidence": "medium"},
-    {"from": "EX1", "to": "N2", "relation": "challenges_narrative", "reason": "EX1 complicates a passive-survival-only narrative.", "confidence": "medium"},
-    {"from": "A1", "to": "I1", "relation": "depends_on", "reason": "I1 depends on the assumption that Y-line asymmetry can preserve social signals.", "confidence": "medium"},
-    {"from": "E1", "to": "I1", "relation": "supports_weakly", "reason": "Frequency asymmetry is consistent with, but does not prove, social advantage.", "confidence": "medium"},
-    {"from": "I1", "to": "UC1", "relation": "supports_weakly", "reason": "I1 is the inferential bridge from E1 to UC1.", "confidence": "medium"},
-    {"from": "UC1", "to": "G1", "relation": "explains_gap", "reason": "UC1 proposes a possible social-historical interpretation of the gap.", "confidence": "medium"},
-    {"from": "UC1", "to": "N2", "relation": "challenges_narrative", "reason": "The claim reframes passive survival as possible social signal.", "confidence": "medium"},
-    {"from": "R1", "to": "UC1", "relation": "qualifies", "reason": "R1 limits the strength of UC1.", "confidence": "high"},
-    {"from": "F1", "to": "UC1", "relation": "falsified_by", "reason": "F1 gives a test that could weaken UC1.", "confidence": "medium"},
-    {"from": "P2", "to": "E2", "relation": "supports", "reason": "P2 provides dotaku ritual context.", "confidence": "medium"},
-    {"from": "E2", "to": "UC2", "relation": "supports_weakly", "reason": "Dotaku discontinuity allows but does not prove social reorganization.", "confidence": "medium"},
-    {"from": "UC2", "to": "N3", "relation": "challenges_narrative", "reason": "UC2 introduces an alternative to purely internal transformation.", "confidence": "medium"},
-    {"from": "R2", "to": "UC2", "relation": "qualifies", "reason": "R2 limits the strength of UC2.", "confidence": "high"},
-    {"from": "F2", "to": "UC2", "relation": "falsified_by", "reason": "F2 gives a test that could weaken UC2.", "confidence": "medium"},
-    {"from": "P3", "to": "UC3", "relation": "supports_weakly", "reason": "Primary texts contain motifs used by UC3, but they do not prove historical memory.", "confidence": "low"},
-    {"from": "UC3", "to": "N4", "relation": "challenges_narrative", "reason": "UC3 reframes mythic structures as possible social memory.", "confidence": "low"},
-    {"from": "R3", "to": "UC3", "relation": "qualifies", "reason": "R3 limits the strength of UC3.", "confidence": "high"},
-    {"from": "F3", "to": "UC3", "relation": "falsified_by", "reason": "F3 gives a test that could weaken UC3.", "confidence": "medium"},
-    {"from": "M7", "to": "UC2", "relation": "heuristic_analogy_for", "reason": "Comparative cases can frame possibility but not prove UC2.", "confidence": "high"},
-    {"from": "M7", "to": "UC3", "relation": "heuristic_analogy_for", "reason": "Comparative cases can frame possibility but not prove UC3.", "confidence": "high"}
+    {
+      "from": "P1",
+      "to": "SC1",
+      "relation": "supports",
+      "reason": "P1 is the source for SC1.",
+      "confidence": "high"
+    },
+    {
+      "from": "SC1",
+      "to": "E1",
+      "relation": "supports",
+      "reason": "SC1 supports the Y-lineage frequency observation.",
+      "confidence": "high"
+    },
+    {
+      "from": "E1",
+      "to": "EX1",
+      "relation": "supports",
+      "reason": "E1 supplies the lineage persistence observation used in EX1.",
+      "confidence": "medium"
+    },
+    {
+      "from": "EX1",
+      "to": "N2",
+      "relation": "challenges_narrative",
+      "reason": "EX1 complicates a passive-survival-only narrative.",
+      "confidence": "medium"
+    },
+    {
+      "from": "A1",
+      "to": "I1",
+      "relation": "depends_on",
+      "reason": "I1 depends on the assumption that Y-line asymmetry can preserve social signals.",
+      "confidence": "medium"
+    },
+    {
+      "from": "E1",
+      "to": "I1",
+      "relation": "supports_weakly",
+      "reason": "Frequency asymmetry is consistent with, but does not prove, social advantage.",
+      "confidence": "medium"
+    },
+    {
+      "from": "I1",
+      "to": "UC1",
+      "relation": "supports_weakly",
+      "reason": "I1 is the inferential bridge from E1 to UC1.",
+      "confidence": "medium"
+    },
+    {
+      "from": "UC1",
+      "to": "G1",
+      "relation": "explains_gap",
+      "reason": "UC1 proposes a possible social-historical interpretation of the gap.",
+      "confidence": "medium"
+    },
+    {
+      "from": "UC1",
+      "to": "N2",
+      "relation": "challenges_narrative",
+      "reason": "The claim reframes passive survival as possible social signal.",
+      "confidence": "medium"
+    },
+    {
+      "from": "R1",
+      "to": "UC1",
+      "relation": "qualifies",
+      "reason": "R1 limits the strength of UC1.",
+      "confidence": "high"
+    },
+    {
+      "from": "F1",
+      "to": "UC1",
+      "relation": "falsified_by",
+      "reason": "F1 gives a test that could weaken UC1.",
+      "confidence": "medium"
+    },
+    {
+      "from": "P2",
+      "to": "E2",
+      "relation": "supports",
+      "reason": "P2 provides dotaku ritual context.",
+      "confidence": "medium"
+    },
+    {
+      "from": "E2",
+      "to": "UC2",
+      "relation": "supports_weakly",
+      "reason": "Dotaku discontinuity allows but does not prove social reorganization.",
+      "confidence": "medium"
+    },
+    {
+      "from": "UC2",
+      "to": "N3",
+      "relation": "challenges_narrative",
+      "reason": "UC2 introduces an alternative to purely internal transformation.",
+      "confidence": "medium"
+    },
+    {
+      "from": "R2",
+      "to": "UC2",
+      "relation": "qualifies",
+      "reason": "R2 limits the strength of UC2.",
+      "confidence": "high"
+    },
+    {
+      "from": "F2",
+      "to": "UC2",
+      "relation": "falsified_by",
+      "reason": "F2 gives a test that could weaken UC2.",
+      "confidence": "medium"
+    },
+    {
+      "from": "P3",
+      "to": "UC3",
+      "relation": "supports_weakly",
+      "reason": "Primary texts contain motifs used by UC3, but they do not prove historical memory.",
+      "confidence": "low"
+    },
+    {
+      "from": "UC3",
+      "to": "N4",
+      "relation": "challenges_narrative",
+      "reason": "UC3 reframes mythic structures as possible social memory.",
+      "confidence": "low"
+    },
+    {
+      "from": "R3",
+      "to": "UC3",
+      "relation": "qualifies",
+      "reason": "R3 limits the strength of UC3.",
+      "confidence": "high"
+    },
+    {
+      "from": "F3",
+      "to": "UC3",
+      "relation": "falsified_by",
+      "reason": "F3 gives a test that could weaken UC3.",
+      "confidence": "medium"
+    },
+    {
+      "from": "M7",
+      "to": "UC2",
+      "relation": "heuristic_analogy_for",
+      "reason": "Comparative cases can frame possibility but not prove UC2.",
+      "confidence": "high"
+    },
+    {
+      "from": "M7",
+      "to": "UC3",
+      "relation": "heuristic_analogy_for",
+      "reason": "Comparative cases can frame possibility but not prove UC3.",
+      "confidence": "high"
+    }
   ]
 }

@@ -33,6 +33,10 @@ Check:
   Identify phrases that exceed the cited source.
   Suggest safer wording without erasing testable C-level claims.
 
+- X-tier failure modes:
+  For each X-tier candidate, identify how the claim breaks.
+  Use failure_modes: evidence_laundering, analogy_inflation, narrative_capture, falsifier_removal, citation_debt, scope_jump.
+
 Output:
 
 1. Structural Audit Table
@@ -40,6 +44,7 @@ Output:
    - issue_type
    - finding
    - severity: pass / warn / fail / needs_source
+   - failure_modes, if X-tier or X-tier candidate
    - suggested_patch
 
 2. Candidate Tier Notes

@@ -1,6 +1,6 @@
 ---
 name: epistemic-gap-mapper-skill
-description: Map frame-challenging hypotheses against target papers and target narratives without judging truth. Use when Codex needs to analyze a manuscript, outsider or interdisciplinary hypothesis, breakthrough claim, controversial argument, or research proposal by extracting claims, separating paper conflict from narrative conflict, auditing A/B/C/X/M tier declarations, identifying overclaims, gaps, exceptions, falsifiers, narrative debt, safer wording, node graphs, narrative audits, target-paper diffs, local claim-evidence checks, or Breakthrough Diagnosis reports.
+description: Map frame-challenging hypotheses against target papers and target narratives without judging truth. Use when Codex needs to analyze a manuscript, outsider or interdisciplinary hypothesis, breakthrough claim, controversial argument, pseudoscience, or research proposal by extracting claims, separating paper conflict from narrative conflict, auditing A/B/C/X/M tier declarations, identifying X-tier failure modes, overclaims, gaps, exceptions, falsifiers, narrative debt, safer wording, node graphs, narrative audits, target-paper diffs, local claim-evidence checks, or Breakthrough Diagnosis reports.
 ---
 
 # Epistemic Gap Mapper
@@ -19,6 +19,7 @@ Use this skill to make a bold or frame-challenging hypothesis legible to expert 
 - Treat comparisons and analogies as `heuristic_analogy_for`, not direct evidence.
 - Produce structured audit material rather than a numeric score or global truth verdict.
 - Let humans declare final A/B/C/X/M tiers. LLMs may propose candidates and audit consistency, but they must not be treated as final arbiters.
+- For X-tier claims, identify how they fail using `failure_modes`, not just that they fail.
 
 ## Reference Map
 
@@ -28,6 +29,7 @@ Load only the files needed for the current task:
 - `docs/node_schema.md` and `docs/edge_schema.md`: read when designing or explaining graph structure.
 - `docs/narrative_audit.md`: read when separating target papers from target narratives.
 - `docs/methodological_index.md`: read when tagging reasoning methods or analogies.
+- `docs/failure_modes.md`: read when explaining why an X-tier node fails.
 - `docs/tool_falsifiability.md`: read when checking whether the mapper itself is failing as a method.
 - `schemas/node_schema.json`, `schemas/edge_schema.json`, `schemas/graph_schema.json`, and `schemas/report_schema.json`: read before producing machine-checkable JSON.
 - `prompts/*.md`: use when the user wants reusable copy-paste prompts.
@@ -48,7 +50,7 @@ Load only the files needed for the current task:
 3. Identify target papers. For each paper, state what it supports, what it does not support, and how the hypothesis accepts, extends, challenges, or reframes it.
 4. Identify target narratives. For each narrative, list component claims, source status, evidence trace, citation debt, and the hypothesis relationship.
 5. Build a node and edge graph using `node_id`, `node_type`, `text`, `tier`, `domain`, `confidence`, relation fields, and relevant metadata.
-6. Run Stage 5A structural audit: citation coverage, analogy marking, falsifier presence, definition consistency, paper/narrative separation, and overclaim phrases.
+6. Run Stage 5A structural audit: citation coverage, analogy marking, falsifier presence, definition consistency, paper/narrative separation, overclaim phrases, and X-tier failure modes.
 7. Run Stage 5B human tier declaration: the author, expert, reviewer, or operator declares final A/B/C/X/M tiers with `declared_tier`, `tier_declared_by`, `tier_rationale`, and `tier_review_status`. LLM output can propose candidates only.
 8. Run Stage 5C local claim-evidence checks: for each declared claim-evidence pair, record whether the cited source locally supports, hedges, presupposes, contradicts, contextualizes, or only analogizes the claim.
 9. Run Stage 5D graph handoff: provide the graph and local audit findings for human global review without asking the LLM for a truth verdict.
@@ -63,10 +65,10 @@ Tiers are declarations, not LLM judgments. The LLM may suggest candidate tiers, 
 - `A`: relatively strong claim supported by existing data or scholarship.
 - `B`: plausible hypothesis consistent with current evidence but not proven.
 - `C`: not yet assertable, but testable or worth preserving as a research question.
-- `X`: unsupported, overclaimed, internally inconsistent, or contradicted by evidence.
+- `X`: unsupported, overclaimed, internally inconsistent, contradicted by evidence, or broken by identifiable failure modes.
 - `M`: methodological tag or heuristic analogy, not direct evidence.
 
-Preserve C-level claims when they are clearly labeled and testable. Any C-tier `UserClaimNode` must link to at least one `FalsifierNode`. Patch X-level claims with safer wording or remove them from the asserted argument.
+Preserve C-level claims when they are clearly labeled and testable. Any C-tier `UserClaimNode` must link to at least one `FalsifierNode`. Patch X-level claims with safer wording or remove them from the asserted argument. Any X-tier node must include at least one `failure_modes` value.
 
 ## Graph Rules
 
@@ -76,6 +78,7 @@ Preserve C-level claims when they are clearly labeled and testable. Any C-tier `
 - Use `NarrativeNode` for standard stories or diffuse frames.
 - Use `NarrativeTraceNode` for candidate sources that clarify whether a narrative is directly supported, partially supported, merely compatible, or still carrying citation debt.
 - Use `RiskNode` for overclaim risks.
+- Use `failure_modes` on X-tier nodes: `evidence_laundering`, `analogy_inflation`, `narrative_capture`, `falsifier_removal`, `citation_debt`, or `scope_jump`.
 - Use `FalsifierNode` for evidence that would weaken or falsify a claim.
 - Use `MethodNode` for methodological tags and analogies.
 - Use `supports_weakly` for plausible but non-decisive support.

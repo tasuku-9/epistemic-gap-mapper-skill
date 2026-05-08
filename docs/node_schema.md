@@ -62,6 +62,8 @@ Use `declared_tier` only when the tier has been declared by a human author, doma
 
 Any UserClaimNode with `tier = C` or `declared_tier = C` must link to at least one `FalsifierNode`.
 
+Any node with `tier = X` or `declared_tier = X` must include `failure_modes`.
+
 ### Evidence Node
 
 An observation, dataset, source statement, or primary textual fact used as evidence.
@@ -165,6 +167,11 @@ Required fields:
 - `risky_phrase`
 - `why_risky`
 - `suggested_patch`
+
+If `tier = X`, also include:
+
+- `failure_modes`
+- `failure_mode_notes`
 
 ### Falsifier Node
 

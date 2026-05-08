@@ -26,6 +26,23 @@
     "text": {"type": "string"},
     "citation": {"type": "string"},
     "tier": {"type": "string", "enum": ["A", "B", "C", "X", "M", "unknown"]},
+    "failure_modes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "evidence_laundering",
+          "analogy_inflation",
+          "narrative_capture",
+          "falsifier_removal",
+          "citation_debt",
+          "scope_jump"
+        ]
+      }
+    },
+    "failure_mode_notes": {"type": "string"},
     "vocabulary_map": {
       "type": "object",
       "additionalProperties": {"type": "string"}
@@ -135,6 +152,14 @@
     {
       "if": {"properties": {"node_type": {"const": "MethodNode"}}},
       "then": {"required": ["method_name", "not_evidence"]}
+    },
+    {
+      "if": {"required": ["tier"], "properties": {"tier": {"const": "X"}}},
+      "then": {"required": ["failure_modes"]}
+    },
+    {
+      "if": {"required": ["declared_tier"], "properties": {"declared_tier": {"const": "X"}}},
+      "then": {"required": ["failure_modes"]}
     }
   ],
   "additionalProperties": true

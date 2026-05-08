@@ -229,7 +229,12 @@
       "why_risky": "Frequency asymmetry can arise through multiple demographic and sampling processes.",
       "suggested_patch": "State this as a testable possibility and list alternative explanations.",
       "tier": "X",
-      "confidence": "high"
+      "confidence": "high",
+      "failure_modes": [
+        "scope_jump",
+        "evidence_laundering"
+      ],
+      "failure_mode_notes": "A lineage-frequency observation cannot by itself carry a conquest or elite-dominance conclusion."
     },
     {
       "node_id": "R2",
@@ -239,7 +244,12 @@
       "why_risky": "Internal ritual transformation may explain discontinuity without external social disruption.",
       "suggested_patch": "Frame disruption as one possible interpretation requiring independent support.",
       "tier": "X",
-      "confidence": "high"
+      "confidence": "high",
+      "failure_modes": [
+        "scope_jump",
+        "narrative_capture"
+      ],
+      "failure_mode_notes": "A ritual discontinuity can be captured by a disruption narrative before local continuity and chronology are checked."
     },
     {
       "node_id": "R3",
@@ -249,7 +259,12 @@
       "why_risky": "Mythic correspondences can be overread without independent controls.",
       "suggested_patch": "Use method language: possible transformed memory structure, not direct evidence.",
       "tier": "X",
-      "confidence": "high"
+      "confidence": "high",
+      "failure_modes": [
+        "analogy_inflation",
+        "evidence_laundering"
+      ],
+      "failure_mode_notes": "Mythic motifs are interpretive analogies and cannot be laundered into literal historical evidence."
     },
     {
       "node_id": "F1",

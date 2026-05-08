@@ -74,6 +74,8 @@ Tiers are declarations, not automated truth judgments. The LLM can propose candi
 | X | Unsupported, overclaimed, internally inconsistent, or contradicted by evidence. |
 | M | Methodological tag or heuristic analogy, not direct evidence. |
 
+X-tier nodes also record `failure_modes`: `evidence_laundering`, `analogy_inflation`, `narrative_capture`, `falsifier_removal`, `citation_debt`, or `scope_jump`. This makes "X" a structural diagnosis rather than a single dismissal label.
+
 ## Recommended use
 
 This skill is useful when a researcher, independent scholar, journalist, graduate student, or interdisciplinary team has a bold hypothesis and needs to know:
@@ -116,7 +118,7 @@ The `prose_case/` folder shows how the same broad hypothesis can be written in f
 - `README.md` and `QUICKSTART.md` — public overview and usage flow.
 - `CONTRIBUTING.md` — contribution rules and safety expectations.
 - `CITATION.cff` — citation metadata.
-- `docs/` — conceptual design, workflow, node schema, edge schema, methodological index, and tool falsifiability.
+- `docs/` — conceptual design, workflow, node schema, edge schema, failure modes, methodological index, and tool falsifiability.
 - `prompts/` — copy-paste prompts for each step of the workflow.
 - `schemas/` — JSON schemas for nodes, edges, graphs, and reports.
 - `templates/` — reusable intake, graph, node, and report templates.

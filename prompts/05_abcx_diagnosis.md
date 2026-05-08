@@ -10,7 +10,7 @@ Run Stage 5 in four passes:
 
 1. 05A Structural Audit
    Use prompts/05a_structural_audit.md.
-   The LLM checks graph structure, citation coverage, analogy marking, falsifier presence, definition consistency, paper/narrative separation, and overclaim phrases.
+   The LLM checks graph structure, citation coverage, analogy marking, falsifier presence, definition consistency, paper/narrative separation, overclaim phrases, and X-tier failure modes.
 
 2. 05B Human Tier Declaration
    Use prompts/05b_human_tier_declaration.md.

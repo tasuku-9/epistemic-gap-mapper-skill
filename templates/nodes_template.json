@@ -19,7 +19,9 @@
       "source": "P1",
       "domain": "replace with domain",
       "tier": "A",
-      "supporting_sources": ["P1"],
+      "supporting_sources": [
+        "P1"
+      ],
       "confidence": "medium"
     },
     {
@@ -28,7 +30,9 @@
       "text": "Replace with the standard narrative or common explanation being examined.",
       "source_status": "unknown",
       "citation_debt": "unknown",
-      "component_claims": ["Replace with one component claim"],
+      "component_claims": [
+        "Replace with one component claim"
+      ],
       "tier": "unknown",
       "confidence": "unknown"
     },
@@ -47,11 +51,21 @@
       "vocabulary_map": {
         "replace key term": "replace with local definition or mapped term"
       },
-      "supporting_sources": ["E1"],
-      "related_target_papers": ["P1"],
-      "related_target_narratives": ["N1"],
-      "risks": ["R1"],
-      "falsifiers": ["F1"],
+      "supporting_sources": [
+        "E1"
+      ],
+      "related_target_papers": [
+        "P1"
+      ],
+      "related_target_narratives": [
+        "N1"
+      ],
+      "risks": [
+        "R1"
+      ],
+      "falsifiers": [
+        "F1"
+      ],
       "confidence": "medium"
     },
     {
@@ -62,13 +76,20 @@
       "why_risky": "Replace with why the claim may exceed the evidence.",
       "suggested_patch": "Replace with safer wording.",
       "tier": "X",
-      "confidence": "medium"
+      "confidence": "medium",
+      "failure_modes": [
+        "scope_jump",
+        "evidence_laundering"
+      ],
+      "failure_mode_notes": "Template risk: identify whether the overclaim jumps scope or launders weak evidence into stronger wording."
     },
     {
       "node_id": "F1",
       "node_type": "FalsifierNode",
       "text": "Replace with evidence that would weaken or falsify the claim.",
-      "would_weaken": ["UC1"],
+      "would_weaken": [
+        "UC1"
+      ],
       "required_evidence": "Replace with what evidence would be needed.",
       "tier": "M",
       "confidence": "medium"

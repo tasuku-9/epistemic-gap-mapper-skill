@@ -15,6 +15,7 @@ For each UserClaimNode, fill:
 - tier_review_status: proposed / declared / reviewer_checked / needs_review / disputed / unknown
 - falsifier_link_required: yes / no
 - linked_falsifiers
+- failure_modes, required if declared_tier is X
 
 Tier guide:
 
@@ -28,6 +29,7 @@ Rules:
 
 - Do not mark a claim X merely because it challenges consensus.
 - Do mark a claim X when it exceeds its sources, contradicts cited evidence, or cannot be repaired with narrower wording.
+- If a claim is X, declare how it fails with one or more failure_modes: evidence_laundering, analogy_inflation, narrative_capture, falsifier_removal, citation_debt, scope_jump.
 - C is allowed only when the claim is explicit, testable, and linked to at least one FalsifierNode.
 - Method or analogy nodes are M, not evidence.
 
@@ -37,6 +39,7 @@ Output graph patch fields for each UserClaimNode:
   "declared_tier": "...",
   "tier_declared_by": "...",
   "tier_rationale": "...",
-  "tier_review_status": "..."
+  "tier_review_status": "...",
+  "failure_modes": ["..."]
 }
 ```

@@ -152,7 +152,12 @@
       "confidence": "high",
       "metadata": {
         "cluster": "Falsification / Risk"
-      }
+      },
+      "failure_modes": [
+        "scope_jump",
+        "evidence_laundering"
+      ],
+      "failure_mode_notes": "A rainy/non-rainy association can be laundered into a causal sales claim and broadened beyond the local sample."
     },
     {
       "node_id": "F1",

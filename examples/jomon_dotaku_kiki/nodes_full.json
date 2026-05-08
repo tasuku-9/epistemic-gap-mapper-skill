@@ -913,7 +913,12 @@
       "confidence": "high",
       "metadata": {
         "cluster": "Falsification / Risk"
-      }
+      },
+      "failure_modes": [
+        "scope_jump",
+        "evidence_laundering"
+      ],
+      "failure_mode_notes": "Y-chromosome frequency is real evidence, but conquest, dominance, or social advantage would be a broader claim than the source can carry alone."
     },
     {
       "node_id": "R2",
@@ -926,7 +931,12 @@
       "confidence": "high",
       "metadata": {
         "cluster": "Falsification / Risk"
-      }
+      },
+      "failure_modes": [
+        "scope_jump",
+        "narrative_capture"
+      ],
+      "failure_mode_notes": "Dotaku discontinuity is a real archaeological pattern, but political takeover or external disruption would be a stronger narrative capture unless chronology and continuity are tested."
     },
     {
       "node_id": "R3",
@@ -939,7 +949,12 @@
       "confidence": "high",
       "metadata": {
         "cluster": "Falsification / Risk"
-      }
+      },
+      "failure_modes": [
+        "analogy_inflation",
+        "evidence_laundering"
+      ],
+      "failure_mode_notes": "Mythic structure can guide interpretation, but treating it as literal record would inflate analogy into evidence."
     },
     {
       "node_id": "R4",
@@ -952,7 +967,12 @@
       "confidence": "high",
       "metadata": {
         "cluster": "Falsification / Risk"
-      }
+      },
+      "failure_modes": [
+        "scope_jump",
+        "citation_debt"
+      ],
+      "failure_mode_notes": "Continental background does not establish a direct Shang-Zhou-to-Yayoi chain without specific source tracing."
     },
     {
       "node_id": "R5",
@@ -965,7 +985,12 @@
       "confidence": "high",
       "metadata": {
         "cluster": "Falsification / Risk"
-      }
+      },
+      "failure_modes": [
+        "scope_jump",
+        "evidence_laundering"
+      ],
+      "failure_mode_notes": "A cultural sphere should not be converted into an immigrant identity without direct demographic or social evidence."
     },
     {
       "node_id": "R6",
@@ -978,7 +1003,13 @@
       "confidence": "high",
       "metadata": {
         "cluster": "Falsification / Risk"
-      }
+      },
+      "failure_modes": [
+        "narrative_capture",
+        "evidence_laundering",
+        "analogy_inflation"
+      ],
+      "failure_mode_notes": "Cross-domain consilience can become a proof-like narrative if weak links and analogies are not kept visible."
     },
     {
       "node_id": "F1",

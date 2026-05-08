@@ -52,6 +52,14 @@ ALLOWED_TIER_REVIEW_STATUS = {
     "disputed",
     "unknown",
 }
+ALLOWED_FAILURE_MODES = {
+    "evidence_laundering",
+    "analogy_inflation",
+    "narrative_capture",
+    "falsifier_removal",
+    "citation_debt",
+    "scope_jump",
+}
 
 EDGE_ENUM_FIELDS = {
     "support_strength": {
@@ -166,6 +174,14 @@ def validate_graph(data: dict) -> list[str]:
                 errors.append(f"Node {node_id} has invalid {tier_field}: {node.get(tier_field)}")
         if "tier_review_status" in node and node.get("tier_review_status") not in ALLOWED_TIER_REVIEW_STATUS:
             errors.append(f"Node {node_id} has invalid tier_review_status: {node.get('tier_review_status')}")
+        if "failure_modes" in node:
+            failure_modes = node.get("failure_modes")
+            if not isinstance(failure_modes, list) or not failure_modes:
+                errors.append(f"Node {node_id}: failure_modes must be a non-empty list.")
+            else:
+                for mode in failure_modes:
+                    if mode not in ALLOWED_FAILURE_MODES:
+                        errors.append(f"Node {node_id} has invalid failure_mode: {mode}")
         if not has_value(node, "text"):
             errors.append(f"Node {node_id} is missing text.")
         for field in TYPE_REQUIRED_FIELDS.get(node_type, []):
@@ -179,6 +195,8 @@ def validate_graph(data: dict) -> list[str]:
                     errors.append(
                         f"Node {node_id}: declared_tier requires {field} so the human declaration remains visible."
                     )
+        if "X" in {node.get("tier"), node.get("declared_tier")} and not has_value(node, "failure_modes"):
+            errors.append(f"Node {node_id}: X-tier nodes must declare at least one failure_mode.")
 
     for node in nodes:
         node_id = node.get("node_id")

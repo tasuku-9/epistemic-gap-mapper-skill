@@ -23,6 +23,7 @@ Output:
 5. C-level Vulnerabilities
 
 6. X-level Problems
+   - include failure_modes for each X-level node
 
 7. Target Paper Relationship
 

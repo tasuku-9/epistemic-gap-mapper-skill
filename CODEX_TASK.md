@@ -21,6 +21,7 @@ You are improving **Epistemic Gap Mapper Skill**, a prompt-and-schema based skil
 - Do not treat comparisons, myths, analogies, or historical parallels as direct evidence.
 - Do not classify speculative claims as A-level claims.
 - Do not let C-level UserClaimNodes stand without at least one falsifier link.
+- Do not leave X-tier nodes as a flat dismissal; include `failure_modes` so the breakage is inspectable.
 - Do not treat "no source found" as proof that a target narrative is false.
 - Do not remove the distinction between `PaperNode`, `SourceClaimNode`, and `NarrativeNode`.
 

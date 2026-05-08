@@ -52,6 +52,15 @@ Review status:
 
 What would make my claim overstated?
 
+If the risk is X-level, mark how it fails:
+
+- evidence_laundering
+- analogy_inflation
+- narrative_capture
+- falsifier_removal
+- citation_debt
+- scope_jump
+
 ## 8. Falsifier
 
 What evidence would weaken or falsify the claim?
