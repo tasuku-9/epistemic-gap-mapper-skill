@@ -65,6 +65,7 @@ Preserve C-level claims when they are clearly labeled and testable. Patch X-leve
 - Use `SourceClaimNode` for claims actually made by target papers.
 - Use `UserClaimNode` for claims made by the user's manuscript.
 - Use `NarrativeNode` for standard stories or diffuse frames.
+- Use `NarrativeTraceNode` for candidate sources that clarify whether a narrative is directly supported, partially supported, merely compatible, or still carrying citation debt.
 - Use `RiskNode` for overclaim risks.
 - Use `FalsifierNode` for evidence that would weaken or falsify a claim.
 - Use `MethodNode` for methodological tags and analogies.

@@ -31,6 +31,7 @@ The system separates:
 
 - **Paper conflict**: disagreement with a specific source.
 - **Narrative conflict**: disagreement with a standard story that may not be traceable to one strong paper.
+- **Narrative trace**: a candidate source's direct, partial, or merely compatible relationship to a narrative.
 - **Scope gap**: something target papers do not address.
 - **Frame conflict**: a different interpretation of accepted evidence.
 - **Overclaim**: a claim stronger than its evidence.

@@ -10,7 +10,10 @@
       "role": "data-anomaly papers",
       "verification_status": "verification needed",
       "tier": "A",
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Genetics"
+      }
     },
     {
       "node_id": "P2",
@@ -22,7 +25,10 @@
       "role": "canonical/update frame papers",
       "verification_status": "verification needed",
       "tier": "A",
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Genetics"
+      }
     },
     {
       "node_id": "P3",
@@ -34,7 +40,10 @@
       "role": "canonical frame paper",
       "verification_status": "verification needed",
       "tier": "A",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Archaeology"
+      }
     },
     {
       "node_id": "P4",
@@ -46,7 +55,10 @@
       "role": "data-support paper",
       "verification_status": "verification needed",
       "tier": "A",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Archaeology"
+      }
     },
     {
       "node_id": "P5",
@@ -58,7 +70,10 @@
       "role": "primary source",
       "verification_status": "known primary source",
       "tier": "A",
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Mythology"
+      }
     },
     {
       "node_id": "P6",
@@ -70,7 +85,10 @@
       "role": "continental background papers",
       "verification_status": "verification needed",
       "tier": "A",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Continental Background"
+      }
     },
     {
       "node_id": "P7",
@@ -82,7 +100,10 @@
       "role": "chronology reference",
       "verification_status": "verification needed",
       "tier": "A",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Continental Background"
+      }
     },
     {
       "node_id": "SC1",
@@ -90,7 +111,10 @@
       "text": "Target Y-chromosome studies report substantial D1a2a/D-M55-related lineages in modern Japanese male populations.",
       "source_paper": "P1",
       "domain": "population genetics",
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Genetics"
+      }
     },
     {
       "node_id": "SC2",
@@ -98,7 +122,10 @@
       "text": "Updated genomic models complicate a simple dual-structure account of Japanese population history.",
       "source_paper": "P2",
       "domain": "archaeogenetics",
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Genetics"
+      }
     },
     {
       "node_id": "SC3",
@@ -106,7 +133,10 @@
       "text": "Dotaku were central to Yayoi ritual systems and later disappear from use and deposition patterns.",
       "source_paper": "P3",
       "domain": "archaeology",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Archaeology"
+      }
     },
     {
       "node_id": "SC4",
@@ -114,7 +144,10 @@
       "text": "Lead isotope analysis can connect dotaku raw materials to external source regions such as the Korean Peninsula and North China.",
       "source_paper": "P4",
       "domain": "archaeometry",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Archaeology"
+      }
     },
     {
       "node_id": "SC5",
@@ -122,7 +155,10 @@
       "text": "The Kiki contain narratives of heavenly descent, land creation, land cession or submission, and agricultural-origin motifs.",
       "source_paper": "P5",
       "domain": "mythology / textual studies",
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Mythology"
+      }
     },
     {
       "node_id": "SC6",
@@ -130,7 +166,10 @@
       "text": "Continental ancient DNA studies indicate genetic changes and coastal gene flow relevant to later Korean Peninsula and Japanese archipelago population formation.",
       "source_paper": "P6",
       "domain": "ancient DNA",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Continental Background"
+      }
     },
     {
       "node_id": "SC7",
@@ -138,7 +177,10 @@
       "text": "One influential AMS radiocarbon-based framework places Early Yayoi beginnings around the 10th century BCE.",
       "source_paper": "P7",
       "domain": "archaeological chronology",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Continental Background"
+      }
     },
     {
       "node_id": "E1",
@@ -151,7 +193,10 @@
         "P1",
         "SC1"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Genetics"
+      }
     },
     {
       "node_id": "E2",
@@ -164,7 +209,10 @@
         "P2",
         "SC2"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Genetics"
+      }
     },
     {
       "node_id": "E3",
@@ -177,7 +225,10 @@
         "E1",
         "E2"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Genetics"
+      }
     },
     {
       "node_id": "E4",
@@ -190,7 +241,10 @@
         "P3",
         "SC3"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Archaeology"
+      }
     },
     {
       "node_id": "E5",
@@ -203,7 +257,10 @@
         "P4",
         "SC4"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Archaeology"
+      }
     },
     {
       "node_id": "E6",
@@ -216,7 +273,10 @@
         "P5",
         "SC5"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Mythology"
+      }
     },
     {
       "node_id": "E7",
@@ -229,7 +289,10 @@
         "P6",
         "SC6"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Continental Background"
+      }
     },
     {
       "node_id": "E8",
@@ -242,7 +305,10 @@
         "P7",
         "SC7"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Continental Background"
+      }
     },
     {
       "node_id": "A1",
@@ -250,7 +316,10 @@
       "text": "Y-chromosome asymmetry can preserve signals of sex-biased social structure, reproductive advantage, or elite effects.",
       "tier": "C",
       "risk_level": "medium",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Genetics"
+      }
     },
     {
       "node_id": "A2",
@@ -258,7 +327,10 @@
       "text": "A major ritual discontinuity can be interpreted as a possible sign of social or political reorganization, but not proof of it.",
       "tier": "B",
       "risk_level": "medium",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Archaeology"
+      }
     },
     {
       "node_id": "A3",
@@ -266,7 +338,10 @@
       "text": "Mythic structures may preserve transformed social memory without functioning as direct historical chronicles.",
       "tier": "C",
       "risk_level": "high",
-      "confidence": "low"
+      "confidence": "low",
+      "metadata": {
+        "cluster": "Mythology"
+      }
     },
     {
       "node_id": "A4",
@@ -274,7 +349,10 @@
       "text": "Continental population movements can provide historical context without establishing a direct causal chain to specific Japanese cultural formations.",
       "tier": "B",
       "risk_level": "medium",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Continental Background"
+      }
     },
     {
       "node_id": "A5",
@@ -282,7 +360,10 @@
       "text": "Multiple independent anomalies can be examined abductively without claiming that any single line of evidence proves the model.",
       "tier": "M",
       "risk_level": "low",
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Cross-Domain Model"
+      }
     },
     {
       "node_id": "EX1",
@@ -291,7 +372,10 @@
       "target_narrative": "N2",
       "source": "E1/E2",
       "tier": "B",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Genetics"
+      }
     },
     {
       "node_id": "EX2",
@@ -300,7 +384,10 @@
       "target_narrative": "N3",
       "source": "E4",
       "tier": "B",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Archaeology"
+      }
     },
     {
       "node_id": "EX3",
@@ -309,7 +396,10 @@
       "target_narrative": "N4",
       "source": "E6",
       "tier": "B",
-      "confidence": "low"
+      "confidence": "low",
+      "metadata": {
+        "cluster": "Mythology"
+      }
     },
     {
       "node_id": "EX4",
@@ -318,7 +408,10 @@
       "target_narrative": "N5",
       "source": "E7",
       "tier": "B",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Continental Background"
+      }
     },
     {
       "node_id": "I1",
@@ -335,7 +428,10 @@
       "risks": [
         "R1"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Genetics"
+      }
     },
     {
       "node_id": "I2",
@@ -351,7 +447,10 @@
       "risks": [
         "R2"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Archaeology"
+      }
     },
     {
       "node_id": "I3",
@@ -366,7 +465,10 @@
       "risks": [
         "R3"
       ],
-      "confidence": "low"
+      "confidence": "low",
+      "metadata": {
+        "cluster": "Mythology"
+      }
     },
     {
       "node_id": "I4",
@@ -382,7 +484,10 @@
       "risks": [
         "R4"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Continental Background"
+      }
     },
     {
       "node_id": "I5",
@@ -399,7 +504,10 @@
       "risks": [
         "R6"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Cross-Domain Model"
+      }
     },
     {
       "node_id": "UC1",
@@ -428,7 +536,10 @@
         "F1",
         "F5"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Genetics"
+      }
     },
     {
       "node_id": "UC2",
@@ -454,7 +565,10 @@
       "falsifiers": [
         "F2"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Archaeology"
+      }
     },
     {
       "node_id": "UC3",
@@ -478,7 +592,10 @@
       "falsifiers": [
         "F3"
       ],
-      "confidence": "low"
+      "confidence": "low",
+      "metadata": {
+        "cluster": "Mythology"
+      }
     },
     {
       "node_id": "UC4",
@@ -504,7 +621,10 @@
       "falsifiers": [
         "F4"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Continental Background"
+      }
     },
     {
       "node_id": "UC5",
@@ -550,7 +670,10 @@
         "F4",
         "F5"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Cross-Domain Model"
+      }
     },
     {
       "node_id": "N1",
@@ -564,7 +687,10 @@
         "Modern Japanese formed through admixture and demographic replacement"
       ],
       "tier": "unknown",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Narrative Audit"
+      }
     },
     {
       "node_id": "N2",
@@ -578,7 +704,24 @@
         "Social-elite interpretations are usually not foregrounded"
       ],
       "tier": "unknown",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Narrative Audit"
+      }
+    },
+    {
+      "node_id": "NT1",
+      "node_type": "NarrativeTraceNode",
+      "text": "Sato et al. 2014 is compatible with the passive Jomon survival narrative by documenting D1a2a/D-M55-related lineages, but it does not directly claim that D1a2a/D-M55 persistence is only passive survival.",
+      "target_narrative": "N2",
+      "source_paper": "P1",
+      "trace_status": "compatible_context",
+      "citation_debt_effect": "clarifies",
+      "tier": "M",
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Narrative Audit"
+      }
     },
     {
       "node_id": "N3",
@@ -591,7 +734,10 @@
         "The end need not imply external disruption"
       ],
       "tier": "unknown",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Narrative Audit"
+      }
     },
     {
       "node_id": "N4",
@@ -605,7 +751,10 @@
         "Royal legitimation is the main interpretive frame"
       ],
       "tier": "unknown",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Narrative Audit"
+      }
     },
     {
       "node_id": "N5",
@@ -619,7 +768,10 @@
         "Political events such as Shang-Zhou are rarely integrated"
       ],
       "tier": "unknown",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Narrative Audit"
+      }
     },
     {
       "node_id": "G1",
@@ -633,7 +785,10 @@
       ],
       "importance": "high",
       "tier": "B",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Genetics"
+      }
     },
     {
       "node_id": "G2",
@@ -645,7 +800,10 @@
       ],
       "importance": "medium",
       "tier": "B",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Archaeology"
+      }
     },
     {
       "node_id": "G3",
@@ -657,7 +815,10 @@
       ],
       "importance": "medium",
       "tier": "B",
-      "confidence": "low"
+      "confidence": "low",
+      "metadata": {
+        "cluster": "Mythology"
+      }
     },
     {
       "node_id": "G4",
@@ -669,7 +830,10 @@
       ],
       "importance": "medium",
       "tier": "B",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Continental Background"
+      }
     },
     {
       "node_id": "G5",
@@ -683,7 +847,10 @@
       ],
       "importance": "high",
       "tier": "B",
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Cross-Domain Model"
+      }
     },
     {
       "node_id": "R1",
@@ -693,7 +860,10 @@
       "why_risky": "Frequency asymmetry can arise through drift, founder effects, sampling, demography, or social institutions without conquest.",
       "suggested_patch": "Use 'may indicate' and explicitly list alternative explanations and ancient-DNA falsifiers.",
       "tier": "X",
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Falsification / Risk"
+      }
     },
     {
       "node_id": "R2",
@@ -703,7 +873,10 @@
       "why_risky": "Internal ritual transformation may explain the discontinuity without external social disruption.",
       "suggested_patch": "Frame disruption as one possible interpretation requiring independent support.",
       "tier": "X",
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Falsification / Risk"
+      }
     },
     {
       "node_id": "R3",
@@ -713,7 +886,10 @@
       "why_risky": "Mythic correspondences can be overread without independent controls.",
       "suggested_patch": "Use method language: possible transformed memory structure, not direct evidence.",
       "tier": "X",
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Falsification / Risk"
+      }
     },
     {
       "node_id": "R4",
@@ -723,7 +899,10 @@
       "why_risky": "Ancient DNA can indicate regional dynamics and gene flow without proving a specific political-event cause.",
       "suggested_patch": "Use 'historical context' rather than 'direct cause' or 'trigger'.",
       "tier": "X",
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Falsification / Risk"
+      }
     },
     {
       "node_id": "R5",
@@ -733,7 +912,10 @@
       "why_risky": "Dotaku cultural affiliation is not identical to direct immigrant status.",
       "suggested_patch": "Use 'continental-associated Dotaku cultural sphere' or 'Yayoi/Dotaku cultural sphere'.",
       "tier": "X",
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Falsification / Risk"
+      }
     },
     {
       "node_id": "R6",
@@ -743,7 +925,10 @@
       "why_risky": "Consilience can suggest an explanatory frame but cannot replace domain-specific evidence.",
       "suggested_patch": "State that the model is a working hypothesis and preserve A/B/C/X distinctions.",
       "tier": "X",
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Falsification / Risk"
+      }
     },
     {
       "node_id": "F1",
@@ -756,7 +941,10 @@
       ],
       "required_evidence": "Representative ancient DNA from elite and non-elite Kofun burials.",
       "tier": "M",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Falsification / Risk"
+      }
     },
     {
       "node_id": "F2",
@@ -769,7 +957,10 @@
       ],
       "required_evidence": "Fine-grained regional archaeological sequences showing continuity without network break or authority transfer.",
       "tier": "M",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Falsification / Risk"
+      }
     },
     {
       "node_id": "F3",
@@ -782,7 +973,10 @@
       ],
       "required_evidence": "Textual-historical evidence for late invention or instability of the relevant motifs.",
       "tier": "M",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Falsification / Risk"
+      }
     },
     {
       "node_id": "F4",
@@ -794,7 +988,10 @@
       ],
       "required_evidence": "Ancient DNA models excluding Shandong/Haidai-related coastal contribution from relevant Yayoi-to-Kofun transformations.",
       "tier": "M",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Falsification / Risk"
+      }
     },
     {
       "node_id": "F5",
@@ -806,7 +1003,10 @@
       ],
       "required_evidence": "Robust population-genetic modeling explaining the paternal/autosomal asymmetry through drift, founder effects, or sampling alone.",
       "tier": "M",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Falsification / Risk"
+      }
     },
     {
       "node_id": "M1",
@@ -815,7 +1015,10 @@
       "text": "The model proposes a candidate explanation across multiple observations; it does not prove the hypothesis.",
       "not_evidence": true,
       "tier": "M",
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Comparative Methods"
+      }
     },
     {
       "node_id": "M2",
@@ -824,7 +1027,10 @@
       "text": "A/B/C/X/M separates evidence, plausible inference, speculation, overclaim, and method.",
       "not_evidence": true,
       "tier": "M",
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Comparative Methods"
+      }
     },
     {
       "node_id": "M3",
@@ -833,7 +1039,10 @@
       "text": "Independent lines of evidence may converge on a shared explanatory frame without any single line proving it.",
       "not_evidence": true,
       "tier": "M",
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Comparative Methods"
+      }
     },
     {
       "node_id": "M4",
@@ -842,7 +1051,10 @@
       "text": "Myths are not direct historical records; persistent structures may be examined for possible correspondences under strict caution.",
       "not_evidence": true,
       "tier": "M",
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Comparative Methods"
+      }
     },
     {
       "node_id": "M6",
@@ -851,7 +1063,10 @@
       "text": "Examples such as Kumulipo show how oral cosmological genealogies can bind creation, descent, ecology, and political legitimacy without being literal chronicles.",
       "not_evidence": true,
       "tier": "M",
-      "confidence": "medium"
+      "confidence": "medium",
+      "metadata": {
+        "cluster": "Comparative Methods"
+      }
     },
     {
       "node_id": "M7",
@@ -860,7 +1075,10 @@
       "text": "Comparative history cases such as Dorian, Germanic, Mongol, Andean, or highland/lowland examples are possibility structures, not evidence for the Japanese case.",
       "not_evidence": true,
       "tier": "M",
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Comparative Methods"
+      }
     },
     {
       "node_id": "M8",
@@ -869,7 +1087,10 @@
       "text": "Each major claim should state what evidence would weaken or falsify it.",
       "not_evidence": true,
       "tier": "M",
-      "confidence": "high"
+      "confidence": "high",
+      "metadata": {
+        "cluster": "Comparative Methods"
+      }
     }
   ],
   "edges": [
@@ -1467,6 +1688,20 @@
       "relation": "not_direct_evidence",
       "reason": "M8 is methodological framing only, not direct evidence for UC5.",
       "confidence": "high"
+    },
+    {
+      "from": "P1",
+      "to": "NT1",
+      "relation": "supports_weakly",
+      "reason": "P1 is compatible context for N2, but it does not directly claim passive survival as the only explanation.",
+      "confidence": "medium"
+    },
+    {
+      "from": "NT1",
+      "to": "N2",
+      "relation": "not_direct_evidence",
+      "reason": "NT1 clarifies citation debt without refuting N2 or treating missing direct support as proof of falsehood.",
+      "confidence": "medium"
     }
   ]
 }

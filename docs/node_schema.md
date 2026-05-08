@@ -99,6 +99,22 @@ Required fields:
 - `citation_debt`
 - `component_claims`
 
+### Narrative Trace Node
+
+A neutral trace record for candidate sources that appear to support, partially support, or fail to directly support a target narrative.
+
+Use this to make citation debt visible without treating missing or partial source support as proof that a narrative is false.
+
+Required fields:
+
+- `node_id`
+- `node_type = NarrativeTraceNode`
+- `text`
+- `target_narrative`
+- `source_paper`
+- `trace_status`
+- `citation_debt_effect`
+
 ### Gap Node
 
 Something existing papers or narratives do not explain.

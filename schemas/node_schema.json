@@ -15,6 +15,7 @@
         "InferenceNode",
         "AssumptionNode",
         "NarrativeNode",
+        "NarrativeTraceNode",
         "GapNode",
         "ExceptionNode",
         "RiskNode",
@@ -44,6 +45,21 @@
     "located_in": {"type": "array", "items": {"type": "string"}},
     "importance": {"type": "string", "enum": ["high", "medium", "low", "unknown"]},
     "target_narrative": {"type": "string"},
+    "trace_status": {
+      "type": "string",
+      "enum": [
+        "direct_support",
+        "partial_support",
+        "compatible_context",
+        "not_direct_claim",
+        "no_source_identified",
+        "unknown"
+      ]
+    },
+    "citation_debt_effect": {
+      "type": "string",
+      "enum": ["lowers", "raises", "clarifies", "unchanged", "unknown"]
+    },
     "risky_phrase": {"type": "string"},
     "why_risky": {"type": "string"},
     "suggested_patch": {"type": "string"},
@@ -82,6 +98,10 @@
     {
       "if": {"properties": {"node_type": {"const": "NarrativeNode"}}},
       "then": {"required": ["source_status", "citation_debt", "component_claims"]}
+    },
+    {
+      "if": {"properties": {"node_type": {"const": "NarrativeTraceNode"}}},
+      "then": {"required": ["target_narrative", "source_paper", "trace_status", "citation_debt_effect"]}
     },
     {
       "if": {"properties": {"node_type": {"const": "GapNode"}}},
