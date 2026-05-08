@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 title: "Epistemic Gap Mapper Skill"
-message: "If you use this skill, schema, or workflow, please cite it."
+message: "If you use this skill, schema, or workflow, please cite it. Text, prompts, templates, documentation, examples, schemas, outreach materials, and diagrams are CC BY 4.0; helper scripts are MIT."
 type: software
 authors:
   - name: "Tasuku"
 version: "0.2"
-license: "CC-BY-4.0"
+license: "CC-BY-4.0 AND MIT"
 repository-code: "https://github.com/tasuku-9/epistemic-gap-mapper-skill"

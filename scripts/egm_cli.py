@@ -85,6 +85,14 @@ def has_value(node: dict, field: str) -> bool:
     return True
 
 
+def field_refs(value: object) -> list[str]:
+    if isinstance(value, str):
+        return [value]
+    if isinstance(value, list):
+        return [item for item in value if isinstance(item, str)]
+    return []
+
+
 def validate_graph(data: dict) -> list[str]:
     errors: list[str] = []
     nodes = data.get("nodes")
@@ -118,6 +126,26 @@ def validate_graph(data: dict) -> list[str]:
                 errors.append(f"Node {node_id} ({node_type}) is missing {field}.")
         if node_type == "MethodNode" and node.get("not_evidence") is not True:
             errors.append(f"Node {node_id} (MethodNode) should set not_evidence to true.")
+
+    for node in nodes:
+        node_id = node.get("node_id")
+        node_type = node.get("node_type")
+        for source_id in field_refs(node.get("supporting_sources")):
+            source_node = node_by_id.get(source_id)
+            if source_node and source_node.get("node_type") == "MethodNode":
+                if node_type == "UserClaimNode":
+                    errors.append(
+                        f"Node {node_id}: UserClaimNode.supporting_sources must not reference MethodNode {source_id}; use heuristic_analogy_for edges instead."
+                    )
+                else:
+                    errors.append(
+                        f"Node {node_id}: supporting_sources must not treat MethodNode {source_id} as evidence."
+                    )
+        for field in ("source", "source_paper", "related_target_papers"):
+            for source_id in field_refs(node.get(field)):
+                source_node = node_by_id.get(source_id)
+                if source_node and source_node.get("node_type") == "MethodNode":
+                    errors.append(f"Node {node_id}: {field} must not reference MethodNode {source_id} as evidence.")
 
     for idx, edge in enumerate(edges):
         src = edge.get("from")

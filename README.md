@@ -95,7 +95,7 @@ This skill is useful when a researcher, independent scholar, journalist, graduat
 - `examples/` — worked example based on the Jomon/Dotaku/Kiki hypothesis.
 - `outreach/` — public explainers and recruitment/community posts in English and Japanese.
 - `scripts/` — lightweight local graph validation and Mermaid rendering helper.
-- `.github/` — sample validation workflow and issue templates.
+- `.github/` — issue templates and the `.github/workflows/validate-samples.yml` sample validation workflow.
 - `assets/` — diagram and visual materials.
 
 ## License
