@@ -1,28 +1,28 @@
-# Prompt 05 — A/B/C/X Diagnosis
+# Prompt 05 - Calibration Audit Workflow
 
 ```text
-Using the node graph, diagnose each UserClaimNode with A/B/C/X/M tiers.
+Use this as the navigation prompt for Stage 5.
 
-Definitions:
-A = relatively strong claim supported by existing data or scholarship.
-B = plausible hypothesis consistent with current evidence but not proven.
-C = not yet assertable but testable or worth preserving as a research question.
-X = unsupported, overclaimed, internally inconsistent, or contradicted by evidence.
-M = methodological tag or heuristic analogy, not direct evidence.
+Do not ask the LLM to decide whether the hypothesis is true.
+Do not ask the LLM to issue the final A/B/C/X/M tier.
 
-For each UserClaimNode, output:
+Run Stage 5 in four passes:
 
-- Proposed Tier
-- Reason for Tier
-- Supporting Evidence
-- Missing Evidence
-- Overclaim Risk
-- Safer Wording
-- What would falsify or weaken it?
-- Human Review Needed: yes / no
+1. 05A Structural Audit
+   Use prompts/05a_structural_audit.md.
+   The LLM checks graph structure, citation coverage, analogy marking, falsifier presence, definition consistency, paper/narrative separation, and overclaim phrases.
 
-Rules:
-- Do not classify a claim as X merely because it challenges consensus.
-- Do classify a claim as X if it overstates the evidence.
-- C is not failure. C is a testable frontier.
+2. 05B Human Tier Declaration
+   Use prompts/05b_human_tier_declaration.md.
+   The human author, expert, reviewer, or operator declares final A/B/C/X/M tiers. The LLM may propose candidate tiers only.
+
+3. 05C Local Claim-Evidence Check
+   Use prompts/05c_local_fact_check.md.
+   For each declared claim-evidence pair, check local support only: direct, hedged, presupposed, contextual, counter-example, analogy-only, no direct support, or unknown.
+
+4. 05D Graph Handoff
+   Use prompts/05d_graph_handoff.md.
+   Hand off graph data and local audit findings for human global review. Do not provide a global truth verdict.
+
+Core rule: calibration is an audit surface, not an AI judgment surface.
 ```

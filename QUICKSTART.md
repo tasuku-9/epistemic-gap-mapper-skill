@@ -30,9 +30,15 @@ Use `prompts/03_extract_target_narratives.md`.
 
 Use `prompts/04_build_nodes.md`.
 
-## Step 6 — Diagnose A/B/C/X/M
+## Step 6 — Run the calibration audit
 
-Use `prompts/05_abcx_diagnosis.md`.
+Use the Stage 5 prompt set:
+
+- `prompts/05_abcx_diagnosis.md` for the overview.
+- `prompts/05a_structural_audit.md` for LLM structural audit.
+- `prompts/05b_human_tier_declaration.md` for human-declared A/B/C/X/M tiers.
+- `prompts/05c_local_fact_check.md` for local claim-evidence checks.
+- `prompts/05d_graph_handoff.md` for human review handoff.
 
 ## Step 7 — Compare with target papers
 
@@ -57,4 +63,4 @@ python scripts/egm_cli.py render examples/jomon_dotaku_kiki/nodes_full.json --me
 
 ## Principle
 
-Do not ask the AI to judge the hypothesis first. Ask it to map the structure first.
+Do not ask the AI to judge the hypothesis first. Ask it to map the structure first, then audit local support for human review.

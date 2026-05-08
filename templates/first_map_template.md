@@ -32,13 +32,21 @@ What observations or source-backed facts matter?
 
 ## 6. Claim Tier
 
-Classify the main claim:
+Declare the main claim tier. The LLM may suggest a candidate, but the final tier should be marked by a human author, reviewer, or expert.
 
 - A: relatively strong
 - B: plausible hypothesis
 - C: testable but not yet assertable
 - X: overclaimed or unsupported
 - M: method or heuristic
+
+Declared tier:
+
+Declared by:
+
+Rationale:
+
+Review status:
 
 ## 7. Risk
 

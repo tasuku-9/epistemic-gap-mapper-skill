@@ -2,7 +2,7 @@
 
 Epistemic Gap Mapper follows a staged workflow. The order matters: do not ask the AI to evaluate the hypothesis before it has extracted the structure.
 
-## Stage 1 — Manuscript claim extraction
+## Stage 1 - Manuscript claim extraction
 
 Goal: extract the user's central hypothesis, claims, evidence, assumptions, and possible overclaims.
 
@@ -15,7 +15,7 @@ Output:
 - Speculative Claims
 - Dangerous Overclaims
 
-## Stage 2 — Target paper discovery
+## Stage 2 - Target paper discovery
 
 Goal: identify the papers and primary sources the manuscript is actually in conversation with.
 
@@ -27,7 +27,7 @@ Target papers are classified as:
 - Adversarial Papers
 - Primary Sources
 
-## Stage 3 — Target narrative extraction
+## Stage 3 - Target narrative extraction
 
 Goal: identify the diffuse standard narrative the hypothesis challenges.
 
@@ -41,23 +41,92 @@ A target narrative may be:
 - AI-frequency narrative,
 - or untraced narrative.
 
-## Stage 4 — Node construction
+## Stage 4 - Node construction
 
 Goal: convert papers, claims, evidence, narratives, gaps, exceptions, risks, and falsifiers into nodes.
 
 Do not evaluate yet. Build the map first.
 
-## Stage 5 — A/B/C/X/M calibration
+## Stage 5 - Calibration audit
 
-Goal: classify claims by evidentiary status.
+Goal: make claim status auditable without asking the LLM for a global verdict.
+
+### Stage 5A - LLM Structural Audit
+
+The LLM checks the graph structure, not the truth of the hypothesis.
+
+Audit fields:
+
+- citation coverage,
+- analogy marking,
+- falsifier presence,
+- definition consistency,
+- paper/narrative separation,
+- overclaim phrases.
+
+Output:
+
+- missing or weak citation links,
+- unmarked analogies,
+- C-tier candidates lacking falsifiers,
+- terms that need definition or scope control,
+- places where target papers and target narratives blur,
+- phrases that exceed local source support.
+
+### Stage 5B - Human Tier Declaration
+
+The human author, domain expert, reviewer, or project operator declares final A/B/C/X/M tiers.
+
+The LLM may propose tier candidates, but final graph data must keep human declaration visible with:
+
+- `declared_tier`,
+- `tier_declared_by`,
+- `tier_rationale`,
+- `tier_review_status`.
+
+Tier meanings:
 
 - A = relatively strong.
 - B = plausible hypothesis.
-- C = not yet assertable.
+- C = not yet assertable, but testable.
 - X = overclaimed or unsupported.
 - M = methodological or heuristic.
 
-## Stage 6 — Target paper diff
+Any C-tier `UserClaimNode` must have at least one linked `FalsifierNode`.
+
+### Stage 5C - LLM Local Claim-Evidence Check
+
+For each declared claim-evidence pair, the LLM checks only whether the cited source locally supports the claim.
+
+Local support options:
+
+- directly supports,
+- hedges,
+- presupposes,
+- contradicts,
+- contextualizes,
+- supplies analogy only,
+- provides no direct support,
+- unknown / needs source.
+
+This stage records edge-level metadata such as `support_strength`, `support_mode`, `source_span`, `local_check_status`, `claim_scope_match`, `vocabulary_match`, and `granularity_match`.
+
+### Stage 5D - Human Global Review
+
+Do not ask the LLM for a global truth verdict or global consistency verdict.
+
+The LLM hands off:
+
+- the graph,
+- structural audit findings,
+- declared tier metadata,
+- local claim-evidence checks,
+- unresolved citation debt,
+- falsification and patch requirements.
+
+The human reviewer decides what the map means.
+
+## Stage 6 - Target paper diff
 
 Goal: determine whether the manuscript conflicts with a source, extends it, or simply uses it as an evidentiary foundation.
 
@@ -69,7 +138,7 @@ Conflict types:
 - overextension,
 - methodological mismatch.
 
-## Stage 7 — Narrative audit
+## Stage 7 - Narrative audit
 
 Goal: determine whether the manuscript is challenging actual papers or a diffuse standard narrative.
 
@@ -82,9 +151,9 @@ Narrative audit includes:
 - challenged elements,
 - reframed elements.
 
-## Stage 8 — Breakthrough diagnosis
+## Stage 8 - Breakthrough diagnosis
 
-Goal: produce a structured diagnosis, not a score.
+Goal: produce a structured diagnosis, not a score or truth verdict.
 
 Output:
 

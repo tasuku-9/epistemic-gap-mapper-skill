@@ -26,6 +26,19 @@
     "text": {"type": "string"},
     "citation": {"type": "string"},
     "tier": {"type": "string", "enum": ["A", "B", "C", "X", "M", "unknown"]},
+    "vocabulary_map": {
+      "type": "object",
+      "additionalProperties": {"type": "string"}
+    },
+    "definition_scope": {"type": "string"},
+    "granularity_justification": {"type": "string"},
+    "declared_tier": {"type": "string", "enum": ["A", "B", "C", "X", "M", "unknown"]},
+    "tier_declared_by": {"type": "string"},
+    "tier_rationale": {"type": "string"},
+    "tier_review_status": {
+      "type": "string",
+      "enum": ["proposed", "declared", "reviewer_checked", "needs_review", "disputed", "unknown"]
+    },
     "domain": {"type": "string"},
     "source_kind": {"type": "string"},
     "role": {"type": "string"},

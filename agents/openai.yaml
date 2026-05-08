@@ -1,4 +1,4 @@
 interface:
   display_name: "Epistemic Gap Mapper"
   short_description: "Map bold hypotheses for expert review"
-  default_prompt: "Use $epistemic-gap-mapper-skill to extract claims from my manuscript, identify target papers and target narratives, build A/B/C/X/M nodes, audit narrative debt, detect overclaims, and produce a Breakthrough Diagnosis."
+  default_prompt: "Use $epistemic-gap-mapper-skill to extract claims from my manuscript, identify target papers and target narratives, build nodes, run a structural audit, prepare human A/B/C/X/M tier declarations, check local claim-evidence support, and produce a human-review handoff."

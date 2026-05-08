@@ -25,7 +25,36 @@
       ]
     },
     "reason": {"type": "string"},
-    "confidence": {"type": "string", "enum": ["high", "medium", "low", "unknown"]}
+    "confidence": {"type": "string", "enum": ["high", "medium", "low", "unknown"]},
+    "support_strength": {
+      "type": "string",
+      "enum": [
+        "direct",
+        "hedged",
+        "presupposed",
+        "contextual",
+        "counter_example",
+        "analogy_only",
+        "no_direct_support",
+        "unknown"
+      ]
+    },
+    "support_mode": {
+      "type": "string",
+      "enum": [
+        "empirical",
+        "textual",
+        "inferential",
+        "methodological",
+        "comparative",
+        "narrative_trace"
+      ]
+    },
+    "source_span": {"type": "string"},
+    "local_check_status": {"type": "string", "enum": ["pass", "warn", "fail", "needs_source"]},
+    "claim_scope_match": {"type": "string", "enum": ["full", "partial", "mismatch", "unknown"]},
+    "vocabulary_match": {"type": "string", "enum": ["same_terms", "mapped_terms", "ambiguous", "mismatch"]},
+    "granularity_match": {"type": "string", "enum": ["same_grain", "too_broad", "too_narrow", "atomized", "unknown"]}
   },
   "additionalProperties": false
 }

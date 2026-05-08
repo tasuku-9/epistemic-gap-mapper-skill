@@ -15,7 +15,7 @@ graph TD
     E2 -- supports_weakly --> E3
     E3 -- supports_weakly --> I1[Paternal asymmetry inference]
     A1[Assumption: Y-lines may preserve social signal] -- depends_on --> I1
-    I1 -- supports_weakly --> UC1[Possible paternal social advantage]
+    I1 -- supports_weakly --> UC1[UC1 B declared: possible paternal social advantage]
   end
 
   subgraph Archaeology [Archaeology]
@@ -24,14 +24,14 @@ graph TD
     E4 -- supports_weakly --> I2[Social reorganization inference]
     E5 -- supports_weakly --> I2
     A2[Assumption: ritual discontinuity may signal reorganization] -- depends_on --> I2
-    I2 -- supports_weakly --> UC2[Possible network disruption / ritual transfer]
+    I2 -- supports_weakly --> UC2[UC2 B declared: possible network disruption / ritual transfer]
   end
 
   subgraph Mythology [Mythology]
     P5[Kojiki / Nihon Shoki] -- supports --> E6[Descent, land transfer, Ogetsuhime motifs]
     E6 -- supports_weakly --> I3[Myth-as-social-memory inference]
     A3[Assumption: myth can preserve transformed memory] -- depends_on --> I3
-    I3 -- supports_weakly --> UC3[Possible ritual-political memory]
+    I3 -- supports_weakly --> UC3[UC3 C declared: possible ritual-political memory]
   end
 
   subgraph Continental_Background [Continental Background]
@@ -39,11 +39,11 @@ graph TD
     P7[Fujio chronology] -- supports --> E8[Yayoi chronology]
     E7 -- supports_weakly --> I4[Continental context inference]
     E8 -- supports_weakly --> I4
-    I4 -- supports_weakly --> UC4[Context, not direct cause]
+    I4 -- supports_weakly --> UC4[UC4 B declared: context, not direct cause]
   end
 
   subgraph Cross_Domain_Model [Cross-Domain Model]
-    UC1 -- supports_weakly --> UC5[Integrated abductive model]
+    UC1 -- supports_weakly --> UC5[UC5 C declared: integrated abductive model]
     UC2 -- supports_weakly --> UC5
     UC3 -- supports_weakly --> UC5
     UC4 -- supports_weakly --> UC5

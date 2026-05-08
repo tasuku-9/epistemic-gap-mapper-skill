@@ -48,6 +48,20 @@ Required fields:
 - `risks`
 - `falsifiers`
 
+Optional calibration and local-check metadata:
+
+- `vocabulary_map`
+- `definition_scope`
+- `granularity_justification`
+- `declared_tier`
+- `tier_declared_by`
+- `tier_rationale`
+- `tier_review_status`
+
+Use `declared_tier` only when the tier has been declared by a human author, domain expert, reviewer, or operator. The LLM may propose candidate tiers, but the final tier must keep the human declaration visible.
+
+Any UserClaimNode with `tier = C` or `declared_tier = C` must link to at least one `FalsifierNode`.
+
 ### Evidence Node
 
 An observation, dataset, source statement, or primary textual fact used as evidence.

@@ -1,9 +1,11 @@
-# Prompt 08 — Breakthrough Diagnosis
+# Prompt 08 - Breakthrough Diagnosis
 
 ```text
-Using the node graph, A/B/C/X diagnosis, target paper diff, and narrative audit, produce a Breakthrough Diagnosis.
+Using the node graph, human tier declarations, local claim-evidence checks, target paper diff, and narrative audit, produce a Breakthrough Diagnosis.
 
 Do not give a numeric score.
+Do not give a global truth verdict.
+Do not treat LLM-proposed tier candidates as final tiers.
 
 Output:
 
@@ -26,15 +28,18 @@ Output:
 
 8. Target Narrative Relationship
 
-9. Required Patches
+9. Local Claim-Evidence Issues
 
-10. Falsification Plan
+10. Required Patches
 
-11. Recommended Next Action
+11. Falsification Plan
+
+12. Recommended Next Action
 
 Rules:
-- “Not consensus” is not a reason for rejection.
+- "Not consensus" is not a reason for rejection.
 - Identify weak nodes, not vague impressions.
-- Preserve testable C claims if they are clearly marked.
-- Mark unsupported overclaims as X.
+- Preserve testable C claims if they are clearly marked and linked to falsifiers.
+- Mark unsupported overclaims as X or patch them with safer wording.
+- End with a human-review handoff, not a final judgment.
 ```

@@ -46,11 +46,12 @@ The system separates:
 2. **Node extraction**
    - Extract Claim, Evidence, Paper, Narrative, Gap, Exception, Falsifier, and Method nodes.
 
-3. **AI-assisted calibration**
-   - Propose A/B/C/X tiers.
-   - Separate papers from narratives.
-   - Detect overclaims.
+3. **Calibration audit**
+   - Run an LLM structural audit.
+   - Let a human author, expert, or reviewer declare final A/B/C/X/M tiers.
+   - Locally check each declared claim-evidence pair.
    - Mark comparisons as heuristic analogies, not evidence.
+   - Hand off graph findings for human global review.
 
 4. **Cross-frame diagnosis**
    - Check logic, source validity, paper relations, narrative debt, and unexplained exceptions.
@@ -61,7 +62,9 @@ The system separates:
    - Breakthrough Diagnosis.
    - Narrative Audit.
 
-## A/B/C/X claim tiers
+## A/B/C/X/M claim tiers
+
+Tiers are declarations, not automated truth judgments. The LLM can propose candidate tiers and audit consistency, but final tiers should record who declared them.
 
 | Tier | Meaning |
 |---|---|
@@ -113,7 +116,7 @@ The `prose_case/` folder shows how the same broad hypothesis can be written in f
 - `README.md` and `QUICKSTART.md` — public overview and usage flow.
 - `CONTRIBUTING.md` — contribution rules and safety expectations.
 - `CITATION.cff` — citation metadata.
-- `docs/` — conceptual design, workflow, node schema, edge schema, methodological index.
+- `docs/` — conceptual design, workflow, node schema, edge schema, methodological index, and tool falsifiability.
 - `prompts/` — copy-paste prompts for each step of the workflow.
 - `schemas/` — JSON schemas for nodes, edges, graphs, and reports.
 - `templates/` — reusable intake, graph, node, and report templates.
@@ -129,6 +132,7 @@ Text, prompts, templates, and diagrams are intended for release under **CC BY 4.
 
 Executable helper scripts are intended for release under the **MIT License**. Text assets are intended for **CC BY 4.0**.
 
+- Root `LICENSE`: CC BY 4.0 notice for the primary text/prompt/schema skill materials.
 - Text, prompts, templates, documentation, examples, schemas, outreach materials, and diagrams: see `LICENSE-CC-BY-4.0.md`.
 - Code in `scripts/`: see `LICENSE-MIT.md`.
 

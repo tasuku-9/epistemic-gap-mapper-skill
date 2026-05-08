@@ -35,3 +35,19 @@ Not:
 ```text
 Kumulipo --supports--> Kiki historical interpretation
 ```
+
+## Optional local claim-evidence metadata
+
+Use these fields when Stage 5C inspects whether a cited source locally supports a declared claim.
+
+| Field | Allowed values |
+|---|---|
+| `support_strength` | `direct`, `hedged`, `presupposed`, `contextual`, `counter_example`, `analogy_only`, `no_direct_support`, `unknown` |
+| `support_mode` | `empirical`, `textual`, `inferential`, `methodological`, `comparative`, `narrative_trace` |
+| `source_span` | page, passage, figure, table, source node, or `not specified` |
+| `local_check_status` | `pass`, `warn`, `fail`, `needs_source` |
+| `claim_scope_match` | `full`, `partial`, `mismatch`, `unknown` |
+| `vocabulary_match` | `same_terms`, `mapped_terms`, `ambiguous`, `mismatch` |
+| `granularity_match` | `same_grain`, `too_broad`, `too_narrow`, `atomized`, `unknown` |
+
+These fields are local checks only. They do not produce a global truth verdict.

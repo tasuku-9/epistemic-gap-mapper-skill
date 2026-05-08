@@ -43,6 +43,41 @@ ALLOWED_RELATIONS = {
     "not_direct_evidence",
 }
 
+ALLOWED_TIERS = {"A", "B", "C", "X", "M", "unknown"}
+ALLOWED_TIER_REVIEW_STATUS = {
+    "proposed",
+    "declared",
+    "reviewer_checked",
+    "needs_review",
+    "disputed",
+    "unknown",
+}
+
+EDGE_ENUM_FIELDS = {
+    "support_strength": {
+        "direct",
+        "hedged",
+        "presupposed",
+        "contextual",
+        "counter_example",
+        "analogy_only",
+        "no_direct_support",
+        "unknown",
+    },
+    "support_mode": {
+        "empirical",
+        "textual",
+        "inferential",
+        "methodological",
+        "comparative",
+        "narrative_trace",
+    },
+    "local_check_status": {"pass", "warn", "fail", "needs_source"},
+    "claim_scope_match": {"full", "partial", "mismatch", "unknown"},
+    "vocabulary_match": {"same_terms", "mapped_terms", "ambiguous", "mismatch"},
+    "granularity_match": {"same_grain", "too_broad", "too_narrow", "atomized", "unknown"},
+}
+
 TYPE_REQUIRED_FIELDS = {
     "PaperNode": ["citation", "domain", "source_kind", "role", "verification_status"],
     "SourceClaimNode": ["source_paper", "domain", "confidence"],
@@ -69,7 +104,7 @@ TYPE_REQUIRED_FIELDS = {
 
 
 def load_graph(path: Path) -> dict:
-    with path.open("r", encoding="utf-8") as f:
+    with path.open("r", encoding="utf-8-sig") as f:
         data = json.load(f)
     if not isinstance(data, dict):
         raise ValueError("Graph file must contain a JSON object.")
@@ -93,6 +128,11 @@ def field_refs(value: object) -> list[str]:
     if isinstance(value, list):
         return [item for item in value if isinstance(item, str)]
     return []
+
+
+def node_type_is(node_by_id: dict[str, dict], node_id: str, expected_type: str) -> bool:
+    node = node_by_id.get(node_id)
+    return bool(node and node.get("node_type") == expected_type)
 
 
 def validate_graph(data: dict) -> list[str]:
@@ -121,6 +161,11 @@ def validate_graph(data: dict) -> list[str]:
         node_type = node.get("node_type")
         if node_type not in ALLOWED_NODE_TYPES:
             errors.append(f"Node {node_id} has invalid node_type: {node_type}")
+        for tier_field in ("tier", "declared_tier"):
+            if tier_field in node and node.get(tier_field) not in ALLOWED_TIERS:
+                errors.append(f"Node {node_id} has invalid {tier_field}: {node.get(tier_field)}")
+        if "tier_review_status" in node and node.get("tier_review_status") not in ALLOWED_TIER_REVIEW_STATUS:
+            errors.append(f"Node {node_id} has invalid tier_review_status: {node.get('tier_review_status')}")
         if not has_value(node, "text"):
             errors.append(f"Node {node_id} is missing text.")
         for field in TYPE_REQUIRED_FIELDS.get(node_type, []):
@@ -128,6 +173,12 @@ def validate_graph(data: dict) -> list[str]:
                 errors.append(f"Node {node_id} ({node_type}) is missing {field}.")
         if node_type == "MethodNode" and node.get("not_evidence") is not True:
             errors.append(f"Node {node_id} (MethodNode) should set not_evidence to true.")
+        if node_type == "UserClaimNode" and has_value(node, "declared_tier"):
+            for field in ("tier_declared_by", "tier_rationale", "tier_review_status"):
+                if not has_value(node, field):
+                    errors.append(
+                        f"Node {node_id}: declared_tier requires {field} so the human declaration remains visible."
+                    )
 
     for node in nodes:
         node_id = node.get("node_id")
@@ -149,6 +200,24 @@ def validate_graph(data: dict) -> list[str]:
                 if source_node and source_node.get("node_type") == "MethodNode":
                     errors.append(f"Node {node_id}: {field} must not reference MethodNode {source_id} as evidence.")
 
+        if node_type == "UserClaimNode" and "C" in {node.get("tier"), node.get("declared_tier")}:
+            falsifier_refs = [
+                ref
+                for ref in field_refs(node.get("falsifiers"))
+                if node_type_is(node_by_id, ref, "FalsifierNode")
+            ]
+            falsifier_edges = [
+                edge
+                for edge in edges
+                if edge.get("relation") == "falsified_by"
+                and edge.get("to") == node_id
+                and node_type_is(node_by_id, edge.get("from"), "FalsifierNode")
+            ]
+            if not falsifier_refs and not falsifier_edges:
+                errors.append(
+                    f"Node {node_id}: C-tier UserClaimNode must link to at least one FalsifierNode."
+                )
+
     for idx, edge in enumerate(edges):
         src = edge.get("from")
         dst = edge.get("to")
@@ -159,6 +228,9 @@ def validate_graph(data: dict) -> list[str]:
             errors.append(f"Edge {idx} has unknown target node: {dst}")
         if rel not in ALLOWED_RELATIONS:
             errors.append(f"Edge {idx} has invalid relation: {rel}")
+        for field, allowed_values in EDGE_ENUM_FIELDS.items():
+            if field in edge and edge.get(field) not in allowed_values:
+                errors.append(f"Edge {idx} has invalid {field}: {edge.get(field)}")
         source_node = node_by_id.get(src)
         target_node = node_by_id.get(dst)
         if rel == "supports" and source_node and source_node.get("node_type") == "MethodNode":

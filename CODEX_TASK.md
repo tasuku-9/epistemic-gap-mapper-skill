@@ -10,14 +10,17 @@ You are improving **Epistemic Gap Mapper Skill**, a prompt-and-schema based skil
 4. Keep worked examples explicit about uncertainty, overclaim risks, and falsification conditions.
 5. Keep the first-use path simple enough for a new user to complete before reading the advanced examples.
 6. Improve public-facing explanation without making the project sound like a manifesto or a fringe-theory amplifier.
+7. Keep calibration audit-oriented: LLMs can propose candidate tiers and local checks, but humans declare final A/B/C/X/M tiers.
 
 ## Guardrails
 
 - Do not add a numeric scoring system.
 - Do not implement automatic truth judgment.
+- Do not ask the LLM for a global truth verdict or global consistency verdict.
 - Do not invent citations or make the tool appear to verify sources automatically.
 - Do not treat comparisons, myths, analogies, or historical parallels as direct evidence.
 - Do not classify speculative claims as A-level claims.
+- Do not let C-level UserClaimNodes stand without at least one falsifier link.
 - Do not treat "no source found" as proof that a target narrative is false.
 - Do not remove the distinction between `PaperNode`, `SourceClaimNode`, and `NarrativeNode`.
 
@@ -30,6 +33,7 @@ You are improving **Epistemic Gap Mapper Skill**, a prompt-and-schema based skil
 5. Add tests or GitHub Actions only if they remain lightweight and dependency-minimal.
 6. Add more examples from domains outside the Jomon / Dotaku / Kiki case.
 7. Preserve the starter example and templates as a low-friction first step.
+8. Use `docs/tool_falsifiability.md` when evaluating whether the mapper itself is becoming too judge-like or too permissive.
 
 ## Validation
 

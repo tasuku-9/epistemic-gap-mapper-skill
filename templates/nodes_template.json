@@ -38,6 +38,15 @@
       "text": "Replace with your hypothesis or claim.",
       "domain": "replace with domain",
       "tier": "B",
+      "declared_tier": "B",
+      "tier_declared_by": "replace with author / expert / reviewer / operator",
+      "tier_rationale": "Replace with why this tier was declared by a human reviewer.",
+      "tier_review_status": "declared",
+      "definition_scope": "Replace with what the claim does and does not cover.",
+      "granularity_justification": "Replace with why the claim is not too broad or too atomized.",
+      "vocabulary_map": {
+        "replace key term": "replace with local definition or mapped term"
+      },
       "supporting_sources": ["E1"],
       "related_target_papers": ["P1"],
       "related_target_narratives": ["N1"],
@@ -78,7 +87,14 @@
       "to": "UC1",
       "relation": "supports_weakly",
       "reason": "Replace with why E1 supports but does not prove UC1.",
-      "confidence": "medium"
+      "confidence": "medium",
+      "support_strength": "hedged",
+      "support_mode": "empirical",
+      "source_span": "not specified",
+      "local_check_status": "warn",
+      "claim_scope_match": "partial",
+      "vocabulary_match": "mapped_terms",
+      "granularity_match": "unknown"
     },
     {
       "from": "UC1",

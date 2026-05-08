@@ -48,7 +48,10 @@
       "source": "P1",
       "domain": "small business / local data",
       "tier": "B",
-      "supporting_sources": ["P1", "SC1"],
+      "supporting_sources": [
+        "P1",
+        "SC1"
+      ],
       "confidence": "medium",
       "metadata": {
         "cluster": "Local Data"
@@ -61,7 +64,9 @@
       "source": "P2",
       "domain": "local data / weather",
       "tier": "A",
-      "supporting_sources": ["P2"],
+      "supporting_sources": [
+        "P2"
+      ],
       "confidence": "medium",
       "metadata": {
         "cluster": "Local Data"
@@ -104,14 +109,36 @@
       "text": "Rainy days may increase this cafe's sales, but the cause needs to be checked against confounders.",
       "domain": "small business / local data",
       "tier": "B",
-      "supporting_sources": ["E1", "E2"],
-      "related_target_papers": ["P1", "P2"],
-      "related_target_narratives": ["N1"],
-      "risks": ["R1"],
-      "falsifiers": ["F1"],
+      "supporting_sources": [
+        "E1",
+        "E2"
+      ],
+      "related_target_papers": [
+        "P1",
+        "P2"
+      ],
+      "related_target_narratives": [
+        "N1"
+      ],
+      "risks": [
+        "R1"
+      ],
+      "falsifiers": [
+        "F1"
+      ],
       "confidence": "medium",
       "metadata": {
         "cluster": "Claim"
+      },
+      "declared_tier": "B",
+      "tier_declared_by": "author",
+      "tier_rationale": "Declared B because the local data are compatible with the hypothesis, but the causal claim needs confounder checks.",
+      "tier_review_status": "declared",
+      "definition_scope": "This cafe during the sampled 90-day period; not all cafes or all rainy days.",
+      "granularity_justification": "Keeps local sales association separate from a broad causal rule.",
+      "vocabulary_map": {
+        "rainy days": "Business days marked rainy in the local weather log.",
+        "increase sales": "Higher average revenue or transactions, not proof of customer motive."
       }
     },
     {
@@ -131,7 +158,9 @@
       "node_id": "F1",
       "node_type": "FalsifierNode",
       "text": "If the rainy-day effect disappears after controlling for weekends, events, promotions, and seasonality, UC1 is weakened.",
-      "would_weaken": ["UC1"],
+      "would_weaken": [
+        "UC1"
+      ],
       "required_evidence": "A comparison that controls for day-of-week, special events, promotions, and seasonal period.",
       "tier": "M",
       "confidence": "medium",
@@ -146,49 +175,98 @@
       "to": "SC1",
       "relation": "supports",
       "reason": "P1 is the source for the sales-log claim.",
-      "confidence": "medium"
+      "confidence": "medium",
+      "support_strength": "direct",
+      "support_mode": "empirical",
+      "source_span": "not specified in sample",
+      "local_check_status": "pass",
+      "claim_scope_match": "full",
+      "vocabulary_match": "same_terms",
+      "granularity_match": "same_grain"
     },
     {
       "from": "SC1",
       "to": "E1",
       "relation": "supports",
       "reason": "SC1 supports the rainy/non-rainy sales comparison.",
-      "confidence": "medium"
+      "confidence": "medium",
+      "support_strength": "direct",
+      "support_mode": "empirical",
+      "source_span": "not specified in sample",
+      "local_check_status": "pass",
+      "claim_scope_match": "full",
+      "vocabulary_match": "same_terms",
+      "granularity_match": "same_grain"
     },
     {
       "from": "P2",
       "to": "E2",
       "relation": "supports",
       "reason": "P2 supplies the rainy-day labels.",
-      "confidence": "medium"
+      "confidence": "medium",
+      "support_strength": "direct",
+      "support_mode": "empirical",
+      "source_span": "not specified in sample",
+      "local_check_status": "pass",
+      "claim_scope_match": "full",
+      "vocabulary_match": "same_terms",
+      "granularity_match": "same_grain"
     },
     {
       "from": "E1",
       "to": "UC1",
       "relation": "supports_weakly",
       "reason": "Higher average sales on rainy days is consistent with UC1 but does not prove causation.",
-      "confidence": "medium"
+      "confidence": "medium",
+      "support_strength": "hedged",
+      "support_mode": "empirical",
+      "source_span": "not specified in sample",
+      "local_check_status": "warn",
+      "claim_scope_match": "partial",
+      "vocabulary_match": "mapped_terms",
+      "granularity_match": "unknown"
     },
     {
       "from": "E2",
       "to": "UC1",
       "relation": "supports_weakly",
       "reason": "E2 makes the rainy-day comparison possible.",
-      "confidence": "medium"
+      "confidence": "medium",
+      "support_strength": "hedged",
+      "support_mode": "empirical",
+      "source_span": "not specified in sample",
+      "local_check_status": "warn",
+      "claim_scope_match": "partial",
+      "vocabulary_match": "mapped_terms",
+      "granularity_match": "unknown"
     },
     {
       "from": "P1",
       "to": "NT1",
       "relation": "supports_weakly",
       "reason": "P1 may be compatible with N1 but does not directly explain customer motivation.",
-      "confidence": "medium"
+      "confidence": "medium",
+      "support_strength": "hedged",
+      "support_mode": "empirical",
+      "source_span": "not specified in sample",
+      "local_check_status": "warn",
+      "claim_scope_match": "partial",
+      "vocabulary_match": "mapped_terms",
+      "granularity_match": "unknown"
     },
     {
       "from": "NT1",
       "to": "N1",
       "relation": "not_direct_evidence",
       "reason": "NT1 clarifies citation debt without treating the narrative as proven or false.",
-      "confidence": "medium"
+      "confidence": "medium",
+      "support_strength": "no_direct_support",
+      "support_mode": "narrative_trace",
+      "source_span": "not specified in sample",
+      "local_check_status": "pass",
+      "claim_scope_match": "partial",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "UC1",

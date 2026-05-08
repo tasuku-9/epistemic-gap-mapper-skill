@@ -6,7 +6,7 @@ Epistemic Gap Mapper should be community-grown because no single actor can relia
 
 - **Domain Expert**: evaluates specific Paper and Evidence nodes.
 - **Independent Researcher**: contributes frame-challenging hypotheses and outsider anomalies.
-- **Methodologist**: evaluates reasoning structure, A/B/C/X classification, and falsification conditions.
+- **Methodologist**: evaluates reasoning structure, human A/B/C/X tier declarations, local claim-evidence checks, and falsification conditions.
 - **Librarian / Archivist**: traces source status, citation debt, and provenance of narratives.
 - **AI / Tool Builder**: improves node extraction, graph rendering, and annotation workflows.
 - **Adversarial Reviewer**: identifies overclaims, unsupported claims, and X-level risks.
@@ -24,7 +24,7 @@ Epistemic Gap Mapper should be community-grown because no single actor can relia
 
 1. Do not promote C claims as A claims.
 2. Do not use comparisons as direct evidence.
-3. Do not treat “no source found” as proof that a narrative is false.
+3. Do not treat "no source found" as proof that a narrative is false.
 4. Do not distort target papers.
 5. Every breakthrough hypothesis should include falsification conditions.
 6. Separate Paper Nodes from Narrative Nodes.
