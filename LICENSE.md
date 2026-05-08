@@ -1,9 +1,6 @@
 # License
 
-Text, prompts, templates, schemas, examples, and diagrams in this package are intended for release under:
+This repository uses a mixed license.
 
-**Creative Commons Attribution 4.0 International (CC BY 4.0)**
-
-You may share and adapt the material for any purpose, provided appropriate attribution is given.
-
-Executable helper scripts are intended for release under the MIT License unless otherwise stated.
+- Text, prompts, templates, documentation, examples, schemas, outreach materials, and diagrams are licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**. See `LICENSE-CC-BY-4.0.md`.
+- Executable helper scripts in `scripts/` are licensed under the **MIT License**. See `LICENSE-MIT.md`.

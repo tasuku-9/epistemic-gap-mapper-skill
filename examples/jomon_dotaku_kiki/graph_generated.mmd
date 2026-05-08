@@ -1,6 +1,11 @@
 graph TD
   P1["Sato et al. 2014, overview of Y-chromosome variation in modern Japanese males."]
+  SC1["Sato et al. 2014 reports Y-chromosome haplogroup variation in modern Japanese..."]
   E1["D1a2a/D-M55 persists at high frequency in modern Japanese male lineages."]
+  EX1["High D1a2a/D-M55 frequency coexists with largely continental-derived autosoma..."]
+  A1["Y-chromosome asymmetry can preserve signals of sex-biased social structure or..."]
+  I1["Paternal-lineage asymmetry may reflect some form of social or reproductive ad..."]
+  G1["Autosomal ancestry models do not by themselves explain the social-historical ..."]
   UC1["Paternal-lineage asymmetry may indicate some form of social or reproductive a..."]
   N2["D1a2a/D-M55 persistence is best understood as passive Jomon-associated survival."]
   P2["Hudson 1992 on Yayoi ritual and dotaku context."]
@@ -8,15 +13,34 @@ graph TD
   UC2["The end of dotaku ritual may reflect social reorganization or network disrupt..."]
   N3["Dotaku discontinuity is usually treated as internal ritual transformation or ..."]
   UC3["Kiki myths may preserve structures of ritual-political memory related to soci..."]
+  N4["Kiki mythic material is often treated as literary-theological tradition rathe..."]
+  P3["The Kojiki and Nihon Shoki contain mythic complexes involving descent, land t..."]
   R1["Y-chromosome frequency alone cannot prove conquest or elite dominance."]
+  R2["Dotaku discontinuity alone cannot prove external disruption or political take..."]
+  R3["Kiki mythic structures cannot be read as literal historical record."]
   F1["If representative Kofun elite burials do not show elevated D1a2a/D-M55 compar..."]
+  F2["If dotaku discontinuity is fully explained by local ritual transformation wit..."]
+  F3["If Kiki descent and land-transfer motifs are late literary constructions with..."]
   M7["Comparative cases are possibility structures, not evidence for the Japanese c..."]
-  P1 -- supports --> E1
-  E1 -- weakly supports --> UC1
+  P1 -- supports --> SC1
+  SC1 -- supports --> E1
+  E1 -- supports --> EX1
+  EX1 -- challenges narrative --> N2
+  A1 -- depends on --> I1
+  E1 -- weakly supports --> I1
+  I1 -- weakly supports --> UC1
+  UC1 -- explains gap --> G1
   UC1 -- challenges narrative --> N2
   R1 -- qualifies --> UC1
   F1 -- falsified by --> UC1
   P2 -- supports --> E2
   E2 -- weakly supports --> UC2
   UC2 -- challenges narrative --> N3
+  R2 -- qualifies --> UC2
+  F2 -- falsified by --> UC2
+  P3 -- weakly supports --> UC3
+  UC3 -- challenges narrative --> N4
+  R3 -- qualifies --> UC3
+  F3 -- falsified by --> UC3
   M7 -- heuristic analogy --> UC2
+  M7 -- heuristic analogy --> UC3

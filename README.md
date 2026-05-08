@@ -2,6 +2,8 @@
 
 **Epistemic Gap Mapper** is a prompt-and-schema based skill for analyzing *frame-challenging hypotheses*.
 
+It is a structure-diagnosis tool, not a truth judge, ranking system, or automatic reviewer.
+
 It does **not** decide whether a hypothesis is true. Instead, it maps how a new hypothesis relates to:
 
 - target papers,
@@ -82,15 +84,18 @@ This skill is useful when a researcher, independent scholar, journalist, graduat
 
 - `SKILL.md` — Codex skill instructions and trigger metadata.
 - `agents/openai.yaml` — UI metadata for skill lists and default invocation.
+- `CODEX_TASK.md` — maintenance guidance for Codex-assisted improvements.
 - `README.md` and `QUICKSTART.md` — public overview and usage flow.
 - `CONTRIBUTING.md` — contribution rules and safety expectations.
+- `CITATION.cff` — citation metadata.
 - `docs/` — conceptual design, workflow, node schema, edge schema, methodological index.
 - `prompts/` — copy-paste prompts for each step of the workflow.
-- `schemas/` — JSON schemas for nodes, edges, and reports.
+- `schemas/` — JSON schemas for nodes, edges, graphs, and reports.
 - `templates/` — reusable intake and report templates.
 - `examples/` — worked example based on the Jomon/Dotaku/Kiki hypothesis.
 - `outreach/` — public explainers and recruitment/community posts in English and Japanese.
 - `scripts/` — lightweight local graph validation and Mermaid rendering helper.
+- `.github/` — sample validation workflow and issue templates.
 - `assets/` — diagram and visual materials.
 
 ## License
@@ -98,6 +103,16 @@ This skill is useful when a researcher, independent scholar, journalist, graduat
 Text, prompts, templates, and diagrams are intended for release under **CC BY 4.0 International** unless otherwise stated.
 
 Executable helper scripts are intended for release under the **MIT License**. Text assets are intended for **CC BY 4.0**.
+
+- Text, prompts, templates, documentation, examples, schemas, outreach materials, and diagrams: see `LICENSE-CC-BY-4.0.md`.
+- Code in `scripts/`: see `LICENSE-MIT.md`.
+
+## Validation
+
+```bash
+python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_sample.json
+python scripts/egm_cli.py render examples/jomon_dotaku_kiki/nodes_sample.json --mermaid
+```
 
 ## v0.2 Additions
 

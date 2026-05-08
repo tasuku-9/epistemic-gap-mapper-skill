@@ -42,21 +42,60 @@ ALLOWED_RELATIONS = {
     "not_direct_evidence",
 }
 
+TYPE_REQUIRED_FIELDS = {
+    "PaperNode": ["citation", "domain", "source_kind", "role", "verification_status"],
+    "SourceClaimNode": ["source_paper", "domain", "confidence"],
+    "UserClaimNode": [
+        "tier",
+        "domain",
+        "supporting_sources",
+        "related_target_papers",
+        "related_target_narratives",
+        "risks",
+        "falsifiers",
+    ],
+    "EvidenceNode": ["source", "domain", "tier"],
+    "InferenceNode": ["tier", "depends_on", "risks"],
+    "AssumptionNode": ["tier", "risk_level"],
+    "NarrativeNode": ["source_status", "citation_debt", "component_claims"],
+    "GapNode": ["located_in", "importance"],
+    "ExceptionNode": ["target_narrative", "source"],
+    "RiskNode": ["risky_phrase", "why_risky", "suggested_patch"],
+    "FalsifierNode": ["would_weaken", "required_evidence"],
+    "MethodNode": ["method_name", "not_evidence"],
+}
+
 
 def load_graph(path: Path) -> dict:
     with path.open("r", encoding="utf-8") as f:
         data = json.load(f)
     if not isinstance(data, dict):
         raise ValueError("Graph file must contain a JSON object.")
-    data.setdefault("nodes", [])
-    data.setdefault("edges", [])
     return data
+
+
+def has_value(node: dict, field: str) -> bool:
+    value = node.get(field)
+    if value is None:
+        return False
+    if isinstance(value, str):
+        return bool(value.strip())
+    if isinstance(value, (list, dict)):
+        return bool(value)
+    return True
 
 
 def validate_graph(data: dict) -> list[str]:
     errors: list[str] = []
-    nodes = data.get("nodes", [])
-    edges = data.get("edges", [])
+    nodes = data.get("nodes")
+    edges = data.get("edges")
+
+    if not isinstance(nodes, list):
+        errors.append("Graph is missing nodes array.")
+        nodes = []
+    if not isinstance(edges, list):
+        errors.append("Graph is missing edges array.")
+        edges = []
 
     ids: set[str] = set()
     node_by_id: dict[str, dict] = {}
@@ -72,8 +111,13 @@ def validate_graph(data: dict) -> list[str]:
         node_type = node.get("node_type")
         if node_type not in ALLOWED_NODE_TYPES:
             errors.append(f"Node {node_id} has invalid node_type: {node_type}")
-        if not node.get("text") and node_type != "MethodNode":
+        if not has_value(node, "text"):
             errors.append(f"Node {node_id} is missing text.")
+        for field in TYPE_REQUIRED_FIELDS.get(node_type, []):
+            if not has_value(node, field):
+                errors.append(f"Node {node_id} ({node_type}) is missing {field}.")
+        if node_type == "MethodNode" and node.get("not_evidence") is not True:
+            errors.append(f"Node {node_id} (MethodNode) should set not_evidence to true.")
 
     for idx, edge in enumerate(edges):
         src = edge.get("from")
@@ -86,10 +130,17 @@ def validate_graph(data: dict) -> list[str]:
         if rel not in ALLOWED_RELATIONS:
             errors.append(f"Edge {idx} has invalid relation: {rel}")
         source_node = node_by_id.get(src)
+        target_node = node_by_id.get(dst)
         if rel == "supports" and source_node and source_node.get("node_type") == "MethodNode":
             errors.append(
                 f"Edge {idx}: Method/comparison nodes should not use supports; use heuristic_analogy_for."
             )
+        if rel == "challenges_narrative" and target_node and target_node.get("node_type") != "NarrativeNode":
+            errors.append(f"Edge {idx}: challenges_narrative must target a NarrativeNode.")
+        if rel == "heuristic_analogy_for" and source_node and source_node.get("node_type") != "MethodNode":
+            errors.append(f"Edge {idx}: heuristic_analogy_for should originate from a MethodNode.")
+        if rel == "supports" and source_node and source_node.get("node_type") == "NarrativeNode":
+            errors.append(f"Edge {idx}: NarrativeNode should not directly support claims; use SourceClaimNode or EvidenceNode.")
     return errors
 
 

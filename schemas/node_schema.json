@@ -23,18 +23,86 @@
       ]
     },
     "text": {"type": "string"},
+    "citation": {"type": "string"},
     "tier": {"type": "string", "enum": ["A", "B", "C", "X", "M", "unknown"]},
     "domain": {"type": "string"},
     "source_kind": {"type": "string"},
+    "role": {"type": "string"},
+    "verification_status": {"type": "string"},
+    "source_paper": {"type": "string"},
+    "source": {"type": "string"},
     "source_status": {"type": "string"},
     "citation_debt": {"type": "string", "enum": ["low", "medium", "high", "unknown", "not_applicable"]},
+    "component_claims": {"type": "array", "items": {"type": "string"}},
     "supporting_sources": {"type": "array", "items": {"type": "string"}},
     "related_target_papers": {"type": "array", "items": {"type": "string"}},
     "related_target_narratives": {"type": "array", "items": {"type": "string"}},
     "risks": {"type": "array", "items": {"type": "string"}},
     "falsifiers": {"type": "array", "items": {"type": "string"}},
+    "depends_on": {"type": "array", "items": {"type": "string"}},
+    "risk_level": {"type": "string", "enum": ["high", "medium", "low", "unknown"]},
+    "located_in": {"type": "array", "items": {"type": "string"}},
+    "importance": {"type": "string", "enum": ["high", "medium", "low", "unknown"]},
+    "target_narrative": {"type": "string"},
+    "risky_phrase": {"type": "string"},
+    "why_risky": {"type": "string"},
+    "suggested_patch": {"type": "string"},
+    "would_weaken": {"type": "array", "items": {"type": "string"}},
+    "required_evidence": {"type": "string"},
+    "method_name": {"type": "string"},
+    "not_evidence": {"type": "boolean"},
     "confidence": {"type": "string", "enum": ["high", "medium", "low", "unknown"]},
     "metadata": {"type": "object"}
   },
+  "allOf": [
+    {
+      "if": {"properties": {"node_type": {"const": "PaperNode"}}},
+      "then": {"required": ["citation", "domain", "source_kind", "role", "verification_status"]}
+    },
+    {
+      "if": {"properties": {"node_type": {"const": "SourceClaimNode"}}},
+      "then": {"required": ["source_paper", "domain", "confidence"]}
+    },
+    {
+      "if": {"properties": {"node_type": {"const": "UserClaimNode"}}},
+      "then": {"required": ["tier", "domain", "supporting_sources", "related_target_papers", "related_target_narratives", "risks", "falsifiers"]}
+    },
+    {
+      "if": {"properties": {"node_type": {"const": "EvidenceNode"}}},
+      "then": {"required": ["source", "domain", "tier"]}
+    },
+    {
+      "if": {"properties": {"node_type": {"const": "InferenceNode"}}},
+      "then": {"required": ["tier", "depends_on", "risks"]}
+    },
+    {
+      "if": {"properties": {"node_type": {"const": "AssumptionNode"}}},
+      "then": {"required": ["tier", "risk_level"]}
+    },
+    {
+      "if": {"properties": {"node_type": {"const": "NarrativeNode"}}},
+      "then": {"required": ["source_status", "citation_debt", "component_claims"]}
+    },
+    {
+      "if": {"properties": {"node_type": {"const": "GapNode"}}},
+      "then": {"required": ["located_in", "importance"]}
+    },
+    {
+      "if": {"properties": {"node_type": {"const": "ExceptionNode"}}},
+      "then": {"required": ["target_narrative", "source"]}
+    },
+    {
+      "if": {"properties": {"node_type": {"const": "RiskNode"}}},
+      "then": {"required": ["risky_phrase", "why_risky", "suggested_patch"]}
+    },
+    {
+      "if": {"properties": {"node_type": {"const": "FalsifierNode"}}},
+      "then": {"required": ["would_weaken", "required_evidence"]}
+    },
+    {
+      "if": {"properties": {"node_type": {"const": "MethodNode"}}},
+      "then": {"required": ["method_name", "not_evidence"]}
+    }
+  ],
   "additionalProperties": true
 }

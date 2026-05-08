@@ -158,4 +158,4 @@ Required fields:
 - `node_type = MethodNode`
 - `method_name`
 - `text`
-- `not_evidence = true/false`
+- `not_evidence = true`

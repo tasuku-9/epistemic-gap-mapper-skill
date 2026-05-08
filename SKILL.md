@@ -27,7 +27,7 @@ Load only the files needed for the current task:
 - `docs/node_schema.md` and `docs/edge_schema.md`: read when designing or explaining graph structure.
 - `docs/narrative_audit.md`: read when separating target papers from target narratives.
 - `docs/methodological_index.md`: read when tagging reasoning methods or analogies.
-- `schemas/node_schema.json`, `schemas/edge_schema.json`, and `schemas/report_schema.json`: read before producing machine-checkable JSON.
+- `schemas/node_schema.json`, `schemas/edge_schema.json`, `schemas/graph_schema.json`, and `schemas/report_schema.json`: read before producing machine-checkable JSON.
 - `prompts/*.md`: use when the user wants reusable copy-paste prompts.
 - `templates/*.md`: use when starting an intake, target-paper table, target-narrative table, or diagnosis report.
 - `examples/jomon_dotaku_kiki/`: use as the worked example for format and tone.
