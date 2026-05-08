@@ -43,7 +43,9 @@ Before committing changes, run:
 ```bash
 python scripts/egm_cli.py validate examples/starter_cafe_rain/nodes_starter.json
 python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_minimal.json
+python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_sample.json
 python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_full.json
+python scripts/egm_cli.py validate templates/nodes_template.json
 python scripts/egm_cli.py render examples/jomon_dotaku_kiki/nodes_full.json --mermaid
 ```
 

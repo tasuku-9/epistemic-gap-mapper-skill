@@ -96,6 +96,8 @@ Tier meanings:
 
 Any C-tier `UserClaimNode` must have at least one linked `FalsifierNode`.
 
+Any X-tier node must declare at least one `failure_modes` value so reviewers can see how the claim breaks.
+
 ### Stage 5C - LLM Local Claim-Evidence Check
 
 For each declared claim-evidence pair, the LLM checks only whether the cited source locally supports the claim.

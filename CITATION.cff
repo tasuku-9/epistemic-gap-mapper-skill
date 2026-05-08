@@ -4,6 +4,6 @@ message: "If you use this skill, schema, or workflow, please cite it. Text, prom
 type: software
 authors:
   - name: "Tasuku"
-version: "0.2"
+version: "0.3"
 license: "CC-BY-4.0 AND MIT"
 repository-code: "https://github.com/tasuku-9/epistemic-gap-mapper-skill"

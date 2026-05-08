@@ -40,4 +40,4 @@ For essays or public examples, these modes can make the "X" legible:
 - The local uncertainty may be real.
 - The conclusion becomes `X` because a specific failure mode enters the chain.
 
-This is the basis of the "疑問は本物、結論はX" framing.
+This is the basis of the "the question may be real, but the conclusion is X" framing.

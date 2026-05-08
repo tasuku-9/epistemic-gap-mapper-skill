@@ -16,7 +16,11 @@ jobs:
         run: python scripts/egm_cli.py validate examples/starter_cafe_rain/nodes_starter.json
       - name: Validate minimal sample graph
         run: python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_minimal.json
+      - name: Validate sample graph
+        run: python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_sample.json
       - name: Validate full sample graph
         run: python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_full.json
+      - name: Validate template graph
+        run: python scripts/egm_cli.py validate templates/nodes_template.json
       - name: Render full sample graph
         run: python scripts/egm_cli.py render examples/jomon_dotaku_kiki/nodes_full.json --mermaid
