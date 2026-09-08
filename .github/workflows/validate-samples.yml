@@ -12,6 +12,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install validator and test dependencies
+        run: python -m pip install -r scripts/requirements.txt pytest
+      - name: Run semantic and provenance regression tests
+        run: python -m pytest -q
+      - name: Validate source-grounded calibration fixture
+        run: python scripts/egm_cli.py validate examples/calibration_local_support/nodes_calibration.json
       - name: Validate starter sample graph
         run: python scripts/egm_cli.py validate examples/starter_cafe_rain/nodes_starter.json
       - name: Validate minimal sample graph

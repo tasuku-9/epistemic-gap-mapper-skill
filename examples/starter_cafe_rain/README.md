@@ -2,6 +2,8 @@
 
 This is a deliberately small Epistemic Gap Mapper example for first-time users.
 
+It is illustrative: no actual cafe or weather logs are supplied, source checks are pending, and tiers are proposals. For a fully supplied fictional source with traceable local checks, see `../calibration_local_support/`.
+
 Question:
 
 > Do rainy days increase sales at a neighborhood cafe?

@@ -2,6 +2,13 @@
 
 ## Breakthrough Status
 
+Record audit readiness: source inspection pending, human declaration pending, or local findings ready for human review. Do not predict breakthrough potential.
+
+## Audit Provenance
+
+- Candidate tiers versus recorded human declarations and their review-log references.
+- Inspected source locators, short excerpts, checker identities, and unresolved source access.
+- C-tier test plans still needing measurements or weakening conditions.
 
 ## Why
 
@@ -37,5 +44,4 @@
 - 
 
 ## Recommended Next Action
-
 

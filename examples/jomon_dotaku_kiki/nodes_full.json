@@ -13,7 +13,8 @@
       "confidence": "high",
       "metadata": {
         "cluster": "Genetics"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "P2",
@@ -28,7 +29,8 @@
       "confidence": "high",
       "metadata": {
         "cluster": "Genetics"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "P3",
@@ -43,7 +45,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Archaeology"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "P4",
@@ -58,7 +61,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Archaeology"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "P5",
@@ -73,7 +77,8 @@
       "confidence": "high",
       "metadata": {
         "cluster": "Mythology"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "P6",
@@ -88,7 +93,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Continental Background"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "P7",
@@ -103,7 +109,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Continental Background"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "SC1",
@@ -196,7 +203,8 @@
       "confidence": "high",
       "metadata": {
         "cluster": "Genetics"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "E2",
@@ -212,13 +220,17 @@
       "confidence": "high",
       "metadata": {
         "cluster": "Genetics"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "E3",
       "node_type": "EvidenceNode",
       "text": "The combination of largely continental-derived autosomal ancestry and high D1a2a/D-M55 paternal frequency creates a paternal-lineage asymmetry needing interpretation.",
-      "source": "E1 + E2",
+      "source": [
+        "E1",
+        "E2"
+      ],
       "domain": "population genetics / social history",
       "tier": "B",
       "supporting_sources": [
@@ -228,7 +240,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Genetics"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "E4",
@@ -244,7 +257,8 @@
       "confidence": "high",
       "metadata": {
         "cluster": "Archaeology"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "E5",
@@ -260,7 +274,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Archaeology"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "E6",
@@ -276,7 +291,8 @@
       "confidence": "high",
       "metadata": {
         "cluster": "Mythology"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "E7",
@@ -292,7 +308,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Continental Background"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "E8",
@@ -308,7 +325,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Continental Background"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "A1",
@@ -319,7 +337,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Genetics"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "A2",
@@ -330,7 +349,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Archaeology"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "A3",
@@ -341,7 +361,8 @@
       "confidence": "low",
       "metadata": {
         "cluster": "Mythology"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "A4",
@@ -352,7 +373,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Continental Background"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "A5",
@@ -363,19 +385,24 @@
       "confidence": "high",
       "metadata": {
         "cluster": "Cross-Domain Model"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "EX1",
       "node_type": "ExceptionNode",
       "text": "High D1a2a/D-M55 paternal frequency coexists with largely continental-derived autosomal ancestry in many mainland Japanese population models.",
       "target_narrative": "N2",
-      "source": "E1/E2",
+      "source": [
+        "E1",
+        "E2"
+      ],
       "tier": "B",
       "confidence": "medium",
       "metadata": {
         "cluster": "Genetics"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "EX2",
@@ -387,7 +414,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Archaeology"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "EX3",
@@ -399,7 +427,8 @@
       "confidence": "low",
       "metadata": {
         "cluster": "Mythology"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "EX4",
@@ -411,7 +440,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Continental Background"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "I1",
@@ -431,7 +461,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Genetics"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "I2",
@@ -450,7 +481,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Archaeology"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "I3",
@@ -468,7 +500,8 @@
       "confidence": "low",
       "metadata": {
         "cluster": "Mythology"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "I4",
@@ -487,7 +520,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Continental Background"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "I5",
@@ -507,7 +541,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Cross-Domain Model"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "UC1",
@@ -540,16 +575,15 @@
       "metadata": {
         "cluster": "Genetics"
       },
-      "declared_tier": "B",
-      "tier_declared_by": "author",
-      "tier_rationale": "Declared B because paternal-lineage asymmetry is compatible with a social or reproductive advantage hypothesis, but does not prove dominance or mechanism.",
-      "tier_review_status": "declared",
+      "tier_rationale": "Candidate B: paternal-lineage asymmetry is compatible with a social or reproductive advantage hypothesis, but does not prove dominance or mechanism.",
+      "tier_review_status": "proposed",
       "definition_scope": "Modern and ancient lineage/ancestry signals used as a cautious clue about possible Late Yayoi-to-Kofun social structure.",
       "granularity_justification": "Keeps lineage asymmetry, social mechanism, and dominance claims at separate grains.",
       "vocabulary_map": {
         "paternal-lineage asymmetry": "Difference between Y-chromosome lineage frequency and autosomal ancestry proportions.",
         "social or reproductive advantage": "Possible social mechanism, not proof of dominance."
-      }
+      },
+      "proposed_tier": "B"
     },
     {
       "node_id": "UC2",
@@ -579,16 +613,15 @@
       "metadata": {
         "cluster": "Archaeology"
       },
-      "declared_tier": "B",
-      "tier_declared_by": "author",
-      "tier_rationale": "Declared B because dotaku discontinuity and bronze-source networks are compatible with social reorganization, but do not prove takeover.",
-      "tier_review_status": "declared",
+      "tier_rationale": "Candidate B: dotaku discontinuity and bronze-source networks are compatible with social reorganization, but do not prove takeover.",
+      "tier_review_status": "proposed",
       "definition_scope": "Archaeological ritual discontinuity and exchange context, not a direct political event reconstruction.",
       "granularity_justification": "Keeps artifact discontinuity separate from causal claims about population or rule.",
       "vocabulary_map": {
         "dotaku discontinuity": "Change or disappearance in a ritual-material complex.",
         "network disruption": "Possible change in exchange or ritual institutions, not automatic conquest."
-      }
+      },
+      "proposed_tier": "B"
     },
     {
       "node_id": "UC3",
@@ -616,16 +649,15 @@
       "metadata": {
         "cluster": "Mythology"
       },
-      "declared_tier": "C",
-      "tier_declared_by": "author",
-      "tier_rationale": "Declared C because transformed ritual-political memory is a testable interpretive hypothesis, not a directly assertable textual fact.",
-      "tier_review_status": "declared",
+      "tier_rationale": "Candidate C: transformed ritual-political memory is a testable interpretive hypothesis, not a directly assertable textual fact.",
+      "tier_review_status": "proposed",
       "definition_scope": "Kiki mythic structures as possible transformed social memory, not chronicle or direct event report.",
       "granularity_justification": "Keeps motif comparison separate from historical reconstruction.",
       "vocabulary_map": {
         "ritual-political memory": "Possible transformed memory encoded in mythic structure.",
         "mythic structures": "Narrative patterns or motifs, not literal chronology."
-      }
+      },
+      "proposed_tier": "C"
     },
     {
       "node_id": "UC4",
@@ -655,16 +687,15 @@
       "metadata": {
         "cluster": "Continental Background"
       },
-      "declared_tier": "B",
-      "tier_declared_by": "author",
-      "tier_rationale": "Declared B because continental background is useful historical context while a direct Shang-Zhou-to-Yayoi causal chain is explicitly not asserted.",
-      "tier_review_status": "declared",
+      "tier_rationale": "Candidate B: continental background is useful historical context while a direct Shang-Zhou-to-Yayoi causal chain is explicitly not asserted.",
+      "tier_review_status": "proposed",
       "definition_scope": "Continental population and chronology background as context, not direct causation.",
       "granularity_justification": "Keeps broad regional context separate from migration-route proof.",
       "vocabulary_map": {
         "continental background": "Contextual source region and chronology information.",
         "direct causal chain": "A stronger claim that is not asserted here."
-      }
+      },
+      "proposed_tier": "B"
     },
     {
       "node_id": "UC5",
@@ -714,16 +745,15 @@
       "metadata": {
         "cluster": "Cross-Domain Model"
       },
-      "declared_tier": "C",
-      "tier_declared_by": "author",
-      "tier_rationale": "Declared C because the integrated cross-domain model is a research program requiring convergent tests across genetics, archaeology, texts, and chronology.",
-      "tier_review_status": "declared",
+      "tier_rationale": "Candidate C: the integrated cross-domain model is a research program requiring convergent tests across genetics, archaeology, texts, and chronology.",
+      "tier_review_status": "proposed",
       "definition_scope": "A single abductive model for human review, not a settled synthesis.",
       "granularity_justification": "Combines domains only as a testable model and preserves domain-specific evidentiary limits.",
       "vocabulary_map": {
         "abductive hypothesis": "A best-explanation candidate that remains open to falsification.",
         "single model": "A graph-level synthesis, not direct proof."
-      }
+      },
+      "proposed_tier": "C"
     },
     {
       "node_id": "N1",
@@ -771,7 +801,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Narrative Audit"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "N3",
@@ -838,7 +869,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Genetics"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "G2",
@@ -853,7 +885,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Archaeology"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "G3",
@@ -868,7 +901,8 @@
       "confidence": "low",
       "metadata": {
         "cluster": "Mythology"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "G4",
@@ -883,7 +917,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Continental Background"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "G5",
@@ -900,7 +935,8 @@
       "confidence": "high",
       "metadata": {
         "cluster": "Cross-Domain Model"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "R1",
@@ -918,7 +954,8 @@
         "scope_jump",
         "evidence_laundering"
       ],
-      "failure_mode_notes": "Y-chromosome frequency is real evidence, but conquest, dominance, or social advantage would be a broader claim than the source can carry alone."
+      "failure_mode_notes": "Y-chromosome frequency is real evidence, but conquest, dominance, or social advantage would be a broader claim than the source can carry alone.",
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "R2",
@@ -936,7 +973,8 @@
         "scope_jump",
         "narrative_capture"
       ],
-      "failure_mode_notes": "Dotaku discontinuity is a real archaeological pattern, but political takeover or external disruption would be a stronger narrative capture unless chronology and continuity are tested."
+      "failure_mode_notes": "Dotaku discontinuity is a real archaeological pattern, but political takeover or external disruption would be a stronger narrative capture unless chronology and continuity are tested.",
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "R3",
@@ -954,7 +992,8 @@
         "analogy_inflation",
         "evidence_laundering"
       ],
-      "failure_mode_notes": "Mythic structure can guide interpretation, but treating it as literal record would inflate analogy into evidence."
+      "failure_mode_notes": "Mythic structure can guide interpretation, but treating it as literal record would inflate analogy into evidence.",
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "R4",
@@ -972,7 +1011,8 @@
         "scope_jump",
         "citation_debt"
       ],
-      "failure_mode_notes": "Continental background does not establish a direct Shang-Zhou-to-Yayoi chain without specific source tracing."
+      "failure_mode_notes": "Continental background does not establish a direct Shang-Zhou-to-Yayoi chain without specific source tracing.",
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "R5",
@@ -990,7 +1030,8 @@
         "scope_jump",
         "evidence_laundering"
       ],
-      "failure_mode_notes": "A cultural sphere should not be converted into an immigrant identity without direct demographic or social evidence."
+      "failure_mode_notes": "A cultural sphere should not be converted into an immigrant identity without direct demographic or social evidence.",
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "R6",
@@ -1009,7 +1050,8 @@
         "evidence_laundering",
         "analogy_inflation"
       ],
-      "failure_mode_notes": "Cross-domain consilience can become a proof-like narrative if weak links and analogies are not kept visible."
+      "failure_mode_notes": "Cross-domain consilience can become a proof-like narrative if weak links and analogies are not kept visible.",
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "F1",
@@ -1025,7 +1067,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Falsification / Risk"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "F2",
@@ -1041,7 +1084,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Falsification / Risk"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "F3",
@@ -1057,7 +1101,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Falsification / Risk"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "F4",
@@ -1072,7 +1117,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Falsification / Risk"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "F5",
@@ -1087,7 +1133,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Falsification / Risk"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "M1",
@@ -1099,7 +1146,8 @@
       "confidence": "high",
       "metadata": {
         "cluster": "Comparative Methods"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "M2",
@@ -1111,7 +1159,8 @@
       "confidence": "high",
       "metadata": {
         "cluster": "Comparative Methods"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "M3",
@@ -1123,7 +1172,8 @@
       "confidence": "high",
       "metadata": {
         "cluster": "Comparative Methods"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "M4",
@@ -1135,7 +1185,8 @@
       "confidence": "high",
       "metadata": {
         "cluster": "Comparative Methods"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "M6",
@@ -1147,7 +1198,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Comparative Methods"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "M7",
@@ -1159,7 +1211,8 @@
       "confidence": "high",
       "metadata": {
         "cluster": "Comparative Methods"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "M8",
@@ -1171,7 +1224,8 @@
       "confidence": "high",
       "metadata": {
         "cluster": "Comparative Methods"
-      }
+      },
+      "tier_review_status": "proposed"
     }
   ],
   "edges": [
@@ -1181,13 +1235,13 @@
       "relation": "supports",
       "reason": "P1 is the source for SC1.",
       "confidence": "high",
-      "support_strength": "direct",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "pass",
-      "claim_scope_match": "full",
-      "vocabulary_match": "same_terms",
-      "granularity_match": "same_grain",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown",
+      "source_ref": "P1"
     },
     {
       "from": "P2",
@@ -1195,13 +1249,13 @@
       "relation": "supports",
       "reason": "P2 is the source for SC2.",
       "confidence": "high",
-      "support_strength": "direct",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "pass",
-      "claim_scope_match": "full",
-      "vocabulary_match": "same_terms",
-      "granularity_match": "same_grain",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown",
+      "source_ref": "P2"
     },
     {
       "from": "P3",
@@ -1209,13 +1263,13 @@
       "relation": "supports",
       "reason": "P3 is the source for SC3.",
       "confidence": "high",
-      "support_strength": "direct",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "pass",
-      "claim_scope_match": "full",
-      "vocabulary_match": "same_terms",
-      "granularity_match": "same_grain",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown",
+      "source_ref": "P3"
     },
     {
       "from": "P4",
@@ -1223,13 +1277,13 @@
       "relation": "supports",
       "reason": "P4 is the source for SC4.",
       "confidence": "high",
-      "support_strength": "direct",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "pass",
-      "claim_scope_match": "full",
-      "vocabulary_match": "same_terms",
-      "granularity_match": "same_grain",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown",
+      "source_ref": "P4"
     },
     {
       "from": "P5",
@@ -1237,13 +1291,13 @@
       "relation": "supports",
       "reason": "P5 is the source for SC5.",
       "confidence": "high",
-      "support_strength": "direct",
+      "support_strength": "unknown",
       "support_mode": "textual",
-      "local_check_status": "pass",
-      "claim_scope_match": "full",
-      "vocabulary_match": "same_terms",
-      "granularity_match": "same_grain",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown",
+      "source_ref": "P5"
     },
     {
       "from": "P6",
@@ -1251,13 +1305,13 @@
       "relation": "supports",
       "reason": "P6 is the source for SC6.",
       "confidence": "high",
-      "support_strength": "direct",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "pass",
-      "claim_scope_match": "full",
-      "vocabulary_match": "same_terms",
-      "granularity_match": "same_grain",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown",
+      "source_ref": "P6"
     },
     {
       "from": "P7",
@@ -1265,13 +1319,13 @@
       "relation": "supports",
       "reason": "P7 is the source for SC7.",
       "confidence": "high",
-      "support_strength": "direct",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "pass",
-      "claim_scope_match": "full",
-      "vocabulary_match": "same_terms",
-      "granularity_match": "same_grain",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown",
+      "source_ref": "P7"
     },
     {
       "from": "SC1",
@@ -1279,13 +1333,12 @@
       "relation": "supports",
       "reason": "SC1 supports E1.",
       "confidence": "high",
-      "support_strength": "direct",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "pass",
-      "claim_scope_match": "full",
-      "vocabulary_match": "same_terms",
-      "granularity_match": "same_grain",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "SC2",
@@ -1293,13 +1346,12 @@
       "relation": "supports",
       "reason": "SC2 supports E2.",
       "confidence": "high",
-      "support_strength": "direct",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "pass",
-      "claim_scope_match": "full",
-      "vocabulary_match": "same_terms",
-      "granularity_match": "same_grain",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "SC3",
@@ -1307,13 +1359,12 @@
       "relation": "supports",
       "reason": "SC3 supports E4.",
       "confidence": "medium",
-      "support_strength": "direct",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "pass",
-      "claim_scope_match": "full",
-      "vocabulary_match": "same_terms",
-      "granularity_match": "same_grain",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "SC4",
@@ -1321,13 +1372,12 @@
       "relation": "supports",
       "reason": "SC4 supports E5.",
       "confidence": "medium",
-      "support_strength": "direct",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "pass",
-      "claim_scope_match": "full",
-      "vocabulary_match": "same_terms",
-      "granularity_match": "same_grain",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "SC5",
@@ -1335,13 +1385,12 @@
       "relation": "supports",
       "reason": "SC5 supports E6.",
       "confidence": "high",
-      "support_strength": "direct",
+      "support_strength": "unknown",
       "support_mode": "textual",
-      "local_check_status": "pass",
-      "claim_scope_match": "full",
-      "vocabulary_match": "same_terms",
-      "granularity_match": "same_grain",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "SC6",
@@ -1349,13 +1398,12 @@
       "relation": "supports",
       "reason": "SC6 supports E7.",
       "confidence": "medium",
-      "support_strength": "direct",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "pass",
-      "claim_scope_match": "full",
-      "vocabulary_match": "same_terms",
-      "granularity_match": "same_grain",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "SC7",
@@ -1363,13 +1411,12 @@
       "relation": "supports",
       "reason": "SC7 supports E8.",
       "confidence": "medium",
-      "support_strength": "direct",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "pass",
-      "claim_scope_match": "full",
-      "vocabulary_match": "same_terms",
-      "granularity_match": "same_grain",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "E1",
@@ -1377,13 +1424,12 @@
       "relation": "supports_weakly",
       "reason": "E1 supplies the paternal-line side of the asymmetry.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "E2",
@@ -1391,13 +1437,12 @@
       "relation": "supports_weakly",
       "reason": "E2 supplies the autosomal ancestry side of the asymmetry.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "EX1",
@@ -1405,13 +1450,7 @@
       "relation": "challenges_narrative",
       "reason": "EX1 complicates passive survival-only narrative.",
       "confidence": "medium",
-      "support_strength": "contextual",
-      "support_mode": "narrative_trace",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "narrative_trace"
     },
     {
       "from": "EX2",
@@ -1419,13 +1458,7 @@
       "relation": "challenges_narrative",
       "reason": "EX2 complicates internal transformation-only narrative.",
       "confidence": "medium",
-      "support_strength": "contextual",
-      "support_mode": "narrative_trace",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "narrative_trace"
     },
     {
       "from": "EX3",
@@ -1433,13 +1466,7 @@
       "relation": "challenges_narrative",
       "reason": "EX3 complicates purely literary-theological narrative.",
       "confidence": "medium",
-      "support_strength": "contextual",
-      "support_mode": "textual",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "textual"
     },
     {
       "from": "EX4",
@@ -1447,13 +1474,7 @@
       "relation": "challenges_narrative",
       "reason": "EX4 complicates simplified migration narrative.",
       "confidence": "medium",
-      "support_strength": "contextual",
-      "support_mode": "narrative_trace",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "narrative_trace"
     },
     {
       "from": "E3",
@@ -1461,13 +1482,12 @@
       "relation": "supports_weakly",
       "reason": "E3 supplies the observation used in EX1.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "E4",
@@ -1475,13 +1495,12 @@
       "relation": "supports_weakly",
       "reason": "E4 supplies the observation used in EX2.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "E6",
@@ -1489,13 +1508,12 @@
       "relation": "supports_weakly",
       "reason": "E6 supplies the observation used in EX3.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "textual",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "E7",
@@ -1503,83 +1521,52 @@
       "relation": "supports_weakly",
       "reason": "E7 supplies the observation used in EX4.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
-      "from": "A1",
-      "to": "I1",
+      "from": "I1",
+      "to": "A1",
       "relation": "depends_on",
       "reason": "I1 depends on A1.",
       "confidence": "medium",
-      "support_strength": "presupposed",
-      "support_mode": "inferential",
-      "local_check_status": "pass",
-      "claim_scope_match": "full",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "same_grain",
-      "source_span": "not specified in sample"
+      "support_mode": "inferential"
     },
     {
-      "from": "A2",
-      "to": "I2",
+      "from": "I2",
+      "to": "A2",
       "relation": "depends_on",
       "reason": "I2 depends on A2.",
       "confidence": "medium",
-      "support_strength": "presupposed",
-      "support_mode": "inferential",
-      "local_check_status": "pass",
-      "claim_scope_match": "full",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "same_grain",
-      "source_span": "not specified in sample"
+      "support_mode": "inferential"
     },
     {
-      "from": "A3",
-      "to": "I3",
+      "from": "I3",
+      "to": "A3",
       "relation": "depends_on",
       "reason": "I3 depends on A3.",
       "confidence": "medium",
-      "support_strength": "presupposed",
-      "support_mode": "inferential",
-      "local_check_status": "pass",
-      "claim_scope_match": "full",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "same_grain",
-      "source_span": "not specified in sample"
+      "support_mode": "inferential"
     },
     {
-      "from": "A4",
-      "to": "I4",
+      "from": "I4",
+      "to": "A4",
       "relation": "depends_on",
       "reason": "I4 depends on A4.",
       "confidence": "medium",
-      "support_strength": "presupposed",
-      "support_mode": "inferential",
-      "local_check_status": "pass",
-      "claim_scope_match": "full",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "same_grain",
-      "source_span": "not specified in sample"
+      "support_mode": "inferential"
     },
     {
-      "from": "A5",
-      "to": "I5",
+      "from": "I5",
+      "to": "A5",
       "relation": "depends_on",
       "reason": "I5 depends on A5.",
       "confidence": "medium",
-      "support_strength": "presupposed",
-      "support_mode": "inferential",
-      "local_check_status": "pass",
-      "claim_scope_match": "full",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "same_grain",
-      "source_span": "not specified in sample"
+      "support_mode": "inferential"
     },
     {
       "from": "E3",
@@ -1587,13 +1574,12 @@
       "relation": "supports_weakly",
       "reason": "E3 is a non-decisive input to I1.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "EX1",
@@ -1601,13 +1587,12 @@
       "relation": "supports_weakly",
       "reason": "EX1 is a non-decisive input to I1.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "E4",
@@ -1615,13 +1600,12 @@
       "relation": "supports_weakly",
       "reason": "E4 is a non-decisive input to I2.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "E5",
@@ -1629,13 +1613,12 @@
       "relation": "supports_weakly",
       "reason": "E5 is a non-decisive input to I2.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "EX2",
@@ -1643,13 +1626,12 @@
       "relation": "supports_weakly",
       "reason": "EX2 is a non-decisive input to I2.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "E6",
@@ -1657,13 +1639,12 @@
       "relation": "supports_weakly",
       "reason": "E6 is a non-decisive input to I3.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "textual",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "EX3",
@@ -1671,13 +1652,12 @@
       "relation": "supports_weakly",
       "reason": "EX3 is a non-decisive input to I3.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "textual",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "E7",
@@ -1685,13 +1665,12 @@
       "relation": "supports_weakly",
       "reason": "E7 is a non-decisive input to I4.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "E8",
@@ -1699,13 +1678,12 @@
       "relation": "supports_weakly",
       "reason": "E8 is a non-decisive input to I4.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "EX4",
@@ -1713,13 +1691,12 @@
       "relation": "supports_weakly",
       "reason": "EX4 is a non-decisive input to I4.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "I1",
@@ -1727,13 +1704,12 @@
       "relation": "supports_weakly",
       "reason": "I1 contributes to the cross-domain abductive model.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "I2",
@@ -1741,13 +1717,12 @@
       "relation": "supports_weakly",
       "reason": "I2 contributes to the cross-domain abductive model.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "I3",
@@ -1755,13 +1730,12 @@
       "relation": "supports_weakly",
       "reason": "I3 contributes to the cross-domain abductive model.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "textual",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "I4",
@@ -1769,13 +1743,12 @@
       "relation": "supports_weakly",
       "reason": "I4 contributes to the cross-domain abductive model.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "I1",
@@ -1783,13 +1756,12 @@
       "relation": "supports_weakly",
       "reason": "I1 is the inferential bridge to UC1.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "I2",
@@ -1797,13 +1769,12 @@
       "relation": "supports_weakly",
       "reason": "I2 is the inferential bridge to UC2.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "I3",
@@ -1811,13 +1782,12 @@
       "relation": "supports_weakly",
       "reason": "I3 is the inferential bridge to UC3.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "textual",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "I4",
@@ -1825,13 +1795,12 @@
       "relation": "supports_weakly",
       "reason": "I4 is the inferential bridge to UC4.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "I5",
@@ -1839,13 +1808,12 @@
       "relation": "supports_weakly",
       "reason": "I5 is the inferential bridge to UC5.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "inferential",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "UC1",
@@ -1853,13 +1821,7 @@
       "relation": "challenges_narrative",
       "reason": "UC1 reframes or challenges N1.",
       "confidence": "medium",
-      "support_strength": "contextual",
-      "support_mode": "narrative_trace",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "narrative_trace"
     },
     {
       "from": "UC1",
@@ -1867,13 +1829,7 @@
       "relation": "challenges_narrative",
       "reason": "UC1 reframes or challenges N2.",
       "confidence": "medium",
-      "support_strength": "contextual",
-      "support_mode": "narrative_trace",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "narrative_trace"
     },
     {
       "from": "UC2",
@@ -1881,13 +1837,7 @@
       "relation": "challenges_narrative",
       "reason": "UC2 reframes or challenges N3.",
       "confidence": "medium",
-      "support_strength": "contextual",
-      "support_mode": "narrative_trace",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "narrative_trace"
     },
     {
       "from": "UC3",
@@ -1895,13 +1845,7 @@
       "relation": "challenges_narrative",
       "reason": "UC3 reframes or challenges N4.",
       "confidence": "medium",
-      "support_strength": "contextual",
-      "support_mode": "textual",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "textual"
     },
     {
       "from": "UC4",
@@ -1909,13 +1853,7 @@
       "relation": "challenges_narrative",
       "reason": "UC4 reframes or challenges N5.",
       "confidence": "medium",
-      "support_strength": "contextual",
-      "support_mode": "narrative_trace",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "narrative_trace"
     },
     {
       "from": "UC5",
@@ -1923,13 +1861,7 @@
       "relation": "challenges_narrative",
       "reason": "UC5 reframes or challenges N1.",
       "confidence": "medium",
-      "support_strength": "contextual",
-      "support_mode": "narrative_trace",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "narrative_trace"
     },
     {
       "from": "UC5",
@@ -1937,13 +1869,7 @@
       "relation": "challenges_narrative",
       "reason": "UC5 reframes or challenges N2.",
       "confidence": "medium",
-      "support_strength": "contextual",
-      "support_mode": "narrative_trace",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "narrative_trace"
     },
     {
       "from": "UC5",
@@ -1951,13 +1877,7 @@
       "relation": "challenges_narrative",
       "reason": "UC5 reframes or challenges N3.",
       "confidence": "medium",
-      "support_strength": "contextual",
-      "support_mode": "narrative_trace",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "narrative_trace"
     },
     {
       "from": "UC5",
@@ -1965,13 +1885,7 @@
       "relation": "challenges_narrative",
       "reason": "UC5 reframes or challenges N4.",
       "confidence": "medium",
-      "support_strength": "contextual",
-      "support_mode": "narrative_trace",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "narrative_trace"
     },
     {
       "from": "UC5",
@@ -1979,13 +1893,7 @@
       "relation": "challenges_narrative",
       "reason": "UC5 reframes or challenges N5.",
       "confidence": "medium",
-      "support_strength": "contextual",
-      "support_mode": "narrative_trace",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "narrative_trace"
     },
     {
       "from": "UC1",
@@ -1993,13 +1901,7 @@
       "relation": "explains_gap",
       "reason": "UC1 offers a possible explanation or framing for G1.",
       "confidence": "medium",
-      "support_strength": "contextual",
-      "support_mode": "empirical",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "empirical"
     },
     {
       "from": "UC2",
@@ -2007,13 +1909,7 @@
       "relation": "explains_gap",
       "reason": "UC2 offers a possible explanation or framing for G2.",
       "confidence": "medium",
-      "support_strength": "contextual",
-      "support_mode": "empirical",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "empirical"
     },
     {
       "from": "UC3",
@@ -2021,13 +1917,7 @@
       "relation": "explains_gap",
       "reason": "UC3 offers a possible explanation or framing for G3.",
       "confidence": "medium",
-      "support_strength": "contextual",
-      "support_mode": "textual",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "textual"
     },
     {
       "from": "UC4",
@@ -2035,13 +1925,7 @@
       "relation": "explains_gap",
       "reason": "UC4 offers a possible explanation or framing for G4.",
       "confidence": "medium",
-      "support_strength": "contextual",
-      "support_mode": "empirical",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "empirical"
     },
     {
       "from": "UC5",
@@ -2049,13 +1933,7 @@
       "relation": "explains_gap",
       "reason": "UC5 offers a possible explanation or framing for G5.",
       "confidence": "medium",
-      "support_strength": "contextual",
-      "support_mode": "inferential",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "inferential"
     },
     {
       "from": "R1",
@@ -2063,13 +1941,7 @@
       "relation": "qualifies",
       "reason": "R1 limits the wording and evidentiary strength of UC1.",
       "confidence": "high",
-      "support_strength": "contextual",
-      "support_mode": "inferential",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "inferential"
     },
     {
       "from": "R2",
@@ -2077,13 +1949,7 @@
       "relation": "qualifies",
       "reason": "R2 limits the wording and evidentiary strength of UC2.",
       "confidence": "high",
-      "support_strength": "contextual",
-      "support_mode": "inferential",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "inferential"
     },
     {
       "from": "R3",
@@ -2091,13 +1957,7 @@
       "relation": "qualifies",
       "reason": "R3 limits the wording and evidentiary strength of UC3.",
       "confidence": "high",
-      "support_strength": "contextual",
-      "support_mode": "inferential",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "inferential"
     },
     {
       "from": "R4",
@@ -2105,13 +1965,7 @@
       "relation": "qualifies",
       "reason": "R4 limits the wording and evidentiary strength of UC4.",
       "confidence": "high",
-      "support_strength": "contextual",
-      "support_mode": "inferential",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "inferential"
     },
     {
       "from": "R5",
@@ -2119,13 +1973,7 @@
       "relation": "qualifies",
       "reason": "R5 limits the wording and evidentiary strength of UC5.",
       "confidence": "high",
-      "support_strength": "contextual",
-      "support_mode": "inferential",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "inferential"
     },
     {
       "from": "R6",
@@ -2133,125 +1981,71 @@
       "relation": "qualifies",
       "reason": "R6 limits the wording and evidentiary strength of UC5.",
       "confidence": "high",
-      "support_strength": "contextual",
-      "support_mode": "inferential",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "inferential"
     },
     {
-      "from": "F1",
-      "to": "UC1",
+      "from": "UC1",
+      "to": "F1",
       "relation": "falsified_by",
       "reason": "F1 identifies evidence that would weaken UC1.",
       "confidence": "medium",
-      "support_strength": "counter_example",
-      "support_mode": "empirical",
-      "local_check_status": "pass",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "empirical"
     },
     {
-      "from": "F2",
-      "to": "UC2",
+      "from": "UC2",
+      "to": "F2",
       "relation": "falsified_by",
       "reason": "F2 identifies evidence that would weaken UC2.",
       "confidence": "medium",
-      "support_strength": "counter_example",
-      "support_mode": "empirical",
-      "local_check_status": "pass",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "empirical"
     },
     {
-      "from": "F3",
-      "to": "UC3",
+      "from": "UC3",
+      "to": "F3",
       "relation": "falsified_by",
       "reason": "F3 identifies evidence that would weaken UC3.",
       "confidence": "medium",
-      "support_strength": "counter_example",
-      "support_mode": "empirical",
-      "local_check_status": "pass",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "empirical"
     },
     {
-      "from": "F4",
-      "to": "UC4",
+      "from": "UC4",
+      "to": "F4",
       "relation": "falsified_by",
       "reason": "F4 identifies evidence that would weaken UC4.",
       "confidence": "medium",
-      "support_strength": "counter_example",
-      "support_mode": "empirical",
-      "local_check_status": "pass",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "empirical"
     },
     {
-      "from": "F5",
-      "to": "UC1",
+      "from": "UC1",
+      "to": "F5",
       "relation": "falsified_by",
       "reason": "F5 identifies evidence that would weaken UC1.",
       "confidence": "medium",
-      "support_strength": "counter_example",
-      "support_mode": "empirical",
-      "local_check_status": "pass",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "empirical"
     },
     {
-      "from": "F1",
-      "to": "UC5",
+      "from": "UC5",
+      "to": "F1",
       "relation": "falsified_by",
       "reason": "F1 identifies evidence that would weaken UC5.",
       "confidence": "medium",
-      "support_strength": "counter_example",
-      "support_mode": "empirical",
-      "local_check_status": "pass",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "empirical"
     },
     {
-      "from": "F2",
-      "to": "UC5",
+      "from": "UC5",
+      "to": "F2",
       "relation": "falsified_by",
       "reason": "F2 identifies evidence that would weaken UC5.",
       "confidence": "medium",
-      "support_strength": "counter_example",
-      "support_mode": "empirical",
-      "local_check_status": "pass",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "empirical"
     },
     {
-      "from": "F3",
-      "to": "UC5",
+      "from": "UC5",
+      "to": "F3",
       "relation": "falsified_by",
       "reason": "F3 identifies evidence that would weaken UC5.",
       "confidence": "medium",
-      "support_strength": "counter_example",
-      "support_mode": "empirical",
-      "local_check_status": "pass",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_mode": "empirical"
     },
     {
       "from": "M1",
@@ -2259,13 +2053,8 @@
       "relation": "not_direct_evidence",
       "reason": "M1 is methodological framing only, not direct evidence for UC5.",
       "confidence": "high",
-      "support_strength": "no_direct_support",
       "support_mode": "methodological",
-      "local_check_status": "pass",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "ambiguous",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_strength": "no_direct_support"
     },
     {
       "from": "M2",
@@ -2273,13 +2062,8 @@
       "relation": "not_direct_evidence",
       "reason": "M2 is methodological framing only, not direct evidence for UC5.",
       "confidence": "high",
-      "support_strength": "no_direct_support",
       "support_mode": "methodological",
-      "local_check_status": "pass",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "ambiguous",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_strength": "no_direct_support"
     },
     {
       "from": "M3",
@@ -2287,13 +2071,8 @@
       "relation": "not_direct_evidence",
       "reason": "M3 is methodological framing only, not direct evidence for UC5.",
       "confidence": "high",
-      "support_strength": "no_direct_support",
       "support_mode": "methodological",
-      "local_check_status": "pass",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "ambiguous",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_strength": "no_direct_support"
     },
     {
       "from": "M4",
@@ -2301,13 +2080,8 @@
       "relation": "heuristic_analogy_for",
       "reason": "M4 is methodological framing only, not direct evidence for UC3.",
       "confidence": "high",
-      "support_strength": "analogy_only",
       "support_mode": "comparative",
-      "local_check_status": "pass",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "ambiguous",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_strength": "analogy_only"
     },
     {
       "from": "M6",
@@ -2315,13 +2089,8 @@
       "relation": "heuristic_analogy_for",
       "reason": "M6 is methodological framing only, not direct evidence for UC3.",
       "confidence": "high",
-      "support_strength": "analogy_only",
       "support_mode": "comparative",
-      "local_check_status": "pass",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "ambiguous",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_strength": "analogy_only"
     },
     {
       "from": "M7",
@@ -2329,13 +2098,8 @@
       "relation": "heuristic_analogy_for",
       "reason": "M7 is methodological framing only, not direct evidence for UC2.",
       "confidence": "high",
-      "support_strength": "analogy_only",
       "support_mode": "comparative",
-      "local_check_status": "pass",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "ambiguous",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_strength": "analogy_only"
     },
     {
       "from": "M7",
@@ -2343,13 +2107,8 @@
       "relation": "heuristic_analogy_for",
       "reason": "M7 is methodological framing only, not direct evidence for UC3.",
       "confidence": "high",
-      "support_strength": "analogy_only",
       "support_mode": "comparative",
-      "local_check_status": "pass",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "ambiguous",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_strength": "analogy_only"
     },
     {
       "from": "M8",
@@ -2357,13 +2116,8 @@
       "relation": "not_direct_evidence",
       "reason": "M8 is methodological framing only, not direct evidence for UC5.",
       "confidence": "high",
-      "support_strength": "no_direct_support",
       "support_mode": "methodological",
-      "local_check_status": "pass",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "ambiguous",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_strength": "no_direct_support"
     },
     {
       "from": "P1",
@@ -2371,13 +2125,13 @@
       "relation": "supports_weakly",
       "reason": "P1 is compatible context for N2, but it does not directly claim passive survival as the only explanation.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "narrative_trace",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
       "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "source_ref": "P1"
     },
     {
       "from": "NT1",
@@ -2385,13 +2139,12 @@
       "relation": "not_direct_evidence",
       "reason": "NT1 clarifies citation debt without refuting N2 or treating missing direct support as proof of falsehood.",
       "confidence": "medium",
-      "support_strength": "no_direct_support",
       "support_mode": "narrative_trace",
-      "local_check_status": "pass",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "ambiguous",
-      "granularity_match": "unknown",
-      "source_span": "not specified in sample"
+      "support_strength": "no_direct_support"
     }
-  ]
+  ],
+  "metadata": {
+    "data_status": "illustrative_unverified",
+    "audit_note": "Tier labels are candidates, not human declarations. Source links are proposed, not verified local support. No human approval is recorded in this graph."
+  }
 }

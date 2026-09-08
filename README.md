@@ -76,6 +76,8 @@ Tiers are declarations, not automated truth judgments. The LLM can propose candi
 
 X-tier nodes also record `failure_modes`: `evidence_laundering`, `analogy_inflation`, `narrative_capture`, `falsifier_removal`, `citation_debt`, or `scope_jump`. This makes "X" a structural diagnosis rather than a single dismissal label.
 
+These are working categories, not an established or exhaustive academic taxonomy. Missing sources are citation debt, not proof of falsehood. Candidate tiers use `proposed_tier`; human declarations require an actual approval reference. Completed local checks require an inspected source, locator, short excerpt, and checker. See [Audit Records](docs/audit_records.md).
+
 ## Recommended use
 
 This skill is useful when a researcher, independent scholar, journalist, graduate student, or interdisciplinary team has a bold hypothesis and needs to know:
@@ -96,6 +98,8 @@ If the full worked example feels too large, start here:
 - `templates/graph_template.md` — a copyable Mermaid graph skeleton.
 
 The starter example is intentionally ordinary. It teaches the basic move: map a claim, the source data, the default narrative, the overclaim risk, and the falsifier before arguing about conclusions.
+
+The cafe and research graphs are illustrative and unverified, not completed audits. [Local Support Calibration](examples/calibration_local_support/README.md) provides a short fictional source with traceable local pass/fail findings, a narrative trace, and a C-tier test plan. It records no human tier approvals.
 
 ## Jomon / Dotaku / Kiki Worked Examples
 
@@ -133,18 +137,23 @@ The `prose_case/` folder shows how the same broad hypothesis can be written in f
 This repository uses two licenses:
 
 - `LICENSE`: CC BY 4.0 for text, prompts, templates, documentation, examples, schemas, outreach materials, and diagrams.
-- `LICENSE-MIT.md`: MIT License for executable helper scripts in `scripts/`.
+- `LICENSE-MIT.md`: MIT License for executable helpers in `scripts/`, compatibility entry points in `egm/`, and tests in `tests/`.
 
 ## Validation
 
 ```bash
+python -m pip install -r scripts/requirements.txt
 python scripts/egm_cli.py validate examples/starter_cafe_rain/nodes_starter.json
 python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_minimal.json
 python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_sample.json
 python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_full.json
 python scripts/egm_cli.py validate templates/nodes_template.json
 python scripts/egm_cli.py render examples/jomon_dotaku_kiki/nodes_full.json --mermaid
+python scripts/egm_cli.py render examples/jomon_dotaku_kiki/nodes_full.json --grouped
+python scripts/egm_cli.py audit examples/calibration_local_support/nodes_calibration.json
 ```
+
+`validate` checks the bundled JSON Schema and semantic invariants, not scientific truth or source authenticity. Pending source checks and human decisions are warnings, not reasons to fabricate data. `audit` emits the full error/warning list as JSON. Run regression tests with `python -m pip install pytest` followed by `python -m pytest -q`; both CLI entry points use `scripts/egm_cli.py`.
 
 ## Recent Additions
 

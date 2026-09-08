@@ -12,6 +12,7 @@ Use these node types:
 - InferenceNode
 - AssumptionNode
 - NarrativeNode
+- NarrativeTraceNode
 - GapNode
 - ExceptionNode
 - RiskNode
@@ -55,6 +56,10 @@ Output:
 3. A simple Mermaid graph.
 
 Rules:
+- Read docs/audit_records.md. Use proposed_tier and a provisional status unless an explicit human declaration is supplied.
+- Allow empty source lists; supplied references must resolve. Never fill missing evidence or approvals with invented records.
+- Uninspected support links use needs_source and unknown support_strength, not pass.
+- falsified_by points from the claim to its FalsifierNode. depends_on points from an inference to its premise.
 - Comparative cases must be MethodNodes or heuristic analogies, not EvidenceNodes.
 - Target narratives must not be PaperNodes.
 - C claims are allowed. X claims require patching.

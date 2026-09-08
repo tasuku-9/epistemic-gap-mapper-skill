@@ -11,7 +11,7 @@ provided, and changes are indicated.
 License text:
 https://creativecommons.org/licenses/by/4.0/
 
-Executable helper scripts in scripts/ are licensed separately under the MIT
-License. See LICENSE-MIT.md.
+Executable helper code in scripts/, compatibility entry points in egm/, and
+tests in tests/ are licensed separately under the MIT License. See LICENSE-MIT.md.
 
 SPDX-License-Identifier: CC-BY-4.0

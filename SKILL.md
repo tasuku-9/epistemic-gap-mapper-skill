@@ -19,6 +19,8 @@ Use this skill to make a bold or frame-challenging hypothesis legible to expert 
 - Treat comparisons and analogies as `heuristic_analogy_for`, not direct evidence.
 - Produce structured audit material rather than a numeric score or global truth verdict.
 - Let humans declare final A/B/C/X/M tiers. LLMs may propose candidates and audit consistency, but they must not be treated as final arbiters.
+- Never infer human approval. Use `proposed_tier` until an explicit human decision is recorded with `tier_declaration_ref`; do not invent approval records.
+- Default uninspected source links to `needs_source` and `unknown`. Completed local checks require a verified source identity, source locator, faithful short excerpt, checker, and finding; a citation or graph relation alone is not verification.
 - For X-tier claims, identify how they fail using `failure_modes`, not just that they fail.
 
 ## Reference Map
@@ -26,6 +28,7 @@ Use this skill to make a bold or frame-challenging hypothesis legible to expert 
 Load only the files needed for the current task:
 
 - `docs/workflow.md`: read for the complete staged workflow.
+- `docs/audit_records.md`: read before assigning tier declarations, recording local checks, or migrating older graphs.
 - `docs/node_schema.md` and `docs/edge_schema.md`: read when designing or explaining graph structure.
 - `docs/narrative_audit.md`: read when separating target papers from target narratives.
 - `docs/methodological_index.md`: read when tagging reasoning methods or analogies.
@@ -36,6 +39,7 @@ Load only the files needed for the current task:
 - `templates/*.md`: use when starting an intake, target-paper table, target-narrative table, or diagnosis report.
 - `templates/first_map_template.md`, `templates/nodes_template.json`, and `templates/graph_template.md`: use when the user needs the fastest possible first map.
 - `examples/starter_cafe_rain/`: use as the low-friction first example before the larger research case.
+- `examples/calibration_local_support/`: use to inspect a tiny source-grounded textual audit with a pass, scope failure, narrative trace, and testable C candidate. Its source is explicitly fictional.
 - `examples/jomon_dotaku_kiki/nodes_minimal.json`: use as the compact worked graph for learning the node system.
 - `examples/jomon_dotaku_kiki/nodes_full.json`: use as the fuller worked graph when the user needs broad coverage of the Jomon / Dotaku / Kiki case.
 - `examples/jomon_dotaku_kiki/graph_sample_grouped.md`: use when the full graph needs a readable grouped Mermaid view.
@@ -68,7 +72,7 @@ Tiers are declarations, not LLM judgments. The LLM may suggest candidate tiers, 
 - `X`: unsupported, overclaimed, internally inconsistent, contradicted by evidence, or broken by identifiable failure modes.
 - `M`: methodological tag or heuristic analogy, not direct evidence.
 
-Preserve C-level claims when they are clearly labeled and testable. Any C-tier `UserClaimNode` must link to at least one `FalsifierNode`. Patch X-level claims with safer wording or remove them from the asserted argument. Any X-tier node must include at least one `failure_modes` value.
+Preserve C-level claims when they are clearly labeled and testable. Any C-tier `UserClaimNode`, including a candidate, must link to at least one `FalsifierNode`; spell out what to measure, what would weaken it, and an alternative explanation. A falsifier link does not rescue a claim from observed contradictory evidence. Propose patches to X-level claims without silently changing human declarations. Any X-tier node must include at least one `failure_modes` value. These are working categories, not an established or exhaustive academic taxonomy.
 
 ## Graph Rules
 
@@ -84,7 +88,8 @@ Preserve C-level claims when they are clearly labeled and testable. Any C-tier `
 - Use `supports_weakly` for plausible but non-decisive support.
 - Use `challenges_narrative` only when the target is a `NarrativeNode`.
 - Use `heuristic_analogy_for` for comparisons, historical parallels, mythological parallels, or method analogies.
-- Do not use `supports` from a `MethodNode`.
+- Do not use `supports` or `supports_weakly` from a `MethodNode`, `NarrativeNode`, or `NarrativeTraceNode`, or put them in evidence-source fields.
+- Allow empty supporting-source lists and show citation debt. Supplied source IDs must resolve. `falsified_by` points from the claim to the FalsifierNode; `depends_on` points from the inference to its premise.
 - Use edge metadata such as `support_strength`, `support_mode`, `local_check_status`, `claim_scope_match`, `vocabulary_match`, and `granularity_match` when inspecting local claim-evidence support.
 
 ## Output Style
@@ -96,10 +101,12 @@ Be clear, rigorous, and non-grandiose. Prefer node-specific criticism over broad
 Use the lightweight CLI only for local graph checks:
 
 ```bash
+python -m pip install -r scripts/requirements.txt
 python scripts/egm_cli.py validate examples/starter_cafe_rain/nodes_starter.json
 python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_minimal.json
 python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_full.json
 python scripts/egm_cli.py render examples/jomon_dotaku_kiki/nodes_full.json --mermaid
+python scripts/egm_cli.py audit examples/calibration_local_support/nodes_calibration.json
 ```
 
 When packaging or testing this skill, validate the skill folder with the skill-creator `quick_validate.py` script.

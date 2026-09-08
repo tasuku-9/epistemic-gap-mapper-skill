@@ -1,0 +1,207 @@
+{
+  "metadata": {
+    "data_status": "synthetic_calibration",
+    "audit_note": "Only the local fictional text is inspected. No empirical truth or human tier declaration is asserted."
+  },
+  "nodes": [
+    {
+      "node_id": "P1",
+      "node_type": "PaperNode",
+      "citation": "source.md (local synthetic fixture)",
+      "text": "A fictional, single-site, single-day observation statement.",
+      "domain": "synthetic calibration",
+      "source_kind": "synthetic text fixture",
+      "role": "primary local text",
+      "verification_status": "verified",
+      "metadata": {
+        "cluster": "Source"
+      }
+    },
+    {
+      "node_id": "UC1",
+      "node_type": "UserClaimNode",
+      "text": "The fixture reports 12 visits at Site A on Tuesday.",
+      "tier": "A",
+      "proposed_tier": "A",
+      "tier_review_status": "proposed",
+      "domain": "synthetic calibration",
+      "supporting_sources": [
+        "P1"
+      ],
+      "related_target_papers": [
+        "P1"
+      ],
+      "related_target_narratives": [
+        "N1"
+      ],
+      "risks": [],
+      "falsifiers": []
+    },
+    {
+      "node_id": "UC2",
+      "node_type": "UserClaimNode",
+      "text": "All sites always receive more visits on Tuesdays than on other days.",
+      "tier": "X",
+      "proposed_tier": "X",
+      "tier_review_status": "proposed",
+      "domain": "synthetic calibration",
+      "supporting_sources": [
+        "P1"
+      ],
+      "related_target_papers": [
+        "P1"
+      ],
+      "related_target_narratives": [
+        "N1"
+      ],
+      "risks": [
+        "R1"
+      ],
+      "falsifiers": [],
+      "failure_modes": [
+        "scope_jump"
+      ],
+      "failure_mode_notes": "A single fictional site-day is generalized across all sites and days."
+    },
+    {
+      "node_id": "UC3",
+      "node_type": "UserClaimNode",
+      "text": "At Site A, Tuesday visit counts may exceed other weekdays over repeated weeks.",
+      "tier": "C",
+      "proposed_tier": "C",
+      "tier_review_status": "proposed",
+      "domain": "synthetic calibration",
+      "supporting_sources": [],
+      "related_target_papers": [
+        "P1"
+      ],
+      "related_target_narratives": [
+        "N1"
+      ],
+      "risks": [
+        "R1"
+      ],
+      "falsifiers": [
+        "F1"
+      ]
+    },
+    {
+      "node_id": "N1",
+      "node_type": "NarrativeNode",
+      "text": "Tuesdays are generally the busiest day.",
+      "source_status": "untraced illustrative narrative",
+      "citation_debt": "high",
+      "component_claims": [
+        "A Tuesday advantage generalizes across sites and weeks."
+      ]
+    },
+    {
+      "node_id": "NT1",
+      "node_type": "NarrativeTraceNode",
+      "text": "The fixture mentions Tuesday but makes no weekday comparison.",
+      "target_narrative": "N1",
+      "source_paper": "P1",
+      "trace_status": "not_direct_claim",
+      "citation_debt_effect": "clarifies"
+    },
+    {
+      "node_id": "R1",
+      "node_type": "RiskNode",
+      "text": "A one-day count cannot establish a weekday advantage.",
+      "risky_phrase": "all sites always",
+      "why_risky": "The source contains no comparison days or additional sites.",
+      "suggested_patch": "Restrict the statement to the recorded fictional site-day; retain any recurring pattern as an untested question.",
+      "tier": "X",
+      "tier_review_status": "proposed",
+      "failure_modes": [
+        "scope_jump"
+      ],
+      "failure_mode_notes": "The risk concerns the overclaim, not the truth of this warning."
+    },
+    {
+      "node_id": "F1",
+      "node_type": "FalsifierNode",
+      "text": "A matched multiweek comparison may fail to show the proposed Tuesday advantage.",
+      "would_weaken": [
+        "UC3"
+      ],
+      "required_evidence": "Daily visit counts at Site A with opening hours, promotions, and events recorded.",
+      "test_plan": {
+        "measurement": "Compare Tuesday and other weekday visit rates per open hour at Site A across eight weeks, adjusting for recorded promotions and events.",
+        "weakening_result": "An adjusted Tuesday difference at or below zero with adequate precision would weaken the proposed advantage; an imprecise result remains unresolved.",
+        "alternative_explanation": "Longer opening hours or Tuesday promotions, rather than the weekday itself, may explain a difference."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "P1",
+      "to": "UC1",
+      "relation": "supports",
+      "source_ref": "P1",
+      "source_span": "source.md, paragraph 2 (line 5)",
+      "source_excerpt": "In this fictional dataset, Site A recorded 12 visits on Tuesday.",
+      "checked_by": "Codex (LLM; local fixture inspection)",
+      "local_check_notes": "The claim reports exactly what the fictional text says; pass does not establish real-world truth.",
+      "support_strength": "direct",
+      "support_mode": "textual",
+      "local_check_status": "pass",
+      "claim_scope_match": "full",
+      "vocabulary_match": "same_terms",
+      "granularity_match": "same_grain"
+    },
+    {
+      "from": "P1",
+      "to": "UC2",
+      "relation": "supports",
+      "source_ref": "P1",
+      "source_span": "source.md, paragraphs 2-3 (lines 5-7)",
+      "source_excerpt": "In this fictional dataset, Site A recorded 12 visits on Tuesday.\n\nNo other site or day was measured. The fixture does not establish a recurring pattern or a cause.",
+      "checked_by": "Codex (LLM; local fixture inspection)",
+      "local_check_notes": "The source explicitly measures no other site or day, so it cannot support this universal comparison.",
+      "support_strength": "no_direct_support",
+      "support_mode": "textual",
+      "local_check_status": "fail",
+      "claim_scope_match": "mismatch",
+      "vocabulary_match": "mapped_terms",
+      "granularity_match": "too_broad"
+    },
+    {
+      "from": "P1",
+      "to": "NT1",
+      "relation": "supports_weakly",
+      "source_ref": "P1",
+      "source_span": "source.md, paragraphs 2-3 (lines 5-7)",
+      "source_excerpt": "In this fictional dataset, Site A recorded 12 visits on Tuesday.\n\nNo other site or day was measured. The fixture does not establish a recurring pattern or a cause.",
+      "checked_by": "Codex (LLM; local fixture inspection)",
+      "local_check_notes": "The Tuesday mention is context only, not support for a busiest-day narrative.",
+      "support_strength": "contextual",
+      "support_mode": "textual",
+      "local_check_status": "warn",
+      "claim_scope_match": "partial",
+      "vocabulary_match": "mapped_terms",
+      "granularity_match": "too_broad"
+    },
+    {
+      "from": "NT1",
+      "to": "N1",
+      "relation": "not_direct_evidence",
+      "support_strength": "no_direct_support"
+    },
+    {
+      "from": "R1",
+      "to": "UC2",
+      "relation": "qualifies"
+    },
+    {
+      "from": "R1",
+      "to": "UC3",
+      "relation": "qualifies"
+    },
+    {
+      "from": "UC3",
+      "to": "F1",
+      "relation": "falsified_by"
+    }
+  ]
+}

@@ -18,6 +18,7 @@ You are improving **Epistemic Gap Mapper Skill**, a prompt-and-schema based skil
 - Do not implement automatic truth judgment.
 - Do not ask the LLM for a global truth verdict or global consistency verdict.
 - Do not invent citations or make the tool appear to verify sources automatically.
+- Read `docs/audit_records.md`: never invent human approvals or completed local source checks. Default examples to proposals and pending source inspection unless the underlying records exist.
 - Do not treat comparisons, myths, analogies, or historical parallels as direct evidence.
 - Do not classify speculative claims as A-level claims.
 - Do not let C-level UserClaimNodes stand without at least one falsifier link.
@@ -41,6 +42,9 @@ You are improving **Epistemic Gap Mapper Skill**, a prompt-and-schema based skil
 Before committing changes, run:
 
 ```bash
+python -m pip install -r scripts/requirements.txt
+python -m pip install pytest
+python -m pytest -q
 python scripts/egm_cli.py validate examples/starter_cafe_rain/nodes_starter.json
 python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_minimal.json
 python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_sample.json

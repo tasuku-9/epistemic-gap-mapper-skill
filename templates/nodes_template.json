@@ -10,7 +10,8 @@
       "role": "target paper / primary source / data source / context source",
       "verification_status": "verification needed",
       "tier": "A",
-      "confidence": "medium"
+      "confidence": "medium",
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "E1",
@@ -22,7 +23,8 @@
       "supporting_sources": [
         "P1"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "N1",
@@ -41,11 +43,8 @@
       "node_type": "UserClaimNode",
       "text": "Replace with your hypothesis or claim.",
       "domain": "replace with domain",
-      "tier": "B",
-      "declared_tier": "B",
-      "tier_declared_by": "replace with author / expert / reviewer / operator",
-      "tier_rationale": "Replace with why this tier was declared by a human reviewer.",
-      "tier_review_status": "declared",
+      "tier": "unknown",
+      "tier_review_status": "needs_review",
       "definition_scope": "Replace with what the claim does and does not cover.",
       "granularity_justification": "Replace with why the claim is not too broad or too atomized.",
       "vocabulary_map": {
@@ -81,7 +80,8 @@
         "scope_jump",
         "evidence_laundering"
       ],
-      "failure_mode_notes": "Template risk: identify whether the overclaim jumps scope or launders weak evidence into stronger wording."
+      "failure_mode_notes": "Template risk: identify whether the overclaim jumps scope or launders weak evidence into stronger wording.",
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "F1",
@@ -92,7 +92,8 @@
       ],
       "required_evidence": "Replace with what evidence would be needed.",
       "tier": "M",
-      "confidence": "medium"
+      "confidence": "medium",
+      "tier_review_status": "proposed"
     }
   ],
   "edges": [
@@ -101,7 +102,13 @@
       "to": "E1",
       "relation": "supports",
       "reason": "Replace with why P1 supports E1.",
-      "confidence": "medium"
+      "confidence": "medium",
+      "local_check_status": "needs_source",
+      "support_strength": "unknown",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown",
+      "source_ref": "P1"
     },
     {
       "from": "E1",
@@ -109,12 +116,11 @@
       "relation": "supports_weakly",
       "reason": "Replace with why E1 supports but does not prove UC1.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "source_span": "not specified",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
       "granularity_match": "unknown"
     },
     {
@@ -132,11 +138,15 @@
       "confidence": "medium"
     },
     {
-      "from": "F1",
-      "to": "UC1",
+      "from": "UC1",
+      "to": "F1",
       "relation": "falsified_by",
       "reason": "Replace with how F1 would weaken UC1.",
       "confidence": "medium"
     }
-  ]
+  ],
+  "metadata": {
+    "data_status": "template_unreviewed",
+    "audit_note": "Tier labels are candidates, not human declarations. Source links are proposed, not verified local support. No human approval is recorded in this graph."
+  }
 }

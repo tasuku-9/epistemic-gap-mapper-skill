@@ -10,9 +10,10 @@ Do not treat LLM-proposed tier candidates as final tiers.
 Output:
 
 1. Breakthrough Status
-   - breakthrough possible
-   - breakthrough possible with revisions
-   - not yet breakthrough-ready
+   - source inspection pending
+   - human tier declaration pending
+   - local audit findings ready for human review
+   Report applicable audit states, not a prediction of truth, novelty, or breakthrough potential.
 
 2. Why
 
@@ -41,6 +42,6 @@ Rules:
 - "Not consensus" is not a reason for rejection.
 - Identify weak nodes, not vague impressions.
 - Preserve testable C claims if they are clearly marked and linked to falsifiers.
-- Mark unsupported overclaims as X or patch them with safer wording.
+- Propose X for locally established overclaims or suggest safer wording. Do not overwrite human declarations or treat unavailable sources as inspected contradictions.
 - End with a human-review handoff, not a final judgment.
 ```

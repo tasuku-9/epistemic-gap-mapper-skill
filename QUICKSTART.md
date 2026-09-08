@@ -2,6 +2,8 @@
 
 ## First 10 minutes
 
+For a tiny source-grounded audit, open `examples/calibration_local_support/README.md`. The supplied text is fictional; its local checks are inspectable, and all tiers remain proposals.
+
 If you are new to Epistemic Gap Mapper, start with the small example:
 
 - `examples/starter_cafe_rain/README.md`
@@ -55,6 +57,7 @@ Use `prompts/08_breakthrough_diagnosis.md`.
 ## Optional — Validate or render a node graph
 
 ```bash
+python -m pip install -r scripts/requirements.txt
 python scripts/egm_cli.py validate examples/starter_cafe_rain/nodes_starter.json
 python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_minimal.json
 python scripts/egm_cli.py validate examples/jomon_dotaku_kiki/nodes_sample.json

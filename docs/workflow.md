@@ -83,8 +83,11 @@ The LLM may propose tier candidates, but final graph data must keep human declar
 
 - `declared_tier`,
 - `tier_declared_by`,
+- `tier_declaration_ref`,
 - `tier_rationale`,
 - `tier_review_status`.
+
+Before an explicit human decision, use `proposed_tier` and a provisional status; omit declaration fields. See [Audit Records](audit_records.md). Do not fabricate a named reviewer or approval event to finish this stage. Local checks and a pending-review handoff can proceed without a final tier.
 
 Tier meanings:
 
@@ -114,6 +117,8 @@ Local support options:
 - unknown / needs source.
 
 This stage records edge-level metadata such as `support_strength`, `support_mode`, `source_span`, `local_check_status`, `claim_scope_match`, `vocabulary_match`, and `granularity_match`.
+
+Inspect the actual source, then record `source_ref`, a short `source_excerpt`, `checked_by`, and `local_check_notes`. If access or verification is missing, use `needs_source` and unknown support. Neither schema validation nor a `supports` edge proves that a source was checked.
 
 ### Stage 5D - Human Global Review
 
@@ -158,6 +163,8 @@ Narrative audit includes:
 ## Stage 8 - Breakthrough diagnosis
 
 Goal: produce a structured diagnosis, not a score or truth verdict.
+
+Report audit readiness and unresolved decisions, not an LLM prediction that a breakthrough is possible. Keep candidate tiers explicitly provisional and attach human declaration references only when they exist.
 
 Output:
 

@@ -2,7 +2,9 @@
 
 `X` should not mean only "bad" or "wrong." It should state how a claim breaks.
 
-Use `failure_modes` on any node with `tier = X` or `declared_tier = X`. Use an array because overclaims often fail in more than one way.
+These are EGM working categories, not an established or exhaustive academic taxonomy. Calibrate them against concrete source passages and record disagreements. Citation debt by itself is not evidence of falsehood; separate an unverified claim from a claim contradicted by inspected evidence. Do not force a category merely to fill the field.
+
+Use `failure_modes` on any node with `tier = X`, `proposed_tier = X`, or `declared_tier = X`. Use an array because overclaims often fail in more than one way. LLM-assigned modes remain proposals until reviewed.
 
 ## Allowed modes
 

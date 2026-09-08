@@ -4,7 +4,7 @@
   "type": "object",
   "required": ["node_id", "node_type", "text"],
   "properties": {
-    "node_id": {"type": "string"},
+    "node_id": {"type": "string", "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"},
     "node_type": {
       "type": "string",
       "enum": [
@@ -23,7 +23,7 @@
         "MethodNode"
       ]
     },
-    "text": {"type": "string"},
+    "text": {"type": "string", "pattern": "\\S"},
     "citation": {"type": "string"},
     "tier": {"type": "string", "enum": ["A", "B", "C", "X", "M", "unknown"]},
     "failure_modes": {
@@ -49,8 +49,10 @@
     },
     "definition_scope": {"type": "string"},
     "granularity_justification": {"type": "string"},
-    "declared_tier": {"type": "string", "enum": ["A", "B", "C", "X", "M", "unknown"]},
+    "proposed_tier": {"type": "string", "enum": ["A", "B", "C", "X", "M"]},
+    "declared_tier": {"type": "string", "enum": ["A", "B", "C", "X", "M"]},
     "tier_declared_by": {"type": "string"},
+    "tier_declaration_ref": {"type": "string"},
     "tier_rationale": {"type": "string"},
     "tier_review_status": {
       "type": "string",
@@ -61,7 +63,12 @@
     "role": {"type": "string"},
     "verification_status": {"type": "string"},
     "source_paper": {"type": "string"},
-    "source": {"type": "string"},
+    "source": {
+      "oneOf": [
+        {"type": "string"},
+        {"type": "array", "uniqueItems": true, "items": {"type": "string"}}
+      ]
+    },
     "source_status": {"type": "string"},
     "citation_debt": {"type": "string", "enum": ["low", "medium", "high", "unknown", "not_applicable"]},
     "component_claims": {"type": "array", "items": {"type": "string"}},
@@ -95,6 +102,16 @@
     "suggested_patch": {"type": "string"},
     "would_weaken": {"type": "array", "items": {"type": "string"}},
     "required_evidence": {"type": "string"},
+    "test_plan": {
+      "type": "object",
+      "required": ["measurement", "weakening_result", "alternative_explanation"],
+      "properties": {
+        "measurement": {"type": "string", "pattern": "\\S"},
+        "weakening_result": {"type": "string", "pattern": "\\S"},
+        "alternative_explanation": {"type": "string", "pattern": "\\S"}
+      },
+      "additionalProperties": false
+    },
     "method_name": {"type": "string"},
     "not_evidence": {"type": "boolean"},
     "confidence": {"type": "string", "enum": ["high", "medium", "low", "unknown"]},
@@ -151,7 +168,22 @@
     },
     {
       "if": {"properties": {"node_type": {"const": "MethodNode"}}},
-      "then": {"required": ["method_name", "not_evidence"]}
+      "then": {"required": ["method_name", "not_evidence"], "properties": {"not_evidence": {"const": true}}}
+    },
+    {
+      "if": {"required": ["declared_tier"]},
+      "then": {
+        "required": ["tier_declared_by", "tier_declaration_ref", "tier_rationale", "tier_review_status"],
+        "properties": {"tier_review_status": {"enum": ["declared", "reviewer_checked", "disputed"]}}
+      }
+    },
+    {
+      "if": {"required": ["tier_review_status"], "properties": {"tier_review_status": {"enum": ["declared", "reviewer_checked", "disputed"]}}},
+      "then": {"required": ["declared_tier"]}
+    },
+    {
+      "if": {"anyOf": [{"required": ["tier_declared_by"]}, {"required": ["tier_declaration_ref"]}]},
+      "then": {"required": ["declared_tier"]}
     },
     {
       "if": {"required": ["tier"], "properties": {"tier": {"const": "X"}}},
@@ -159,6 +191,10 @@
     },
     {
       "if": {"required": ["declared_tier"], "properties": {"declared_tier": {"const": "X"}}},
+      "then": {"required": ["failure_modes"]}
+    },
+    {
+      "if": {"required": ["proposed_tier"], "properties": {"proposed_tier": {"const": "X"}}},
       "then": {"required": ["failure_modes"]}
     }
   ],

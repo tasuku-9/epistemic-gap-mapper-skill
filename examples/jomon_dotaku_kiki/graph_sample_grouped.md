@@ -1,91 +1,194 @@
-# Grouped Mermaid Graph Sample
+# Grouped Mermaid Graph
 
-This grouped graph is designed for the fuller Jomon / Dotaku / Kiki case.
-It keeps genetics, archaeology, mythology, continental background, narrative audit,
-comparative methods, and falsification / risk visible as separate subgraphs.
+Generated from `nodes_full.json` using `scripts/egm_cli.py render --grouped`. Edit the JSON and regenerate the diagram together.
+
+## Legend
+
+| Relation | Meaning |
+|---|---|
+| `supports` | Proposed supporting relation; its local check status is shown separately. |
+| `supports_weakly` | Proposed partial or non-decisive support, not proof. |
+| `challenges_narrative` | Challenges or reframes a narrative, not necessarily a paper. |
+| `qualifies` | Limits how strongly the target may be stated. |
+| `falsified_by` | Claim points to a condition that would weaken it; the result has not necessarily occurred. |
+| `heuristic_analogy_for` | Analogy or comparison, not evidence. |
+
+Solid support arrows indicate a recorded local `pass`, not global truth. Dotted arrows indicate pending or non-passing support, limits, future falsifiers, or non-evidentiary relations. Read each label: dotted does not mean false. `proposed` tiers are not human declarations; `needs_source` means the local source check is pending.
 
 ```mermaid
+%%{init: {"flowchart": {"defaultRenderer": "elk"}}}%%
 graph TD
-  subgraph Genetics [Genetics]
-    P1[Sato / Inoue & Sato] -- supports --> SC1[Source claim: Y-lineage variation]
-    SC1 -- supports --> E1[D1a2a/D-M55 high frequency]
-    P2[Cooke / Liu] -- supports --> SC2[Source claim: updated ancestry models]
-    SC2 -- supports --> E2[Autosomal ancestry models]
-    E1 -- supports_weakly --> E3[Paternal/autosomal asymmetry]
-    E2 -- supports_weakly --> E3
-    E3 -- supports_weakly --> I1[Paternal asymmetry inference]
-    A1[Assumption: Y-lines may preserve social signal] -- depends_on --> I1
-    I1 -- supports_weakly --> UC1[UC1 B declared: possible paternal social advantage]
+  subgraph cluster_0["Genetics"]
+    P1["P1 A (proposed):<br/>Modern Japanese male Y-chromosome<br/>haplogroup studies used for<br/>D1a2a/D-M55 and..."]
+    P2["P2 A (proposed):<br/>Ancient and modern genomic studies<br/>supporting tripartite or updated<br/>ancestry ..."]
+    SC1["SC1:<br/>Target Y-chromosome studies report<br/>substantial D1a2a/D-M55-related<br/>lineages i..."]
+    SC2["SC2:<br/>Updated genomic models complicate a<br/>simple dual-structure account of<br/>Japanese..."]
+    E1["E1 A (proposed):<br/>D1a2a/D-M55 persists at high<br/>frequency in modern Japanese male<br/>lineages."]
+    E2["E2 A (proposed):<br/>Autosomal ancestry models for most<br/>mainland Japanese populations are<br/>largely ..."]
+    E3["E3 B (proposed):<br/>The combination of largely<br/>continental-derived autosomal<br/>ancestry and high D1..."]
+    A1["A1 C (proposed):<br/>Y-chromosome asymmetry can preserve<br/>signals of sex-biased social<br/>structure, r..."]
+    EX1["EX1 B (proposed):<br/>High D1a2a/D-M55 paternal frequency<br/>coexists with largely<br/>continental-derived..."]
+    I1["I1 B (proposed):<br/>Paternal-lineage asymmetry may<br/>reflect some form of social or<br/>reproductive ad..."]
+    UC1["UC1 B (proposed):<br/>The paternal-lineage asymmetry may<br/>indicate some form of social or<br/>reproducti..."]
+    G1["G1 B (proposed):<br/>Autosomal ancestry models do not by<br/>themselves explain the<br/>social-historical ..."]
   end
-
-  subgraph Archaeology [Archaeology]
-    P3[Hudson 1992] -- supports --> E4[Dotaku discontinuity]
-    P4[Mabuchi & Hirao] -- supports --> E5[External bronze-source networks]
-    E4 -- supports_weakly --> I2[Social reorganization inference]
-    E5 -- supports_weakly --> I2
-    A2[Assumption: ritual discontinuity may signal reorganization] -- depends_on --> I2
-    I2 -- supports_weakly --> UC2[UC2 B declared: possible network disruption / ritual transfer]
+  subgraph cluster_1["Archaeology"]
+    P3["P3 A (proposed):<br/>Archaeological discussion of Yayoi<br/>ritual context and dotaku."]
+    P4["P4 A (proposed):<br/>Lead isotope work on dotaku raw<br/>bronze material provenance."]
+    SC3["SC3:<br/>Dotaku were central to Yayoi ritual<br/>systems and later disappear from use<br/>and ..."]
+    SC4["SC4:<br/>Lead isotope analysis can connect<br/>dotaku raw materials to external<br/>source reg..."]
+    E4["E4 A (proposed):<br/>Dotaku ritual flourished in western<br/>Japan and then ended in the Late<br/>Yayoi pe..."]
+    E5["E5 A (proposed):<br/>Dotaku raw materials were connected<br/>to external bronze source networks<br/>throug..."]
+    A2["A2 B (proposed):<br/>A major ritual discontinuity can be<br/>interpreted as a possible sign of<br/>social ..."]
+    EX2["EX2 B (proposed):<br/>Dotaku discontinuity remains a<br/>striking ritual-system change that<br/>may not be ..."]
+    I2["I2 B (proposed):<br/>Dotaku discontinuity may reflect<br/>social reorganization, network<br/>disruption, r..."]
+    UC2["UC2 B (proposed):<br/>The end of dotaku ritual may reflect<br/>social reorganization or network<br/>disrupt..."]
+    G2["G2 B (proposed):<br/>Dotaku ritual discontinuity is<br/>archaeologically described but not<br/>always inte..."]
   end
-
-  subgraph Mythology [Mythology]
-    P5[Kojiki / Nihon Shoki] -- supports --> E6[Descent, land transfer, Ogetsuhime motifs]
-    E6 -- supports_weakly --> I3[Myth-as-social-memory inference]
-    A3[Assumption: myth can preserve transformed memory] -- depends_on --> I3
-    I3 -- supports_weakly --> UC3[UC3 C declared: possible ritual-political memory]
+  subgraph cluster_2["Mythology"]
+    P5["P5 A (proposed):<br/>Primary mythological texts and<br/>reference translations containing<br/>heavenly des..."]
+    SC5["SC5:<br/>The Kiki contain narratives of<br/>heavenly descent, land creation,<br/>land cession ..."]
+    E6["E6 A (proposed):<br/>The Kiki contain structures of<br/>descent, land creation beginning<br/>with Awaji, l..."]
+    A3["A3 C (proposed):<br/>Mythic structures may preserve<br/>transformed social memory without<br/>functioning ..."]
+    EX3["EX3 B (proposed):<br/>Kiki narratives repeatedly organize<br/>descent, land transfer, submission,<br/>and a..."]
+    I3["I3 B (proposed):<br/>Kiki mythic structures may be<br/>examined as possible transformed<br/>ritual-politic..."]
+    UC3["UC3 C (proposed):<br/>Kiki mythic structures may preserve<br/>transformed structures of<br/>ritual-politica..."]
+    G3["G3 B (proposed):<br/>Kiki mythic structures are often<br/>interpreted within textual or<br/>legitimation f..."]
   end
-
-  subgraph Continental_Background [Continental Background]
-    P6[Fang / Liu / Wang] -- supports --> E7[Shandong-Haidai / coastal gene flow]
-    P7[Fujio chronology] -- supports --> E8[Yayoi chronology]
-    E7 -- supports_weakly --> I4[Continental context inference]
-    E8 -- supports_weakly --> I4
-    I4 -- supports_weakly --> UC4[UC4 B declared: context, not direct cause]
+  subgraph cluster_3["Continental Background"]
+    P6["P6 A (proposed):<br/>Studies on Shandong/Haidai genetic<br/>change, northern coastal route gene<br/>flow, ..."]
+    P7["P7 A (proposed):<br/>AMS-based Yayoi chronology reference<br/>used for dating the start of Early<br/>Yayoi..."]
+    SC6["SC6:<br/>Continental ancient DNA studies<br/>indicate genetic changes and coastal<br/>gene flo..."]
+    SC7["SC7:<br/>One influential AMS<br/>radiocarbon-based framework places<br/>Early Yayoi beginnings..."]
+    E7["E7 A (proposed):<br/>Continental background studies show<br/>Shandong/Haidai genetic change and<br/>northe..."]
+    E8["E8 A (proposed):<br/>One influential long chronology<br/>places Early Yayoi beginnings around<br/>the 10th..."]
+    A4["A4 B (proposed):<br/>Continental population movements can<br/>provide historical context without<br/>estab..."]
+    EX4["EX4 B (proposed):<br/>Coastal continental gene-flow<br/>evidence complicates simplified,<br/>single-event m..."]
+    I4["I4 B (proposed):<br/>Shandong/Haidai and northern coastal<br/>gene-flow evidence may provide<br/>historica..."]
+    UC4["UC4 B (proposed):<br/>Continental East Asian population<br/>dynamics around Shandong/Haidai and<br/>norther..."]
+    G4["G4 B (proposed):<br/>Continental source dynamics for<br/>Yayoi formation are not always<br/>connected to s..."]
   end
-
-  subgraph Cross_Domain_Model [Cross-Domain Model]
-    UC1 -- supports_weakly --> UC5[UC5 C declared: integrated abductive model]
-    UC2 -- supports_weakly --> UC5
-    UC3 -- supports_weakly --> UC5
-    UC4 -- supports_weakly --> UC5
-    M1[Abductive reasoning] -. not evidence .-> UC5
-    M3[Consilience] -. not evidence .-> UC5
-    M8[Falsification framing] -. not evidence .-> UC5
+  subgraph cluster_4["Cross-Domain Model"]
+    A5["A5 M (proposed):<br/>Multiple independent anomalies can<br/>be examined abductively without<br/>claiming t..."]
+    I5["I5 B (proposed):<br/>The three anomaly families may be<br/>considered together as a<br/>cross-domain abduc..."]
+    UC5["UC5 C (proposed):<br/>The paternal-lineage asymmetry,<br/>dotaku discontinuity, Kiki mythic<br/>structures,..."]
+    G5["G5 B (proposed):<br/>No single target paper is<br/>responsible for cross-domain<br/>consistency among pate..."]
   end
-
-  subgraph Narrative_Audit [Narrative Audit]
-    N1[Standard overlay narrative]
-    N2[Passive survival narrative]
-    N3[Internal dotaku transition narrative]
-    N4[Myth as literary legitimation narrative]
-    N5[Simplified migration narrative]
-    NT1[NarrativeTrace: compatible but not direct-only-passive claim]
-    P1 -. compatible context .-> NT1
-    NT1 -. not direct evidence .-> N2
-    UC1 -- challenges_narrative --> N1
-    UC1 -- challenges_narrative --> N2
-    UC2 -- challenges_narrative --> N3
-    UC3 -- challenges_narrative --> N4
-    UC4 -- challenges_narrative --> N5
+  subgraph cluster_5["Narrative Audit"]
+    N1["N1:<br/>The standard Japanese<br/>population-history narrative treats<br/>Yayoi agriculturali..."]
+    N2["N2:<br/>D1a2a/D-M55 persistence is best<br/>understood as passive<br/>Jomon-associated surviv..."]
+    NT1["NT1 M (proposed):<br/>Sato et al. 2014 is compatible with<br/>the passive Jomon survival narrative<br/>by d..."]
+    N3["N3:<br/>Dotaku discontinuity is usually<br/>treated as internal ritual<br/>transformation or ..."]
+    N4["N4:<br/>Kiki mythic material is often<br/>treated as literary-theological or<br/>royal legiti..."]
+    N5["N5:<br/>Yayoi formation is sometimes<br/>narrated as a migration story<br/>without precise sp..."]
   end
-
-  subgraph Comparative_Methods [Comparative Methods]
-    M4[Myth as social memory, not chronicle] -. heuristic_analogy_for .-> UC3
-    M6[Kumulipo / oral genealogy analogy] -. heuristic_analogy_for .-> UC3
-    M7[Comparative highland/lowland history] -. heuristic_analogy_for .-> UC2
-    M7 -. heuristic_analogy_for .-> UC3
+  subgraph cluster_6["Falsification / Risk"]
+    R1["R1 X (proposed):<br/>Y-chromosome frequency alone cannot<br/>prove conquest, elite dominance, or<br/>socia..."]
+    R2["R2 X (proposed):<br/>Dotaku discontinuity alone cannot<br/>prove external disruption or<br/>political take..."]
+    R3["R3 X (proposed):<br/>Kiki mythic structures cannot be<br/>read as literal historical record."]
+    R4["R4 X (proposed):<br/>A direct Shang-Zhou-to-Yayoi<br/>migration chain is not established."]
+    R5["R5 X (proposed):<br/>Calling the Dotaku cultural sphere<br/>&#x27;immigrant&#x27; overstates the<br/>identification ..."]
+    R6["R6 X (proposed):<br/>Combining genetics, archaeology, and<br/>myth can create a false impression<br/>of pr..."]
+    F1["F1 M (proposed):<br/>Representative Kofun elite burials<br/>do not show elevated D1a2a/D-M55<br/>compared ..."]
+    F2["F2 M (proposed):<br/>Regional dotaku chronologies fully<br/>explain the discontinuity as<br/>continuous lo..."]
+    F3["F3 M (proposed):<br/>Kiki descent, land-transfer, and<br/>agricultural-origin motifs are shown<br/>to be l..."]
+    F4["F4 M (proposed):<br/>Yayoi-related migration is<br/>adequately explained by source<br/>dynamics independen..."]
+    F5["F5 M (proposed):<br/>Neutral demographic models<br/>adequately explain modern<br/>Y-D1a2a/D-M55 frequency ..."]
   end
-
-  subgraph Falsification_Risk [Falsification / Risk]
-    R1[Y-DNA alone cannot prove dominance] -. qualifies .-> UC1
-    R2[Dotaku discontinuity cannot prove takeover] -. qualifies .-> UC2
-    R3[Myth is not chronicle] -. qualifies .-> UC3
-    R4[No direct Shang-Zhou-to-Yayoi causal proof] -. qualifies .-> UC4
-    R5[Do not call Dotaku sphere simply immigrant] -. qualifies .-> UC5
-    R6[Cross-domain synthesis can over-imply proof] -. qualifies .-> UC5
-    F1[Kofun elite aDNA test] -. falsified_by .-> UC1
-    F2[Dotaku continuity test] -. falsified_by .-> UC2
-    F3[Kiki late-construction test] -. falsified_by .-> UC3
-    F4[Ancient DNA source-model test] -. falsified_by .-> UC4
-    F5[Neutral demographic model test] -. falsified_by .-> UC1
+  subgraph cluster_7["Comparative Methods"]
+    M1["M1 M (proposed):<br/>The model proposes a candidate<br/>explanation across multiple<br/>observations; it d..."]
+    M2["M2 M (proposed):<br/>A/B/C/X/M separates evidence,<br/>plausible inference, speculation,<br/>overclaim, an..."]
+    M3["M3 M (proposed):<br/>Independent lines of evidence may<br/>converge on a shared explanatory<br/>frame with..."]
+    M4["M4 M (proposed):<br/>Myths are not direct historical<br/>records; persistent structures may<br/>be examine..."]
+    M6["M6 M (proposed):<br/>Examples such as Kumulipo show how<br/>oral cosmological genealogies can<br/>bind cre..."]
+    M7["M7 M (proposed):<br/>Comparative history cases such as<br/>Dorian, Germanic, Mongol, Andean, or<br/>highla..."]
+    M8["M8 M (proposed):<br/>Each major claim should state what<br/>evidence would weaken or falsify it."]
   end
+  P1 -. "supports (needs_source)" .-> SC1
+  P2 -. "supports (needs_source)" .-> SC2
+  P3 -. "supports (needs_source)" .-> SC3
+  P4 -. "supports (needs_source)" .-> SC4
+  P5 -. "supports (needs_source)" .-> SC5
+  P6 -. "supports (needs_source)" .-> SC6
+  P7 -. "supports (needs_source)" .-> SC7
+  SC1 -. "supports (needs_source)" .-> E1
+  SC2 -. "supports (needs_source)" .-> E2
+  SC3 -. "supports (needs_source)" .-> E4
+  SC4 -. "supports (needs_source)" .-> E5
+  SC5 -. "supports (needs_source)" .-> E6
+  SC6 -. "supports (needs_source)" .-> E7
+  SC7 -. "supports (needs_source)" .-> E8
+  E1 -. "weakly supports (needs_source)" .-> E3
+  E2 -. "weakly supports (needs_source)" .-> E3
+  EX1 -. "challenges narrative" .-> N2
+  EX2 -. "challenges narrative" .-> N3
+  EX3 -. "challenges narrative" .-> N4
+  EX4 -. "challenges narrative" .-> N5
+  E3 -. "weakly supports (needs_source)" .-> EX1
+  E4 -. "weakly supports (needs_source)" .-> EX2
+  E6 -. "weakly supports (needs_source)" .-> EX3
+  E7 -. "weakly supports (needs_source)" .-> EX4
+  I1 -. "depends on" .-> A1
+  I2 -. "depends on" .-> A2
+  I3 -. "depends on" .-> A3
+  I4 -. "depends on" .-> A4
+  I5 -. "depends on" .-> A5
+  E3 -. "weakly supports (needs_source)" .-> I1
+  EX1 -. "weakly supports (needs_source)" .-> I1
+  E4 -. "weakly supports (needs_source)" .-> I2
+  E5 -. "weakly supports (needs_source)" .-> I2
+  EX2 -. "weakly supports (needs_source)" .-> I2
+  E6 -. "weakly supports (needs_source)" .-> I3
+  EX3 -. "weakly supports (needs_source)" .-> I3
+  E7 -. "weakly supports (needs_source)" .-> I4
+  E8 -. "weakly supports (needs_source)" .-> I4
+  EX4 -. "weakly supports (needs_source)" .-> I4
+  I1 -. "weakly supports (needs_source)" .-> I5
+  I2 -. "weakly supports (needs_source)" .-> I5
+  I3 -. "weakly supports (needs_source)" .-> I5
+  I4 -. "weakly supports (needs_source)" .-> I5
+  I1 -. "weakly supports (needs_source)" .-> UC1
+  I2 -. "weakly supports (needs_source)" .-> UC2
+  I3 -. "weakly supports (needs_source)" .-> UC3
+  I4 -. "weakly supports (needs_source)" .-> UC4
+  I5 -. "weakly supports (needs_source)" .-> UC5
+  UC1 -. "challenges narrative" .-> N1
+  UC1 -. "challenges narrative" .-> N2
+  UC2 -. "challenges narrative" .-> N3
+  UC3 -. "challenges narrative" .-> N4
+  UC4 -. "challenges narrative" .-> N5
+  UC5 -. "challenges narrative" .-> N1
+  UC5 -. "challenges narrative" .-> N2
+  UC5 -. "challenges narrative" .-> N3
+  UC5 -. "challenges narrative" .-> N4
+  UC5 -. "challenges narrative" .-> N5
+  UC1 -. "explains gap" .-> G1
+  UC2 -. "explains gap" .-> G2
+  UC3 -. "explains gap" .-> G3
+  UC4 -. "explains gap" .-> G4
+  UC5 -. "explains gap" .-> G5
+  R1 -. "qualifies" .-> UC1
+  R2 -. "qualifies" .-> UC2
+  R3 -. "qualifies" .-> UC3
+  R4 -. "qualifies" .-> UC4
+  R5 -. "qualifies" .-> UC5
+  R6 -. "qualifies" .-> UC5
+  UC1 -. "would be weakened by" .-> F1
+  UC2 -. "would be weakened by" .-> F2
+  UC3 -. "would be weakened by" .-> F3
+  UC4 -. "would be weakened by" .-> F4
+  UC1 -. "would be weakened by" .-> F5
+  UC5 -. "would be weakened by" .-> F1
+  UC5 -. "would be weakened by" .-> F2
+  UC5 -. "would be weakened by" .-> F3
+  M1 -. "not direct evidence" .-> UC5
+  M2 -. "not direct evidence" .-> UC5
+  M3 -. "not direct evidence" .-> UC5
+  M4 -. "heuristic analogy" .-> UC3
+  M6 -. "heuristic analogy" .-> UC3
+  M7 -. "heuristic analogy" .-> UC2
+  M7 -. "heuristic analogy" .-> UC3
+  M8 -. "not direct evidence" .-> UC5
+  P1 -. "weakly supports (needs_source)" .-> NT1
+  NT1 -. "not direct evidence" .-> N2
 ```

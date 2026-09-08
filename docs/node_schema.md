@@ -53,20 +53,26 @@ Optional calibration and local-check metadata:
 - `vocabulary_map`
 - `definition_scope`
 - `granularity_justification`
+- `proposed_tier`
 - `declared_tier`
 - `tier_declared_by`
+- `tier_declaration_ref`
 - `tier_rationale`
 - `tier_review_status`
 
 Use `declared_tier` only when the tier has been declared by a human author, domain expert, reviewer, or operator. The LLM may propose candidate tiers, but the final tier must keep the human declaration visible.
 
-Any UserClaimNode with `tier = C` or `declared_tier = C` must link to at least one `FalsifierNode`.
+See [Audit Records](audit_records.md) for the required approval record and state transitions. A template or role name alone is not a declaration. Without a declaration, `tier` is provisional. Empty source, narrative, and risk lists are valid unfinished work; dangling IDs are not.
 
-Any node with `tier = X` or `declared_tier = X` must include `failure_modes`.
+Any UserClaimNode with `tier = C`, `proposed_tier = C`, or `declared_tier = C` must link to at least one `FalsifierNode`.
+
+Any node with `tier = X`, `proposed_tier = X`, or `declared_tier = X` must include `failure_modes`.
 
 ### Evidence Node
 
 An observation, dataset, source statement, or primary textual fact used as evidence.
+
+`source` is a node ID or an array of node IDs. Use an empty array when no source is recorded, not a fabricated reference. `source_paper` elsewhere must identify one PaperNode.
 
 Required fields:
 
@@ -171,7 +177,7 @@ Required fields:
 If `tier = X`, also include:
 
 - `failure_modes`
-- `failure_mode_notes`
+- `failure_mode_notes` (recommended explanation of the particular failure, not required by the schema)
 
 ### Falsifier Node
 
@@ -184,6 +190,8 @@ Required fields:
 - `text`
 - `would_weaken`
 - `required_evidence`
+
+Recommended `test_plan` fields: `measurement`, `weakening_result`, and `alternative_explanation`. A missing plan on a C claim's falsifier produces an audit warning. This node describes a possible test outcome, not evidence that the outcome has already occurred.
 
 ### Method Node
 

@@ -21,12 +21,15 @@ Provide:
    - RiskNodes and FalsifierNodes
 
 2. Human Tier Declaration Summary
+   - proposed_tier, clearly distinguished from final declarations
    - declared_tier
    - tier_declared_by
+   - tier_declaration_ref
    - tier_review_status
    - unresolved declarations
 
 3. Local Claim-Evidence Findings
+   - inspected source, exact locator, short excerpt, checker, and finding
    - pass
    - warn
    - fail
@@ -46,4 +49,6 @@ Provide:
 
 Final sentence:
 This is an audit handoff for human review, not a truth judgment.
+
+Do not invent missing approval records or completed local checks. Keep uninspected support and unfinished C-tier test plans visible.
 ```

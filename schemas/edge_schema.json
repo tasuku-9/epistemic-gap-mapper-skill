@@ -51,10 +51,22 @@
       ]
     },
     "source_span": {"type": "string"},
+    "source_ref": {"type": "string"},
+    "source_excerpt": {"type": "string"},
+    "checked_by": {"type": "string"},
+    "local_check_notes": {"type": "string"},
     "local_check_status": {"type": "string", "enum": ["pass", "warn", "fail", "needs_source"]},
     "claim_scope_match": {"type": "string", "enum": ["full", "partial", "mismatch", "unknown"]},
     "vocabulary_match": {"type": "string", "enum": ["same_terms", "mapped_terms", "ambiguous", "mismatch"]},
     "granularity_match": {"type": "string", "enum": ["same_grain", "too_broad", "too_narrow", "atomized", "unknown"]}
   },
+  "allOf": [
+    {
+      "if": {"required": ["local_check_status"], "properties": {"local_check_status": {"enum": ["pass", "warn", "fail"]}}},
+      "then": {
+        "required": ["source_ref", "source_span", "source_excerpt", "checked_by", "local_check_notes", "support_strength"]
+      }
+    }
+  ],
   "additionalProperties": false
 }

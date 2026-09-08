@@ -27,6 +27,10 @@ Use periodic calibration sets:
 
 Compare outputs across operators. Large disagreement is not automatically failure, but it is evidence that the workflow needs clearer definitions, better examples, or more local support metadata.
 
+Start with `examples/calibration_local_support/`: hold its fictional source fixed, record each operator's local support findings before showing the existing graph, and compare source locators, scope judgments, and missed overclaims. Do not compare only aggregate tier distributions; different claims can receive swapped labels while totals stay identical. Record disagreements per claim and their reasons. This fixture and the CLI regression tests check mechanisms, not scientific validity or population-level reliability.
+
+Treat fabricated human declarations and unsupported completed-check metadata as tool failures too. A graph passing schema validation must never be presented as having passed scientific review.
+
 ## What failure does not mean
 
 Tool failure does not prove a target narrative false.

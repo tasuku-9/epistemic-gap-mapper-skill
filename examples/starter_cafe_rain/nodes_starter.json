@@ -8,12 +8,13 @@
       "domain": "small business / local data",
       "source_kind": "local dataset",
       "role": "primary source",
-      "verification_status": "user-provided source",
+      "verification_status": "illustrative source; data not supplied",
       "tier": "A",
       "confidence": "medium",
       "metadata": {
         "cluster": "Local Data"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "P2",
@@ -23,12 +24,13 @@
       "domain": "local data / weather",
       "source_kind": "local dataset",
       "role": "primary source",
-      "verification_status": "user-provided source",
+      "verification_status": "illustrative source; data not supplied",
       "tier": "A",
       "confidence": "medium",
       "metadata": {
         "cluster": "Local Data"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "SC1",
@@ -55,7 +57,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Local Data"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "E2",
@@ -70,7 +73,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Local Data"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "N1",
@@ -101,7 +105,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Narrative Audit"
-      }
+      },
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "UC1",
@@ -130,16 +135,15 @@
       "metadata": {
         "cluster": "Claim"
       },
-      "declared_tier": "B",
-      "tier_declared_by": "author",
-      "tier_rationale": "Declared B because the local data are compatible with the hypothesis, but the causal claim needs confounder checks.",
-      "tier_review_status": "declared",
+      "tier_rationale": "Candidate B: the local data are compatible with the hypothesis, but the causal claim needs confounder checks.",
+      "tier_review_status": "proposed",
       "definition_scope": "This cafe during the sampled 90-day period; not all cafes or all rainy days.",
       "granularity_justification": "Keeps local sales association separate from a broad causal rule.",
       "vocabulary_map": {
         "rainy days": "Business days marked rainy in the local weather log.",
         "increase sales": "Higher average revenue or transactions, not proof of customer motive."
-      }
+      },
+      "proposed_tier": "B"
     },
     {
       "node_id": "R1",
@@ -157,7 +161,8 @@
         "scope_jump",
         "evidence_laundering"
       ],
-      "failure_mode_notes": "A rainy/non-rainy association can be laundered into a causal sales claim and broadened beyond the local sample."
+      "failure_mode_notes": "A rainy/non-rainy association can be laundered into a causal sales claim and broadened beyond the local sample.",
+      "tier_review_status": "proposed"
     },
     {
       "node_id": "F1",
@@ -171,7 +176,8 @@
       "confidence": "medium",
       "metadata": {
         "cluster": "Falsification / Risk"
-      }
+      },
+      "tier_review_status": "proposed"
     }
   ],
   "edges": [
@@ -181,13 +187,13 @@
       "relation": "supports",
       "reason": "P1 is the source for the sales-log claim.",
       "confidence": "medium",
-      "support_strength": "direct",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "source_span": "not specified in sample",
-      "local_check_status": "pass",
-      "claim_scope_match": "full",
-      "vocabulary_match": "same_terms",
-      "granularity_match": "same_grain"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown",
+      "source_ref": "P1"
     },
     {
       "from": "SC1",
@@ -195,13 +201,12 @@
       "relation": "supports",
       "reason": "SC1 supports the rainy/non-rainy sales comparison.",
       "confidence": "medium",
-      "support_strength": "direct",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "source_span": "not specified in sample",
-      "local_check_status": "pass",
-      "claim_scope_match": "full",
-      "vocabulary_match": "same_terms",
-      "granularity_match": "same_grain"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown"
     },
     {
       "from": "P2",
@@ -209,13 +214,13 @@
       "relation": "supports",
       "reason": "P2 supplies the rainy-day labels.",
       "confidence": "medium",
-      "support_strength": "direct",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "source_span": "not specified in sample",
-      "local_check_status": "pass",
-      "claim_scope_match": "full",
-      "vocabulary_match": "same_terms",
-      "granularity_match": "same_grain"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown",
+      "source_ref": "P2"
     },
     {
       "from": "E1",
@@ -223,12 +228,11 @@
       "relation": "supports_weakly",
       "reason": "Higher average sales on rainy days is consistent with UC1 but does not prove causation.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "source_span": "not specified in sample",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
       "granularity_match": "unknown"
     },
     {
@@ -237,12 +241,11 @@
       "relation": "supports_weakly",
       "reason": "E2 makes the rainy-day comparison possible.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "source_span": "not specified in sample",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
       "granularity_match": "unknown"
     },
     {
@@ -251,13 +254,13 @@
       "relation": "supports_weakly",
       "reason": "P1 may be compatible with N1 but does not directly explain customer motivation.",
       "confidence": "medium",
-      "support_strength": "hedged",
+      "support_strength": "unknown",
       "support_mode": "empirical",
-      "source_span": "not specified in sample",
-      "local_check_status": "warn",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "mapped_terms",
-      "granularity_match": "unknown"
+      "local_check_status": "needs_source",
+      "claim_scope_match": "unknown",
+      "vocabulary_match": "ambiguous",
+      "granularity_match": "unknown",
+      "source_ref": "P1"
     },
     {
       "from": "NT1",
@@ -265,13 +268,8 @@
       "relation": "not_direct_evidence",
       "reason": "NT1 clarifies citation debt without treating the narrative as proven or false.",
       "confidence": "medium",
-      "support_strength": "no_direct_support",
       "support_mode": "narrative_trace",
-      "source_span": "not specified in sample",
-      "local_check_status": "pass",
-      "claim_scope_match": "partial",
-      "vocabulary_match": "ambiguous",
-      "granularity_match": "unknown"
+      "support_strength": "no_direct_support"
     },
     {
       "from": "UC1",
@@ -288,11 +286,15 @@
       "confidence": "high"
     },
     {
-      "from": "F1",
-      "to": "UC1",
+      "from": "UC1",
+      "to": "F1",
       "relation": "falsified_by",
       "reason": "F1 states what would weaken UC1.",
       "confidence": "medium"
     }
-  ]
+  ],
+  "metadata": {
+    "data_status": "illustrative_unverified",
+    "audit_note": "Tier labels are candidates, not human declarations. Source links are proposed, not verified local support. No human approval is recorded in this graph."
+  }
 }

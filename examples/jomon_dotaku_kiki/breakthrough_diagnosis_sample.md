@@ -1,8 +1,10 @@
 # Sample Breakthrough Diagnosis
 
+This is an illustrative, unverified handoff, not a completed source audit. The tier sections below contain candidates, not recorded human declarations. Verify each source and obtain explicit human decisions before presenting these classifications as final.
+
 ## Breakthrough Status
 
-Breakthrough possible with revisions.
+Source inspection and human tier declaration pending. This report does not assess breakthrough potential.
 
 ## Why
 
